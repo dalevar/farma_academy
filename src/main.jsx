@@ -5,6 +5,8 @@ import LandingPage from './pages/landing_page/App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
 
+import { ThemeProvider } from "@material-tailwind/react";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -17,6 +19,6 @@ const router = createBrowserRouter([
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <App />
   </React.StrictMode>,
 )
