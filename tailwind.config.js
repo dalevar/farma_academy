@@ -4,6 +4,7 @@ export default ({
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     colors: { 
+      "white" : "#FFFFFF",
       "farma-50" : "#EFFAFF",
       "farma-100" : "#DFF4FF",
       "farma-200" : "#B8EBFF",

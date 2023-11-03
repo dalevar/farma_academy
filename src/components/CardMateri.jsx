@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+// eslint-disable-next-line react/prop-types
 const CardMateri = ({ materi }) => {
   return (
     <div className="card-materi">
