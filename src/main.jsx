@@ -5,7 +5,7 @@ import LandingPage from './pages/landing_page/App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
 
-// import { ThemeProvider } from "@material-tailwind/react";
+import { ThemeProvider } from "@material-tailwind/react";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +19,8 @@ const router = createBrowserRouter([
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <ThemeProvider>
     <RouterProvider router={router} />
+    </ThemeProvider>
   </React.StrictMode>,
 )
