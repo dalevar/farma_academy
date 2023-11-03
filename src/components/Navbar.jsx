@@ -42,7 +42,7 @@ const Navbar = () => {
                 </svg>
               </div>
               <input
-                type="text" 
+                type="text"
                 id="default-search"
                 className="block w-full p-4 pl-10 text-lg text-farma-700 border border-farma-100 rounded-2xl focus:border-farma-500 active:border-farma-500 outline-none"
                 placeholder="Halo! mau belajar apa harini?"
