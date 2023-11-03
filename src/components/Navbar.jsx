@@ -12,15 +12,15 @@ const Navbar = () => {
     navigation(`/materi/${search.toLowerCase()}`);
   };
   return (
-    <nav className="fixed top-0 w-full flex justify-between items-center p-5 h-28">
-      <div className="w-44">
+    <nav className="fixed top-0 w-full flex justify-between items-center p-5 h-28 bg-white">
+      <div className="w-40 2xl:w-44 xl:w-44 lg:w-28 md:w-32 sm:w-28">
         <img
           src="/images/BIG LOGO.png"
           alt="none"
           className="object-cover w-full"
         />
       </div>
-      <div className="search flex items-center w-3/12">
+      <div className="search flex items-center 2xl:w-3/12 lg:w-3/12 md:w-4/12 sm:w-4/12">
         <div className="w-full">
           <form className="w-full" onSubmit={materiSearch}>
             <div className="relative">
@@ -42,19 +42,13 @@ const Navbar = () => {
                 </svg>
               </div>
               <input
-                type="text"
+                type="text" 
                 id="default-search"
                 className="block w-full p-4 pl-10 text-lg text-farma-700 border border-farma-100 rounded-2xl focus:border-farma-500 active:border-farma-500 outline-none"
                 placeholder="Halo! mau belajar apa harini?"
                 onChange={(e) => setSearch(e.target.value)}
                 required
               />
-              <button
-                type="submit"
-                className="text-farma-500 absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg px-4 py-2"
-              >
-                Search
-              </button>
             </div>
           </form>
           {search !== "" && (
@@ -75,31 +69,31 @@ const Navbar = () => {
         </div>
       </div>
       <div className="nav-menu flex">
-        <div className="nav-list flex items-center me-16 ">
-          <ul className="flex text-farma-950 font-medium">
+        <div className="nav-list hidden items-center 2xl:me-16 xl:me-8 me-14 2xl:flex xl:flex lg:flex md:flex sm:hidden flex-wrap justify-between">
+          <ul className="flex items-center text-farma-950 font-medium">
             <li
-              className={`me-5 text-xl ${
+              className={`me-6 2xl:text-xl lg:text-md ${
                 paramsSlug === "materi" && "underline decoration-farma-700"
               }`}
             >
               <Link to={"./module"}>Materi belajar</Link>
             </li>
             <li
-              className={`me-5 text-xl ${
+              className={`me-5 2xl:text-xl lg:text-md ${
                 paramsSlug === "materi" && "underline decoration-farma-700"
               }`}
             >
               <Link to={"./hitung-cepat"}>Hitung cepat</Link>
             </li>
             <li
-              className={`me-5 text-xl ${
+              className={`me-5 2xl:text-xl lg:text-md ${
                 paramsSlug === "materi" && "underline decoration-farma-700"
               }`}
             >
               <Link to={"./community"}>Community</Link>
             </li>
             <li
-              className={`me-5 text-xl ${
+              className={`me-5 2xl:text-xl lg:text-md ${
                 paramsSlug === "materi" && "underline decoration-farma-700"
               }`}
             >
@@ -107,13 +101,13 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="nav-action flex items-center">
+        <div className="nav-action 2xl:flex xl:flex lg:flex items-center hidden">
           <ul className="flex items-center">
-            <li className="py-2 px-5 bg-farma-200 text-farma-900 text-2xl rounded-md hover:bg-opacity-80 me-5">
-              <Link>Masuk</Link>
+            <li className="py-2 px-5 xl:py-1 xl:px-4 lg:px-3 bg-farma-200 text-farma-900 text-2xl rounded-md hover:bg-opacity-80 me-5">
+              <Link to={"./login"}>Masuk</Link>
             </li>
-            <li>
-              <Link className="py-2 px-5 bg-farma-800 text-farma-50 text-2xl rounded-md hover:bg-opacity-80">
+            <li className="py-2 px-5 xl:py-1 xl:px-4 lg:px-3 bg-farma-800 text-farma-50 text-2xl rounded-md hover:bg-opacity-80">
+              <Link to={"./register"}>
                 Daftar
               </Link>
             </li>

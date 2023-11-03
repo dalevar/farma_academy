@@ -2,11 +2,10 @@ import LayoutLandingPage from "./Layout";
 
 const LandingPage = () => {
   return (
-    <div className="min-h-full">
     <LayoutLandingPage>
-      <h1>Landing Page</h1>
+      <div className="container is-fullhd">asdas</div>
+      <div className="container bg-farma-900">hai</div>
     </LayoutLandingPage>
-    </div>
-  )
+  );
 };
 export default LandingPage;
