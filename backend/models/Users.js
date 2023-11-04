@@ -116,6 +116,14 @@ const Users = db.define(
         notEmpty: true,
       },
     },
+    url_serti_konsultan: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+
+      validate: {
+        notEmpty: true,
+      }
+    },
     photo_profile: {
       type: DataTypes.TEXT,
       allowNull: true,
@@ -124,6 +132,14 @@ const Users = db.define(
         notEmpty: true,
       },
     },
+    url_photo_profile: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+
+      validate: {
+        notEmpty: true,
+      }
+    } ,
     password: {
       type: DataTypes.TEXT,
       allowNull: false,
