@@ -69,10 +69,10 @@ const Payment = db.define(
 );
 
 
-Users.hasMany(Payment);
+Users.hasMany(Payment, { foreignKey: "userId" });
 Payment.belongsTo(Users, { foreignKey: "userId" });
 
-PaketBelajar.hasMany(Payment);
+PaketBelajar.hasMany(Payment, { foreignKey: "paketId" });
 Payment.belongsTo(PaketBelajar, { foreignKey: "paketId" });
 
 export default Payment;

@@ -44,9 +44,10 @@ const ChatKonsultan = db.define(
 );
 
 
-ChatKonsultan.hasMany(Users, { foreignKey: "user_konsulId" });
-Users.belongsTo(ChatKonsultan, { foreignKey: "user_konsulId" });
+Users.hasMany(ChatKonsultan);
+ChatKonsultan.belongsTo(Users, { foreignKey: "user_konsulId" });
 
-ChatKonsultan.hasMany(Users, { foreignKey: "userId" });
-Users.belongsTo(ChatKonsultan, { foreignKey: "userId" });
+Users.hasMany(ChatKonsultan);
+ChatKonsultan.belongsTo(Users, { foreignKey: "userId" });
+
 export default ChatKonsultan;

@@ -2,10 +2,9 @@ import { Sequelize } from "sequelize";
 import db from "../config/Database.js";
 import Materi from "./Materi.js";
 import JawabanQuiz from "./JawabanQuiz.js";
-
 const { DataTypes } = Sequelize;
 
-const QuizMateri = db.define(
+const QuizMateri = db.define("quiz_materi",
   {
     quiz_tipe: {
       type: DataTypes.STRING,
@@ -32,9 +31,10 @@ const QuizMateri = db.define(
     jawabanId: {
       type: DataTypes.INTEGER,
       allowNull: false,
+
       validate: {
         isInt: true,
-      },
+      }
     },
     jawaban_benar: {
       type: DataTypes.STRING,
@@ -49,10 +49,11 @@ const QuizMateri = db.define(
     freezeTableName: true,
   }
 );
-Materi.hasMany(QuizMateri, {foreignKey: "materiId"});
-QuizMateri.belongsTo(Materi, {foreignKey: "materiId"});
 
-JawabanQuiz.hasMany(QuizMateri, {foreignKey: "jawabanId"});
-QuizMateri.belongsTo(JawabanQuiz, {foreignKey: "jawabanId"});
+JawabanQuiz.hasMany(QuizMateri, { foreignKey: "jawabanId" });
+QuizMateri.belongsTo(JawabanQuiz, { foreignKey: "jawabanId" });
+
+Materi.hasMany(QuizMateri, { foreignKey: "materiId" });
+QuizMateri.belongsTo(Materi, { foreignKey: "materiId" });
 
 export default QuizMateri;

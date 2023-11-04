@@ -3,7 +3,7 @@ import { Sequelize } from "sequelize";
 
 const { DataTypes } = Sequelize;
 
-const PaketBelajar = db.define("daftar_paket", {
+const PaketBelajar = db.define("paket_belajar", {
     nama: {
         type: DataTypes.STRING,
         allowNull: false,

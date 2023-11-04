@@ -1,6 +1,5 @@
 import { Sequelize } from "sequelize";
 import db from "../config/Database.js";
-import Module from "./Module.js";
 import BabModule from "./BabModule.js";
 
 const { DataTypes } = Sequelize;
@@ -8,14 +7,6 @@ const { DataTypes } = Sequelize;
 const SubBab = db.define(
   "sub_bab",
   {
-    moduleId: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-
-      validate: {
-        isInt: true,
-      },
-    },
     babId: {
       type: DataTypes.INTEGER,
       allowNull: true,
@@ -53,8 +44,6 @@ const SubBab = db.define(
     freezeTableName: true,
   }
 );
-Module.hasMany(SubBab, { foreignKey: "moduleId" });
-SubBab.belongsTo(Module, { foreignKey: "moduleId" });
 
 BabModule.hasMany(SubBab, { foreignKey: "babId" });
 SubBab.belongsTo(BabModule, { foreignKey: "babId" });

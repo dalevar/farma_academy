@@ -1,30 +1,14 @@
 import { Sequelize } from "sequelize";
 import db from "../config/Database.js";
-import Module from "./Module.js";
-import BabModule from "./BabModule.js";
 import SubBab from "./SubBab.js";
+import MateriVideo from "./MateriVideo.js";
 
 const { DataTypes } = Sequelize;
 
-const MateriVideo = db.define(
-  "materi_video",
+const Materi = db.define(
+  "materi",
   {
-    moduleId: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-
-      validate: {
-        isInt: true,
-      },
-    },
-    babId: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-
-      validate: {
-        isInt: true,
-      },
-    },
+    
     subBabId: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -71,13 +55,10 @@ const MateriVideo = db.define(
   }
 );
 
-Module.hasMany(MateriVideo, {foreignKey: "moduleId"});
-MateriVideo.belongsTo(Module, {foreignKey: "moduleId"});
 
-BabModule.hasMany(MateriVideo, {foreignKey: "babId"});
-MateriVideo.belongsTo(BabModule, {foreignKey: "babId"});
+SubBab.hasMany(Materi);
+Materi.belongsTo(SubBab, {foreignKey: "subBabId"});
 
-SubBab.hasMany(MateriVideo, {foreignKey: "subBabId"});
-MateriVideo.belongsTo(SubBab, {foreignKey: "babId"});
-
-export default MateriVideo;
+MateriVideo.hasOne(Materi, {foreignKey: "videoId"});
+Materi.belongsTo(MateriVideo, {foreignKey: "videoId"});
+export default Materi;

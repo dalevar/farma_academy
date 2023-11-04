@@ -35,7 +35,7 @@ const SertifikatUser = db.define(
     freezeTableName: true,
   }
 );
-Users.hasMany(SertifikatUser, { foreignKey: "userId" });
+Users.hasMany(SertifikatUser);
 SertifikatUser.belongsTo(Users, { foreignKey: "userId" });
 
 export default SertifikatUser;
