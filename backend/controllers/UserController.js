@@ -7,7 +7,7 @@ import fs from "fs";
 import moment from "moment";
 export const getAllUser = async (req, res) => {
   await Users.findAll({
-    includes: [
+    include: [
       {
         model: Roles,
         attributes: ["nama"],
