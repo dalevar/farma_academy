@@ -1,10 +1,12 @@
 import db from "../config/Database.js";
 import { Sequelize } from "sequelize";
+import Users from "./Users.js";
+import Materi from "./Materi.js";
 
 const { DataTypes } = Sequelize;
 
 const CommentMateri = db.define("comment_materi", {
-  forumId: {
+  materiId: {
     type: DataTypes.INTEGER,
     allowNull: false,
 
@@ -40,4 +42,9 @@ const CommentMateri = db.define("comment_materi", {
     freezeTableName: true
 })
 
+Materi.hasMany(CommentMateri, { foreignKey: "materiId" });
+CommentMateri.belongsTo(Materi, { foreignKey: "materiId" });
+
+Users.hasMany(CommentMateri, { foreignKey: "userId" });
+CommentMateri.belongsTo(Users, { foreignKey: "userId" });
 export default CommentMateri;

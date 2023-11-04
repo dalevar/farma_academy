@@ -1,6 +1,6 @@
 import { Sequlize } from "sequelize";
 import db from "../config/Database.js";
-
+import QuizMateri from "./QuizMateri.js";
 const { DataTypes } = Sequlize;
 
 const JawabanQuiz = db.define(
@@ -35,5 +35,6 @@ const JawabanQuiz = db.define(
     freezeTableName: true,
   }
 );
-
+QuizMateri.hasMany(JawabanQuiz, { foreignKey: "quizId" });
+JawabanQuiz.belongsTo(QuizMateri, { foreignKey: "quizId" });
 export default JawabanQuiz;

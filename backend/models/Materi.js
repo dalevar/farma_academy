@@ -1,5 +1,8 @@
 import { Sequlize } from "sequelize";
 import db from "../config/Database.js";
+import Module from "./Module.js";
+import BabModule from "./BabModule.js";
+import SubBab from "./SubBab.js";
 
 const { DataTypes } = Sequlize;
 
@@ -67,5 +70,14 @@ const MateriVideo = db.define(
     freezeTableName: true,
   }
 );
+
+Module.hasMany(MateriVideo, {foreignKey: "moduleId"});
+MateriVideo.belongsTo(Module, {foreignKey: "moduleId"});
+
+BabModule.hasMany(MateriVideo, {foreignKey: "babId"});
+MateriVideo.belongsTo(BabModule, {foreignKey: "babId"});
+
+SubBab.hasMany(MateriVideo, {foreignKey: "subBabId"});
+MateriVideo.belongsTo(SubBab, {foreignKey: "babId"});
 
 export default MateriVideo;

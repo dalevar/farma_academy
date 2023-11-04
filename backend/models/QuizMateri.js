@@ -1,11 +1,13 @@
 import { Sequlize } from "sequelize";
 import db from "../config/Database.js";
+import Materi from "./Materi.js";
+import JawabanQuiz from "./JawabanQuiz.js";
 
 const { DataTypes } = Sequlize;
 
 const QuizMateri = db.define(
   {
-    quiz_role: {
+    quiz_tipe: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
@@ -47,5 +49,10 @@ const QuizMateri = db.define(
     freezeTableName: true,
   }
 );
+Materi.hasMany(QuizMateri, {foreignKey: "materiId"});
+QuizMateri.belongsTo(Materi, {foreignKey: "materiId"});
+
+JawabanQuiz.hasMany(QuizMateri, {foreignKey: "jawabanId"});
+QuizMateri.belongsTo(JawabanQuiz, {foreignKey: "jawabanId"});
 
 export default QuizMateri;

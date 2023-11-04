@@ -1,6 +1,6 @@
 import { Sequlize } from "sequelize";
 import db from "../config/Database.js";
-
+import Users from "./Users.js";
 const { DataTypes } = Sequlize;
 
 const SertifikatUser = db.define(
@@ -35,5 +35,7 @@ const SertifikatUser = db.define(
     freezeTableName: true,
   }
 );
+Users.hasMany(SertifikatUser, { foreignKey: "userId" });
+SertifikatUser.belongsTo(Users, { foreignKey: "userId" });
 
 export default SertifikatUser;

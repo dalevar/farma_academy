@@ -1,5 +1,6 @@
 import { Sequlize } from "sequelize";
 import db from "../config/Database.js";
+import Materi from "./Materi.js";
 
 const { DataTypes } = Sequlize;
 
@@ -44,4 +45,6 @@ const MateriVideo = db.define(
   }
 );
 
+Materi.hasMany(MateriVideo, {foreignKey: "materiId"});
+MateriVideo.belongsTo(Materi, {foreignKey: "materiId"});
 export default MateriVideo;

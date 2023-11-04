@@ -1,6 +1,6 @@
 import { Sequlize } from "sequelize";
 import db from "../config/Database.js";
-
+import Materi from "./Materi.js";
 const { DataTypes } = Sequlize;
 
 const RangkumanMateri = db.define(
@@ -35,5 +35,7 @@ const RangkumanMateri = db.define(
     freezeTableName: true,
   }
 );
+Materi.hasMany(RangkumanMateri, {foreignKey: "materiId"});
+RangkumanMateri.belongsTo(Materi, {foreignKey: "materiId"});
 
 export default RangkumanMateri;

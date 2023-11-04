@@ -3,7 +3,7 @@ import { Sequelize } from "sequelize";
 
 const { DataTypes } = Sequelize;
 
-const DaftarPaket = db.define("daftar_paket", {
+const PaketBelajar = db.define("daftar_paket", {
     nama: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -41,4 +41,4 @@ const DaftarPaket = db.define("daftar_paket", {
     freezeTableName: true
 })
 
-export default DaftarPaket;   
+export default PaketBelajar;   

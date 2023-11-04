@@ -1,5 +1,8 @@
 import { Sequelize } from "sequelize";
 import db from "../config/Database.js";
+import Materi from "./Materi.js";
+import StatusPremium from "./StatusPremium.js";
+import Roles from "./Roles.js";
 
 const { DataTypes } = Sequelize;
 
@@ -98,7 +101,7 @@ const Users = db.define(
         notEmpty: true,
       },
     },
-    perusahaan: {
+    perusahaan_bekerja: {
       type: DataTypes.STRING,
       allowNull: true,
 
@@ -160,5 +163,12 @@ const Users = db.define(
     freezeTableName: true,
   }
 );
+Materi.hasMany(Users, {foreignKey: "materiId"});
+Users.belongsTo(Materi, {foreignKey: "materiId"});
 
+StatusPremium.hasMany(Users, {foreignKey: "statusPremiumId"});
+Users.belongsTo(StatusPremium, {foreignKey: "statusPremiumId"});
+
+Roles.hasMany(Users, {foreignKey: "roleId"});
+Users.belongsTo(Roles, {foreignKey: "roleId"});
 export default Users;
