@@ -42,9 +42,9 @@ const CommentMateri = db.define("comment_materi", {
     freezeTableName: true
 })
 
-Materi.hasMany(CommentMateri, { foreignKey: "materiId" });
+Materi.hasMany(CommentMateri);
 CommentMateri.belongsTo(Materi, { foreignKey: "materiId" });
 
-Users.hasMany(CommentMateri, { foreignKey: "userId" });
+Users.hasMany(CommentMateri);
 CommentMateri.belongsTo(Users, { foreignKey: "userId" });
 export default CommentMateri;

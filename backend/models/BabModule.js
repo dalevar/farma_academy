@@ -40,7 +40,7 @@ const BabModule = db.define("bab_module", {
     freezeTableName: true
 })
 
-BabModule.hasMany(Module, { foreignKey: "moduleId" });
-Module.belongsTo(BabModule, { foreignKey: "moduleId" });
+Module.hasMany(BabModule, { foreignKey: "moduleId" });
+BabModule.belongsTo(Module, { foreignKey: "moduleId" });
 
 export default BabModule

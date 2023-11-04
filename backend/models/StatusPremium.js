@@ -42,7 +42,7 @@ const StatusPremium = db.define("status_premium",{
 },{
     freezeTableName: true
 })
-Users.hasMany(StatusPremium, { foreignKey: "userId" });
+Users.hasMany(StatusPremium);
 StatusPremium.belongsTo(Users, { foreignKey: "userId" });
 
 Payment.hasMany(StatusPremium, { foreignKey: "paymentInfoId" });

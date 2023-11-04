@@ -1,20 +1,11 @@
 import { Sequelize } from "sequelize";
 import db from "../config/Database.js";
-import Materi from "./Materi.js";
 
 const { DataTypes } = Sequelize;
 
 const MateriVideo = db.define(
   "materi_video",
   {
-    materiId: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-
-      validate: {
-        isInt: true,
-      },
-    },
     video: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -22,6 +13,14 @@ const MateriVideo = db.define(
       validate: {
         notEmpty: true,
       },
+    },
+    on_duration_question: {
+      type: DataTypes.STRING,
+      allowNull: true,
+
+      validate: {
+        notEmpty: true,
+      }
     },
     pilihan_jawaban: {
       type: DataTypes.STRING,
@@ -45,6 +44,5 @@ const MateriVideo = db.define(
   }
 );
 
-Materi.hasMany(MateriVideo, {foreignKey: "materiId"});
-MateriVideo.belongsTo(Materi, {foreignKey: "materiId"});
+
 export default MateriVideo;

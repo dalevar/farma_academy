@@ -4,7 +4,7 @@ import Materi from "./Materi.js";
 const { DataTypes } = Sequelize;
 
 const RangkumanMateri = db.define(
-  "sertifikat_user",
+  "rangkuman_materi",
   {
     materiId: {
       type: DataTypes.INTEGER,

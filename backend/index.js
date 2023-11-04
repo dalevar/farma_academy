@@ -27,9 +27,6 @@ import MateriVideo from "./routes/MateriVideoRoute.js";
 import JawabanQuizRoute from "./routes/JawabanQuizRoute.js";
 
 
-// eslint-disable-next-line no-undef
-require('events').EventEmitter.prototype._maxListeners = 100;
-
 (async () => {
   db.sync();
 })();
@@ -43,25 +40,25 @@ app.use(
   })
 );
 app.use(FileUpload());
+app.use(RoleRoute);
+app.use(ModuleRoute);
 app.use(UsersRoute);
+app.use(BabModuleRoute);
 app.use(subBabRoute);
 app.use(StatusPremiumRoute);
 app.use(SertifikatUserRoute);
-app.use(RoleRoute);
 app.use(RangkumanBelajarRoute);
+app.use(MateriRoute);
 app.use(QuizMateriRoute);
+app.use(JawabanQuizRoute);
+app.use(MateriVideo);
 app.use(PaketBelajarRoute);
 app.use(PaymentRoute);
-app.use(ModuleRoute);
-app.use(BabModuleRoute);
 app.use(ForumRoute);
 app.use(CommentForumRoute);
 app.use(CommentMateriRoute);
 app.use(AlatPraktikumRoute);
 app.use(ChatKonsulRoute);
-app.use(MateriRoute);
-app.use(MateriVideo);
-app.use(JawabanQuizRoute);
 
 // eslint-disable-next-line no-undef
 app.listen(process.env.APP_PORT, () => {
