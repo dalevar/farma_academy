@@ -6,7 +6,6 @@ npm install
 
 
 # Backend (MYSQL ONLY)
-## Start express server
 ### Make new database on Laragon / XAMMP
 ```
 CREATE DATABASE farmaacademy_db;
