@@ -33,11 +33,12 @@ http://localhost:5000/user
 http://localhost:5000/user/:nis
 ```
 ### Create new user (Method: POST)
-## Key for post data to API
+## Key for POST/PATCH data to API
 ```
 {
-  "name", TYPE TEXT,
-  "email", TYPE TEXT,
+  "materiId" : TYPE INTEGER (NULLABLE)
+  "name" : TYPE TEXT,
+  "email" : TYPE TEXT,
   "noHp" : TYPE INTEGER,
   "username" : TYPE TEXT,
   "tempatLahir" : TYPE TEXT (EXAMPLE VALUE: Banjarmasin),
@@ -47,11 +48,13 @@ http://localhost:5000/user/:nis
   "pendidikanTerakhir" : TYPE TEXT,
   "pekerjaan" : TYPE TEXT (NULLABLE),
   "perusahaanBekerja" : TYPE TEXT (NULLABLE),
-  "sertifikatKonsultan" TYPE FILE (NULLABLE),
+  "sertifikatKonsultan" : TYPE FILE (NULLABLE),
   "photoProfile" : TYPE FILE (NULLABLE),
   "password" : TYPE TEXT,
   "confirmPassword" : TYPE TEXT,
-  "roleId" : TYPE INTEGER
+  "roleId" : TYPE INTEGER,
+  "statusPremium" : TYPE INTEGER(NULLABLE)
+  "isActive" : TYPE BOOLEAN(0,1)
 }
 ```
 ```
