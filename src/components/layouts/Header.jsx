@@ -23,7 +23,7 @@ export default function Header() {
                 {/* nav ketika lebih dari lg */}
                 <div className="items-center gap-5 hidden lg:flex">
                     {/* Nav */}
-                    <div className="flex gap-5 text-lg">
+                    <div className="flex gap-5 text-lg mr-5">
                         <div>
                             <button className="">Materi Belajar <span className="inline-block w-4 h-4"><IconChevron /></span></button>
                         </div>
