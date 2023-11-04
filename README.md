@@ -4,6 +4,8 @@
 npm install
 ```
 # User api
+### Get all user
+## Method: GET
 ```
 http://localhost:5000/user
 ```
