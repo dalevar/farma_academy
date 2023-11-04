@@ -1,10 +1,10 @@
-import { Sequlize } from "sequelize";
+import { Sequelize } from "sequelize";
 import db from "../config/Database.js";
 import Module from "./Module.js";
 import BabModule from "./BabModule.js";
 import SubBab from "./SubBab.js";
 
-const { DataTypes } = Sequlize;
+const { DataTypes } = Sequelize;
 
 const MateriVideo = db.define(
   "materi_video",

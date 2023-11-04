@@ -1,17 +1,17 @@
 import express from "express";
 import {
-  getAllKelas,
-  getKelasById,
-  createKelas,
-  updateKelas,
-  deleteKelas,
-} from "../controllers/KelasController.js";
+  getAllBabModule,
+  getBabModuleById,
+  createBabModule,
+  updateBabModule,
+  deleteBabModule,
+} from "../controllers/BabModuleController.js";
 
 const router = express.Router();
-router.get("/kelas", getAllKelas);
-router.get("/kelas/:id", getKelasById);
-router.post("/kelas", createKelas);
-router.patch("/kelas/:id", updateKelas);
-router.delete("/kelas/:id",deleteKelas);
+router.get("/babmodule", getAllBabModule);
+router.get("/babmodule/:id", getBabModuleById);
+router.post("/babmodule", createBabModule);
+router.patch("/babmodule/:id", updateBabModule);
+router.delete("/babmodule/:id",deleteBabModule);
 
 export default router;

@@ -52,6 +52,9 @@ const CommentForum = db.define("comment_forum", {
 Users.hasMany(CommentForum, { foreignKey: "userId" });
 CommentForum.belongsTo(Users, { foreignKey: "userId" });
 
+Users.hasMany(CommentForum, { foreignKey: "replyCommentUserId" });
+CommentForum.belongsTo(Users, { foreignKey: "replyCommentUserId" });
+
 Forum.hasMany(CommentForum, { foreignKey: "forumId" });
 CommentForum.belongsTo(Forum, { foreignKey: "forumId" });
 

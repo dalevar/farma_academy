@@ -1,17 +1,17 @@
 import express from "express";
 import {
-  getAllKelas,
-  getKelasById,
-  createKelas,
-  updateKelas,
-  deleteKelas,
-} from "../controllers/KelasController.js";
+  getAllSertifikat,
+  getSertifikatById,
+  createSertifikat,
+  updateSertifikat,
+  deleteSertifikat,
+} from "../controllers/SertifikatController.js";
 
 const router = express.Router();
-router.get("/kelas", getAllKelas);
-router.get("/kelas/:id", getKelasById);
-router.post("/kelas", createKelas);
-router.patch("/kelas/:id", updateKelas);
-router.delete("/kelas/:id",deleteKelas);
+router.get("/sertifikat", getAllSertifikat);
+router.get("/sertifikat/:id", getSertifikatById);
+router.post("/sertifikat", createSertifikat);
+router.patch("/sertifikat/:id", updateSertifikat);
+router.delete("/sertifikat/:id",deleteSertifikat);
 
 export default router;

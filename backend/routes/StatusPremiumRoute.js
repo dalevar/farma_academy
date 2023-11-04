@@ -1,17 +1,17 @@
 import express from "express";
 import {
-  getAllKelas,
-  getKelasById,
-  createKelas,
-  updateKelas,
-  deleteKelas,
-} from "../controllers/KelasController.js";
+  getAllStatusPremium,
+  getStatusPremiumById,
+  createStatusPremium,
+  updateStatusPremium,
+  deleteStatusPremium,
+} from "../controllers/StatusPremiumController.js";
 
 const router = express.Router();
-router.get("/kelas", getAllKelas);
-router.get("/kelas/:id", getKelasById);
-router.post("/kelas", createKelas);
-router.patch("/kelas/:id", updateKelas);
-router.delete("/kelas/:id",deleteKelas);
+router.get("/statusPremium", getAllStatusPremium);
+router.get("/statusPremium/:id", getStatusPremiumById);
+router.post("/statusPremium", createStatusPremium);
+router.patch("/statusPremium/:id", updateStatusPremium);
+router.delete("/statusPremium/:id",deleteStatusPremium);
 
 export default router;

@@ -1,8 +1,8 @@
 import { Sequelize } from "sequelize";
 import db from "../config/Database.js";
+import Roles from "./Roles.js";
 import Materi from "./Materi.js";
 import StatusPremium from "./StatusPremium.js";
-import Roles from "./Roles.js";
 
 const { DataTypes } = Sequelize;
 
@@ -171,4 +171,5 @@ Users.belongsTo(StatusPremium, {foreignKey: "statusPremiumId"});
 
 Roles.hasMany(Users, {foreignKey: "roleId"});
 Users.belongsTo(Roles, {foreignKey: "roleId"});
+
 export default Users;

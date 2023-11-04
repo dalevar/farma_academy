@@ -1,9 +1,16 @@
 import { Sequelize } from "sequelize";
 import db from "../config/Database.js";
-
+import Users from "./Users.js";
 const { DataTypes } = Sequelize;
 
 const Forum = db.define("forum", {
+    userId: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validate: {
+            isInt: true,
+        }
+    },
     uuid: {
         type: DataTypes.STRING,
         defaultValue: DataTypes.UUIDV4,
@@ -52,4 +59,6 @@ const Forum = db.define("forum", {
     freezeTableName: true
 })
 
+Users.hasMany(Forum, { foreignKey: "userId" });
+Forum.belongsTo(Users, { foreignKey: "userId" });
 export default Forum

@@ -1,7 +1,7 @@
-import { Sequlize } from "sequelize";
+import { Sequelize } from "sequelize";
 import db from "../config/Database.js";
 import QuizMateri from "./QuizMateri.js";
-const { DataTypes } = Sequlize;
+const { DataTypes } = Sequelize;
 
 const JawabanQuiz = db.define(
   "jawaban_quiz",

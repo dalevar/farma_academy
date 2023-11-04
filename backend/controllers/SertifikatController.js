@@ -1,4 +1,4 @@
-import Sertifikat from "../models/Sertifikat.js";
+import SertifikatUser from "../models/SertifikatUser.js";
 export const getAllSertifikat = async (req, res) => {
     
 };

@@ -1,17 +1,17 @@
 import express from "express";
 import {
-  getAllKelas,
-  getKelasById,
-  createKelas,
-  updateKelas,
-  deleteKelas,
-} from "../controllers/KelasController.js";
+  getAllMateri,
+  getMateriById,
+  createMateri,
+  updateMateri,
+  deleteMateri,
+} from "../controllers/MateriController.js";
 
 const router = express.Router();
-router.get("/kelas", getAllKelas);
-router.get("/kelas/:id", getKelasById);
-router.post("/kelas", createKelas);
-router.patch("/kelas/:id", updateKelas);
-router.delete("/kelas/:id",deleteKelas);
+router.get("/materi", getAllMateri);
+router.get("/materi/:id", getMateriById);
+router.post("/materi", createMateri);
+router.patch("/materi/:id", updateMateri);
+router.delete("/materi/:id",deleteMateri);
 
 export default router;

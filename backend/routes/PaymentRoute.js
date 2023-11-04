@@ -1,17 +1,17 @@
 import express from "express";
 import {
-  getAllKelas,
-  getKelasById,
-  createKelas,
-  updateKelas,
-  deleteKelas,
-} from "../controllers/KelasController.js";
+  getAllPayment,
+  getPaymentById,
+  createPayment,
+  updatePayment,
+  deletePayment,
+} from "../controllers/PaymentController.js";
 
 const router = express.Router();
-router.get("/kelas", getAllKelas);
-router.get("/kelas/:id", getKelasById);
-router.post("/kelas", createKelas);
-router.patch("/kelas/:id", updateKelas);
-router.delete("/kelas/:id",deleteKelas);
+router.get("/payment", getAllPayment);
+router.get("/payment/:id", getPaymentById);
+router.post("/payment", createPayment);
+router.patch("/payment/:id", updatePayment);
+router.delete("/payment/:id",deletePayment);
 
 export default router;

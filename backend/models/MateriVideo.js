@@ -1,8 +1,8 @@
-import { Sequlize } from "sequelize";
+import { Sequelize } from "sequelize";
 import db from "../config/Database.js";
 import Materi from "./Materi.js";
 
-const { DataTypes } = Sequlize;
+const { DataTypes } = Sequelize;
 
 const MateriVideo = db.define(
   "materi_video",

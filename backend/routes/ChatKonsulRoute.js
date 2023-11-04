@@ -1,17 +1,17 @@
 import express from "express";
 import {
-  getAllKelas,
-  getKelasById,
-  createKelas,
-  updateKelas,
-  deleteKelas,
-} from "../controllers/KelasController.js";
+  getAllChatKonsul,
+  getChatKonsulById,
+  createChatKonsul,
+  updateChatKonsul,
+  deleteChatKonsul,
+} from "../controllers/ChatKonsulController.js";
 
 const router = express.Router();
-router.get("/kelas", getAllKelas);
-router.get("/kelas/:id", getKelasById);
-router.post("/kelas", createKelas);
-router.patch("/kelas/:id", updateKelas);
-router.delete("/kelas/:id",deleteKelas);
+router.get("/chatkonsul", getAllChatKonsul);
+router.get("/chatkonsul/:id", getChatKonsulById);
+router.post("/chatkonsul", createChatKonsul);
+router.patch("/chatkonsul/:id", updateChatKonsul);
+router.delete("/chatkonsul/:id",deleteChatKonsul);
 
 export default router;

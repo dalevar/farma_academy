@@ -1,17 +1,17 @@
 import express from "express";
 import {
-  getAllKelas,
-  getKelasById,
-  createKelas,
-  updateKelas,
-  deleteKelas,
-} from "../controllers/KelasController.js";
+  getAllForum,
+  getForumById,
+  createForum,
+  updateForum,
+  deleteForum,
+} from "../controllers/ForumController.js";
 
 const router = express.Router();
-router.get("/kelas", getAllKelas);
-router.get("/kelas/:id", getKelasById);
-router.post("/kelas", createKelas);
-router.patch("/kelas/:id", updateKelas);
-router.delete("/kelas/:id",deleteKelas);
+router.get("/forum", getAllForum);
+router.get("/forum/:id", getForumById);
+router.post("/forum", createForum);
+router.patch("/forum/:id", updateForum);
+router.delete("/forum/:id",deleteForum);
 
 export default router;

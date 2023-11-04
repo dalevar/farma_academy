@@ -1,7 +1,7 @@
-import { Sequlize } from "sequelize";
+import { Sequelize } from "sequelize";
 import db from "../config/Database.js";
 import Users from "./Users.js";
-const { DataTypes } = Sequlize;
+const { DataTypes } = Sequelize;
 
 const SertifikatUser = db.define(
   "sertifikat_user",

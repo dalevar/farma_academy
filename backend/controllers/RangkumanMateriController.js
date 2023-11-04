@@ -1,8 +1,8 @@
 import RangkumanMateri from "../models/RangkumanMateri.js";
-export const getAllQuizMateri = async (req, res) => {
+export const getAllRangkumanMateri = async (req, res) => {
     
 };
-export const getQuizMateriById = async (req, res) => {};
-export const createQuizMateri = async (req, res) => {};
-export const updateQuizMateri = async (req, res) => {};
-export const deleteQuizMateri = async (req, res) => {};
+export const getRangkumanMateriById = async (req, res) => {};
+export const createRangkumanMateri = async (req, res) => {};
+export const updateRangkumanMateri = async (req, res) => {};
+export const deleteRangkumanMateri = async (req, res) => {};
