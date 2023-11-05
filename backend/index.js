@@ -1,11 +1,11 @@
-
 import express from "express";
 import dotenv from "dotenv";
-import bodyParser from "body-parser";
+// import bodyParser from "body-parser";
 import cors from "cors";
 import db from "./config/Database.js";
 import FileUpload from "express-fileupload";
-
+import session from "express-session";
+import AuthRoute from "./routes/AuthRoute.js";
 import UsersRoute from "./routes/UsersRoute.js";
 import subBabRoute from "./routes/SubBabRoute.js";
 import StatusPremiumRoute from "./routes/StatusPremiumRoute.js";
@@ -25,14 +25,30 @@ import ChatKonsulRoute from "./routes/ChatKonsulRoute.js";
 import MateriRoute from "./routes/MateriRoute.js";
 import MateriVideo from "./routes/MateriVideoRoute.js";
 import JawabanQuizRoute from "./routes/JawabanQuizRoute.js";
+import SequelizeStore from 'connect-session-sequelize';
 
-
-(async () => {
-  db.sync();
-})();
+// (async () => {
+//   db.sync();
+// })();
 dotenv.config();
 const app = express();
-app.use(bodyParser.json());
+app.use(express.json());
+const sessionStore = SequelizeStore(session.Store);
+const store = new sessionStore({
+  db: db
+})
+app.use(
+  session({
+    // eslint-disable-next-line no-undef
+    secret: process.env.SESS_SECRET,
+    resave: false,
+    saveUninitialized: true,
+    store: store,
+    cookie: {
+      secure: "auto",
+    },
+  })
+);
 app.use(
   cors({
     credentials: true,
@@ -40,6 +56,8 @@ app.use(
   })
 );
 app.use(FileUpload());
+app.use(AuthRoute);
+app.use(express.static("public"));
 app.use(RoleRoute);
 app.use(ModuleRoute);
 app.use(UsersRoute);
@@ -60,6 +78,7 @@ app.use(CommentMateriRoute);
 app.use(AlatPraktikumRoute);
 app.use(ChatKonsulRoute);
 
+// store.sync();
 // eslint-disable-next-line no-undef
 app.listen(process.env.APP_PORT, () => {
   // eslint-disable-next-line no-undef
