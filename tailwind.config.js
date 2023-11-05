@@ -22,7 +22,7 @@ export default ({
         sans: ["Inter", "sans-serif"],
       },
       boxShadow: {
-        calculatorCardShadow: '2px 4px 6px -1px #085172',
+        CardShadow: '2px 4px 6px -1px #085172',
       },
     },
   },
