@@ -1,0 +1,11 @@
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email" : "lutf8363@gmail.com",
+    "password" : "123456"
+}
+###
+GET http://localhost:5000/sessioninformation
+###
+DELETE http://localhost:5000/logout/64a03af7-c599-4e43-ba58-36f3d7a05a46

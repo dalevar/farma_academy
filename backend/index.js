@@ -1,11 +1,11 @@
 import express from "express";
 import dotenv from "dotenv";
-import bodyParser from "body-parser";
+// import bodyParser from "body-parser";
 import cors from "cors";
 import db from "./config/Database.js";
 import FileUpload from "express-fileupload";
 import session from "express-session";
-
+import AuthRoute from "./routes/AuthRoute.js";
 import UsersRoute from "./routes/UsersRoute.js";
 import subBabRoute from "./routes/SubBabRoute.js";
 import StatusPremiumRoute from "./routes/StatusPremiumRoute.js";
@@ -32,23 +32,19 @@ import SequelizeStore from 'connect-session-sequelize';
 // })();
 dotenv.config();
 const app = express();
-app.use(bodyParser.json());
+app.use(express.json());
 const sessionStore = SequelizeStore(session.Store);
 const store = new sessionStore({
   db: db
 })
 app.use(
   session({
-    // secret digunakan untuk membuat session terenkripsi
     // eslint-disable-next-line no-undef
     secret: process.env.SESS_SECRET,
-    // resave digunakan mengontrol apakah sesi akan disimpan ulang pada setiap permintaan HTTP
     resave: false,
-    // saveUninitalized digunakan untuk mengontrol apakah sesi akan disimpan, meskipun sesi tersebut tidak mengalami perubahan selama permintaan HTTP tertentu.
     saveUninitialized: true,
+    store: store,
     cookie: {
-      // true untuk https, false untuk http, auto untuk mendetksi httpnya apa
-      store: store,
       secure: "auto",
     },
   })
@@ -60,6 +56,7 @@ app.use(
   })
 );
 app.use(FileUpload());
+app.use(AuthRoute);
 app.use(express.static("public"));
 app.use(RoleRoute);
 app.use(ModuleRoute);
