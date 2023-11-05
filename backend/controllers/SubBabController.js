@@ -13,11 +13,13 @@ export const getAllSubBab = async (req, res) => {
     });
 };
 export const getSubBabById = async (req, res) => {
-  await SubBab.findByPk(req.params.id, { include: BabModule }).then(
-    (subbab) => {
+  await SubBab.findByPk(req.params.id, { include: BabModule })
+    .then((subbab) => {
       res.status(200).json({ status: 200, data: subbab, message: "Success" });
-    }
-  );
+    })
+    .catch((err) => {
+      res.status(500).json({ status: 500, message: err });
+    });
 };
 export const createSubBab = async (req, res) => {
   if (req.files === null || !req.files)
@@ -52,7 +54,15 @@ export const createSubBab = async (req, res) => {
         req.body.isGratis === null || !req.body.isGratis ? false : true,
       foto_url: urlProfile,
       foto: subBabFoto,
-    });
+    })
+      .then((err) => {
+        res
+          .status(201)
+          .json({ response: 201, message: "Subbab baru ditambahkan" });
+      })
+      .catch((err) => {
+        res.status(500).json({ response: 500, message: err });
+      });
   });
 };
 export const updateSubBab = async (req, res) => {
@@ -73,7 +83,12 @@ export const updateSubBab = async (req, res) => {
       .status(400)
       .json({ response: 400, message: "Gambar tidak ditemukan" });
 
-  const file = req.files.foto;
+  let file;
+  if (req.files) {
+    const file = req.files.foto;
+  }else{
+    file = subBab.foto
+  }
   const fileSize = file.data.length;
   const ext = path.extname(file.name);
   const subBabFoto =
@@ -110,7 +125,7 @@ export const deleteSubBab = async (req, res) => {
       id: req.params.id,
     },
   });
-  if(subBab === null || !subBab)
+  if (subBab === null || !subBab)
     return res
       .status(404)
       .json({ response: 404, message: "Subbab tidak ditemukan" });

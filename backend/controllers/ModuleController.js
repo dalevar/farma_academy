@@ -28,7 +28,8 @@ export const createModule = async (req, res) => {
   const file = req.files.foto;
   const fileSize = file.data.length;
   const ext = path.extname(file.name);
-  const moduleFoto = req.body.namaModule.replace(/ /g, "_") + "-" + file.md5 + ext;
+  const moduleFoto =
+    req.body.namaModule.replace(/ /g, "_") + "-" + file.md5 + ext;
   const urlModule = `${req.protocol}://${req.get(
     "host"
   )}/images/gambar_module/${moduleFoto}`;
@@ -77,10 +78,16 @@ export const updateModule = async (req, res) => {
       .status(400)
       .json({ response: 400, message: "Gambar tidak ditemukan" });
 
-  const file = req.files.foto;
+  let file;
+  if (req.files) {
+    file = req.files.foto;
+  }else{
+    file = moduleData.foto
+  }
   const fileSize = file.data.length;
   const ext = path.extname(file.name);
-  const moduleFoto = req.body.namaModule.replace(/ /g, "_") + "-" + file.md5 + ext;
+  const moduleFoto =
+    req.body.namaModule.replace(/ /g, "_") + "-" + file.md5 + ext;
   const urlModule = `${req.protocol}://${req.get(
     "host"
   )}/images/gambar_module/${moduleFoto}`;
@@ -124,13 +131,16 @@ export const deleteModule = async (req, res) => {
       .status(404)
       .json({ response: 404, message: "module tidak ditemukan" });
   fs.unlinkSync(`./public/images/gambar_module/${moduleData.foto}`);
-  await moduleData.destroy({
-    where: {
-      id: req.params.id,
-    },
-  }).then(() => {
-    res.status(200).json({ response: 200, message: "Success" });
-  }).catch((err) => {
-    res.status(500).json({ response: 500, message: err.message });
-  });
+  await moduleData
+    .destroy({
+      where: {
+        id: req.params.id,
+      },
+    })
+    .then(() => {
+      res.status(200).json({ response: 200, message: "Success" });
+    })
+    .catch((err) => {
+      res.status(500).json({ response: 500, message: err.message });
+    });
 };

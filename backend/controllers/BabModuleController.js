@@ -80,9 +80,10 @@ export const updateBabModule = async (req, res) => {
       .json({ response: 404, message: "Bab Module tidak ditemukan" });
 
   let file;
-
-  if (req.files === null || !req.files){
-    file = babModule.foto
+  if (req.files) {
+    file = req.files.foto;
+  } else {
+    file = babModule.foto;
   }
 
   const fileSize = file.data.length;
