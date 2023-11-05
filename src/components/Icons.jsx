@@ -38,3 +38,11 @@ export function IconPharmacy() {
         </svg>
     )
 }
+
+export function IconClose() {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-full h-full" viewBox="0 0 12 12" fill="none">
+            <path d="M1.16667 11.6667L0 10.5L4.66667 5.83333L0 1.16667L1.16667 0L5.83333 4.66667L10.5 0L11.6667 1.16667L7 5.83333L11.6667 10.5L10.5 11.6667L5.83333 7L1.16667 11.6667Z" fill="black" />
+        </svg>
+    )
+}

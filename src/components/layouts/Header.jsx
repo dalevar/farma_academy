@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { IconBurger, IconPharmacy, IconSearch, IconSubwayBook } from "../Icons";
-import Dropdown from "../Dropdown";
-import LoginButton from "../button/LoginButton";
+import Dropdown from "../buttons/Dropdown";
+import LoginButton from "../buttons/LoginButton";
 
 
 export default function Header() {
@@ -20,7 +20,7 @@ export default function Header() {
 
 
     return (
-        <header className="sticky top-0 backdrop-blur-sm bg-white/75 select-none z-50">
+        <header className="sticky top-0 select-none z-50 after:w-full after:content-[''] after:-z-10 after:absolute after:top-0 after:h-full after:bg-white/75 after:backdrop-blur-sm">
             <nav className="flex container mx-auto items-center justify-between px-3 lg:px-0">
                 <div className="flex items-center gap-2">
                     {/* logo */}

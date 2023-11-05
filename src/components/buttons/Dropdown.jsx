@@ -2,7 +2,7 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import PropTypes from 'prop-types';
 
-import { IconChevron } from "./Icons";
+import { IconChevron } from "../Icons";
 
 
 export default function Dropdown({ listItems, tittleDropdown }) {
