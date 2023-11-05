@@ -1,22 +1,44 @@
 import { useState } from "react";
-import { IconBurger, IconPharmacy, IconSearch, IconSubwayBook } from "../Icons";
+import { IconBurger, IconPharmacy, IconSearch, IconSubwayBook, IconForum, IconJob, IconEvent } from "../Icons";
 import Dropdown from "../buttons/Dropdown";
 import LoginButton from "../buttons/LoginButton";
+import { Link } from "react-router-dom";
 
 
 export default function Header() {
     const [search, setSearch] = useState('')
 
-    const dropdownListItems = [
-        {
-            icon: <IconSubwayBook />,
-            title: 'Module Belajar',
-        },
-        {
-            icon: <IconPharmacy />,
-            title: 'Alat-alat Laboratorium',
-        },
-    ]
+    const dropdownListItems = {
+        materiBelajar: [
+            {
+                icon: <IconSubwayBook />,
+                title: 'Module Belajar',
+                to: '/modul',
+            },
+            {
+                icon: <IconPharmacy />,
+                title: 'Alat-alat Laboratorium',
+                to: '',
+            },
+        ],
+        community: [
+            {
+                icon: <IconForum />,
+                title: 'Forum Diskusi',
+                to: '',
+            },
+            {
+                icon: <IconJob />,
+                title: 'Job',
+                to: '',
+            },
+            {
+                icon: <IconEvent />,
+                title: 'Event',
+                to: '',
+            },
+        ],
+    }
 
 
     return (
@@ -24,7 +46,9 @@ export default function Header() {
             <nav className="flex container mx-auto items-center justify-between px-3 lg:px-0">
                 <div className="flex items-center gap-2">
                     {/* logo */}
-                    <img src="/logos/Logo.png" alt="Logo" width={90} />
+                    <Link to={'/'}>
+                        <img src="/logos/Logo.png" alt="Logo" width={90} />
+                    </Link>
 
                     {/* search form */}
                     <form>
@@ -52,11 +76,19 @@ export default function Header() {
                     {/* Nav */}
                     <div className="flex gap-5 text-lg mr-5">
                         <div>
-                            <Dropdown tittleDropdown="Materi Belajar" listItems={dropdownListItems} />
+                            <Link to={'/'}>Home</Link>
                         </div>
 
                         <div>
-                            <a href="">Hitung Cepat</a>
+                            <Dropdown tittleDropdown="Materi Belajar" listItems={dropdownListItems.materiBelajar} />
+                        </div>
+
+                        <div>
+                            <Link to={'/#calculator'}>Hitung Cepat</Link>
+                        </div>
+
+                        <div>
+                            <Dropdown tittleDropdown="Community" listItems={dropdownListItems.community} />
                         </div>
 
                         <div>
@@ -68,7 +100,7 @@ export default function Header() {
                     {/* Login or Regis */}
                     <div className="flex gap-2">
                         <LoginButton />
-                        <a href="" className="inline-block px-4 py-2 text-farma-50 bg-farma-800 rounded-md">Daftar</a>
+                        <Link to={'/register'} className="inline-block px-4 py-2 text-farma-50 bg-farma-800 rounded-md">Daftar</Link>
                     </div>
                 </div>
 
