@@ -3,15 +3,14 @@ import {
   getAllChatKonsul,
   getChatKonsulById,
   createChatKonsul,
-  updateChatKonsul,
   deleteChatKonsul,
 } from "../controllers/ChatKonsulController.js";
+import { verifyUser, verifyAdmin } from "../middleware/AuthUser.js";
 
 const router = express.Router();
-router.get("/chatkonsul", getAllChatKonsul);
-router.get("/chatkonsul/:id", getChatKonsulById);
-router.post("/chatkonsul", createChatKonsul);
-router.patch("/chatkonsul/:id", updateChatKonsul);
-router.delete("/chatkonsul/:id",deleteChatKonsul);
+router.get("/chatkonsul", verifyUser, getAllChatKonsul);
+router.get("/chatkonsul/:id", verifyUser, getChatKonsulById);
+router.post("/chatkonsul", verifyUser, createChatKonsul);
+router.delete("/chatkonsul/:id", verifyAdmin, deleteChatKonsul);
 
 export default router;

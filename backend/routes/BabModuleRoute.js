@@ -6,12 +6,13 @@ import {
   updateBabModule,
   deleteBabModule,
 } from "../controllers/BabModuleController.js";
+import { verifyUser, verifyAdmin } from "../middleware/AuthUser.js";
 
 const router = express.Router();
-router.get("/babmodule", getAllBabModule);
-router.get("/babmodule/:id", getBabModuleById);
-router.post("/babmodule", createBabModule);
-router.patch("/babmodule/:id", updateBabModule);
-router.delete("/babmodule/:id",deleteBabModule);
+router.get("/bab", verifyUser, getAllBabModule);
+router.get("/bab/:id", verifyUser, getBabModuleById);
+router.post("/bab", verifyAdmin, createBabModule);
+router.patch("/bab/:id", verifyAdmin, updateBabModule);
+router.delete("/bab/:id", verifyAdmin, deleteBabModule);
 
 export default router;

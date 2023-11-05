@@ -29,7 +29,7 @@ const Module = db.define(
         notEmpty: true,
       },
     },
-    gambar: {
+    foto: {
       type: DataTypes.STRING,
       allowNull: false,
 
@@ -37,6 +37,14 @@ const Module = db.define(
         notEmpty: true,
       },
     },
+    foto_url: {
+      type: DataTypes.STRING,
+      allowNull: false,
+
+      validate: {
+        notEmpty: true,
+      },
+    }
   },
   {
     freezeTableName: true,

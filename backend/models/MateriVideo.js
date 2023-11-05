@@ -14,6 +14,14 @@ const MateriVideo = db.define(
         notEmpty: true,
       },
     },
+    url_video: {
+      type: DataTypes.STRING,
+      allowNull: false,
+
+      validate: {
+        notEmpty: true,
+      }
+    },
     on_duration_question: {
       type: DataTypes.STRING,
       allowNull: true,

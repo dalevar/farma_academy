@@ -31,7 +31,15 @@ const SubBab = db.define(
         notEmpty: true,
       },
     },
-    gambar: {
+    foto: {
+      type: DataTypes.STRING,
+      allowNull: true,
+
+      validate: {
+        notEmpty: true,
+      },
+    },
+    foto_url: {
       type: DataTypes.STRING,
       allowNull: true,
 

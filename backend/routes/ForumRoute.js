@@ -6,12 +6,12 @@ import {
   updateForum,
   deleteForum,
 } from "../controllers/ForumController.js";
-
+import { verifyUser } from "../middleware/AuthUser.js";
 const router = express.Router();
-router.get("/forum", getAllForum);
-router.get("/forum/:id", getForumById);
-router.post("/forum", createForum);
-router.patch("/forum/:id", updateForum);
-router.delete("/forum/:id",deleteForum);
+router.get("/forum", verifyUser, getAllForum);
+router.get("/forum/:id", verifyUser, getForumById);
+router.post("/forum", verifyUser, createForum);
+router.patch("/forum/:id", verifyUser, updateForum);
+router.delete("/forum/:id", verifyUser, deleteForum);
 
 export default router;

@@ -1,4 +1,3 @@
-import Users from "./Users.js";
 import db from "../config/Database.js";
 import { Sequelize } from "sequelize";
 import PaketBelajar from "./PaketBelajar.js";
@@ -68,9 +67,6 @@ const Payment = db.define(
   }
 );
 
-
-Users.hasMany(Payment, { foreignKey: "userId" });
-Payment.belongsTo(Users, { foreignKey: "userId" });
 
 PaketBelajar.hasMany(Payment, { foreignKey: "paketId" });
 Payment.belongsTo(PaketBelajar, { foreignKey: "paketId" });

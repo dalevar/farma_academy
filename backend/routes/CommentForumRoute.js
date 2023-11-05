@@ -6,12 +6,13 @@ import {
   updateCommentForum,
   deleteCommentForum,
 } from "../controllers/CommentForumController.js";
+import { verifyUser } from "../middleware/AuthUser.js";
 
 const router = express.Router();
-router.get("/commentforum", getAllCommentForum);
-router.get("/commentforum/:id", getCommentForumById);
-router.post("/commentforum", createCommentForum);
-router.patch("/commentforum/:id", updateCommentForum);
-router.delete("/commentforum/:id",deleteCommentForum);
+router.get("/commentforum",verifyUser, getAllCommentForum);
+router.get("/commentforum/:id",verifyUser, getCommentForumById);
+router.post("/commentforum", verifyUser, createCommentForum);
+router.patch("/commentforum/:id", verifyUser, updateCommentForum);
+router.delete("/commentforum/:id",verifyUser, deleteCommentForum);
 
 export default router;

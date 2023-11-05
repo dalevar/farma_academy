@@ -1,19 +1,10 @@
 import db from "../config/Database.js";
 import { Sequelize } from "sequelize";
-import Users from "./Users.js";
 import Payment from "./Payment.js";
 import PaketBelajar from "./PaketBelajar.js";
 const { DataTypes } = Sequelize;
 
 const StatusPremium = db.define("status_premium",{
-    userId: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-
-        validate: {
-            isInt: true,
-        }
-    },
     paketId: {
         type: DataTypes.INTEGER,
         allowNull: true,
@@ -42,9 +33,6 @@ const StatusPremium = db.define("status_premium",{
 },{
     freezeTableName: true
 })
-Users.hasMany(StatusPremium);
-StatusPremium.belongsTo(Users, { foreignKey: "userId" });
-
 Payment.hasMany(StatusPremium, { foreignKey: "paymentInfoId" });
 StatusPremium.belongsTo(Payment, { foreignKey: "paymentInfoId" });
 
