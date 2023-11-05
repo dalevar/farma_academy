@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
 import cors from "cors";
-// import db from "./config/Database.js";
+import db from "./config/Database.js";
 import FileUpload from "express-fileupload";
 import session from "express-session";
 
@@ -25,6 +25,7 @@ import ChatKonsulRoute from "./routes/ChatKonsulRoute.js";
 import MateriRoute from "./routes/MateriRoute.js";
 import MateriVideo from "./routes/MateriVideoRoute.js";
 import JawabanQuizRoute from "./routes/JawabanQuizRoute.js";
+import SequelizeStore from 'connect-session-sequelize';
 
 // (async () => {
 //   db.sync();
@@ -32,6 +33,10 @@ import JawabanQuizRoute from "./routes/JawabanQuizRoute.js";
 dotenv.config();
 const app = express();
 app.use(bodyParser.json());
+const sessionStore = SequelizeStore(session.Store);
+const store = new sessionStore({
+  db: db
+})
 app.use(
   session({
     // secret digunakan untuk membuat session terenkripsi
@@ -43,6 +48,7 @@ app.use(
     saveUninitialized: true,
     cookie: {
       // true untuk https, false untuk http, auto untuk mendetksi httpnya apa
+      store: store,
       secure: "auto",
     },
   })
@@ -75,6 +81,7 @@ app.use(CommentMateriRoute);
 app.use(AlatPraktikumRoute);
 app.use(ChatKonsulRoute);
 
+// store.sync();
 // eslint-disable-next-line no-undef
 app.listen(process.env.APP_PORT, () => {
   // eslint-disable-next-line no-undef
