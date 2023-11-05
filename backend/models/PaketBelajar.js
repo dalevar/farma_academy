@@ -12,6 +12,22 @@ const PaketBelajar = db.define("paket_belajar", {
             notEmpty: true,
         }
     },
+    foto: {
+        type: DataTypes.STRING,
+        allowNull: false,
+
+        validate: {
+            notEmpty: true,
+        }
+    },
+    foto_url: {
+        type: DataTypes.STRING,
+        allowNull: false,
+
+        validate: {
+            notEmpty: true,
+        }
+    },
     penjelasan_paket: {
         type: DataTypes.STRING,
         allowNull: false,

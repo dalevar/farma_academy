@@ -28,6 +28,14 @@ const BabModule = db.define("bab_module", {
             notEmpty: true,
         }
     },
+    foto_url: {
+        type: DataTypes.TEXT,
+        allowNull: true,
+
+        validate: {
+            notEmpty: true,
+        }
+    },
     foto: {
         type: DataTypes.TEXT,
         allowNull: true,

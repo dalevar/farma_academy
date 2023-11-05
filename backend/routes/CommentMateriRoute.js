@@ -6,12 +6,13 @@ import {
   updateCommentMateri,
   deleteCommentMateri,
 } from "../controllers/CommentMateriController.js";
+import { verifyUser } from "../middleware/AuthUser.js";
 
 const router = express.Router();
-router.get("/commentmateri", getAllCommentMateri);
-router.get("/commentmateri/:id", getCommentMateriById);
-router.post("/commentmateri", createCommentMateri);
-router.patch("/commentmateri/:id", updateCommentMateri);
-router.delete("/commentmateri/:id",deleteCommentMateri);
+router.get("/commentmateri",verifyUser, getAllCommentMateri);
+router.get("/commentmateri/:id",verifyUser, getCommentMateriById);
+router.post("/commentmateri", verifyUser, createCommentMateri);
+router.patch("/commentmateri/:id", verifyUser, updateCommentMateri);
+router.delete("/commentmateri/:id",verifyUser, deleteCommentMateri);
 
 export default router;

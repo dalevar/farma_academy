@@ -21,6 +21,22 @@ const QuizMateri = db.define("quiz_materi",
         isInt: true,
       },
     },
+    foto: {
+      type: DataTypes.STRING,
+      allowNull: true,
+
+      validate: {
+        notEmpty: true,
+      }
+    },
+    url_foto: {
+      type: DataTypes.STRING,
+      allowNull: true,
+
+      validate: {
+        notEmpty: true,
+      }
+    },
     soal: {
       type: DataTypes.STRING,
       allowNull: false,

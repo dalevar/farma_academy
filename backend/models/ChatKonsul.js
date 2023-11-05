@@ -22,27 +22,34 @@ const ChatKonsultan = db.define(
       },
     },
     chat: {
-        type: DataTypes.TEXT,
-        allowNull: false,
+      type: DataTypes.TEXT,
+      allowNull: false,
 
-        validate: {
-            notEmpty: true,
-        }
+      validate: {
+        notEmpty: true,
+      },
+    },
+    url_file: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+
+      validate: {
+        notEmpty: true,
+      },
     },
     file: {
-        type: DataTypes.TEXT,
-        allowNull: true,
+      type: DataTypes.TEXT,
+      allowNull: true,
 
-        validate: {
-            notEmpty: true,
-        }
-    }
+      validate: {
+        notEmpty: true,
+      },
+    },
   },
   {
     freezeTableName: true,
   }
 );
-
 
 Users.hasMany(ChatKonsultan);
 ChatKonsultan.belongsTo(Users, { foreignKey: "user_konsulId" });

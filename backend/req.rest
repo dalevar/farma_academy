@@ -6,7 +6,7 @@ POST http://localhost:5000/role
 Content-Type: application/json
 
 {
-    "name" : "konsultan"
+    "name" : "super_admin"
 }
 ###
 PATCH http://localhost:5000/role/3

@@ -27,7 +27,6 @@ export const Login = async (req, res) => {
     nomor: user.uuid,
     name: user.nama,
     email: user.email,
-    noHp: user.no_hp,
     role: user.role.nama,
     statusPremiumId: user.statusPremiumId,
   });
@@ -52,7 +51,6 @@ export const SessionInformation = async (req, res) => {
     nomor: user.uuid,
     name: user.nama,
     email: user.email,
-    noHp: user.no_hp,
     role: user.role.nama,
     statusPremiumId: user.statusPremiumId,
   });

@@ -2,7 +2,7 @@ import { Sequelize } from "sequelize";
 import db from "../config/Database.js";
 import Roles from "./Roles.js";
 import Materi from "./Materi.js";
-
+import StatusPremium from "./StatusPremium.js";
 const { DataTypes } = Sequelize;
 
 const Users = db.define(
@@ -40,30 +40,23 @@ const Users = db.define(
         isEmail: true,
       },
     },
-    no_hp: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        notEmpty: true,
-      },
-    },
     username: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       validate: {
         notEmpty: true,
       },
     },
     tempat_lahir: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       validate: {
         notEmpty: true,
       },
     },
     tanggal_lahir: {
       type: DataTypes.DATEONLY,
-      allowNull: false,
+      allowNull: true,
 
       validate: {
         notEmpty: true,
@@ -71,7 +64,7 @@ const Users = db.define(
     },
     jenis_kelamin: {
       type: DataTypes.ENUM("L", "P"),
-      allowNull: false,
+      allowNull: true,
 
       validate: {
         notEmpty: true,
@@ -79,14 +72,14 @@ const Users = db.define(
     },
     domisili_sekarang: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       validate: {
         notEmpty: true,
       },
     },
     pendidikan_terakhir: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
 
       validate: {
         notEmpty: true,
@@ -94,7 +87,7 @@ const Users = db.define(
     },
     pekerjaan: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
 
       validate: {
         notEmpty: true,
@@ -166,6 +159,7 @@ const Users = db.define(
     },
     is_active: {
       type: DataTypes.BOOLEAN,
+      defaultValue: true,
       allowNull: false,
 
       validate: {
@@ -178,6 +172,10 @@ const Users = db.define(
     freezeTableName: true,
   }
 );
+
+StatusPremium.hasMany(Users, {foreignKey: "statusPremiumId"});
+Users.belongsTo(StatusPremium, {foreignKey: "statusPremiumId"});
+
 Materi.hasMany(Users, {foreignKey: "materiId"});
 Users.belongsTo(Materi, {foreignKey: "materiId"});
 
