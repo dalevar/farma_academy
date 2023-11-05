@@ -33,7 +33,7 @@ http://localhost:5000/user
 http://localhost:5000/user/:nis
 ```
 ### Create new user (Method: POST)
-## Key for POST/PATCH data to API
+## Key User API
 ```
 {
   "materiId" : TYPE INTEGER (NULLABLE)
