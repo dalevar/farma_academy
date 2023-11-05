@@ -10,7 +10,7 @@ export default function Footer() {
                         <p className="break-words leading-tight text-lg w-full text-center">Academy Online Farmasi pertama yang telah berkerjasama dengan DUDI</p>
                     </div>
                 </div>
-                <div className="flex justify-between flex-auto">
+                <div className="flex justify-between flex-auto flex-wrap">
                     <div>
                         <span className="font-semibold">TENTANG KAMI</span>
                     </div>
