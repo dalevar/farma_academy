@@ -2,6 +2,7 @@ import CalculatorCard from "../../components/card/Calculator";
 import { IconSubwayBook } from "../../components/Icons";
 
 const LandingPage = () => {
+
   return (
     <div>
       {/* banner */}
@@ -45,6 +46,20 @@ const LandingPage = () => {
 
       </section>
 
+
+      <section className="bg-farma-100 mt-20 text-farma-950">
+        <div className="container mx-auto flex items-center min-h-screen">
+          <div className="flex-auto">
+            <p className="break-words text-3xl leading-tight font-semibold">Solusi belajar farmasi yang terjangkau dan efektif</p>
+            <p className="text-farma-800 leading-tight break-words">Kami menawarkan berbagai program pembelajaran farmasi online yang bisa kamu pilih sesuai kebutuhanmu.</p>
+
+
+          </div>
+          <div className="basis-1/2">
+
+          </div>
+        </div>
+      </section>
 
 
     </div>

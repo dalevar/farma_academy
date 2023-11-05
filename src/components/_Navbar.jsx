@@ -1,5 +1,6 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
+
 const Navbar = () => {
   let [search, setSearch] = useState("");
   const navigation = useNavigate();
@@ -15,7 +16,7 @@ const Navbar = () => {
     <nav className="fixed top-0 w-full flex justify-between items-center p-5 h-28 bg-white">
       <div className="w-40 2xl:w-44 xl:w-44 lg:w-28 md:w-32 sm:w-28">
         <img
-          src="/images/BIG LOGO.png"
+          src="/logos/BigLogo.png"
           alt="none"
           className="object-cover w-full"
         />
@@ -72,30 +73,26 @@ const Navbar = () => {
         <div className="nav-list hidden items-center 2xl:me-16 xl:me-8 me-14 2xl:flex xl:flex lg:flex md:flex sm:hidden flex-wrap justify-between">
           <ul className="flex items-center text-farma-950 font-medium">
             <li
-              className={`me-6 2xl:text-xl lg:text-md ${
-                paramsSlug === "materi" && "underline decoration-farma-700"
-              }`}
+              className={`me-6 2xl:text-xl lg:text-md ${paramsSlug === "materi" && "underline decoration-farma-700"
+                }`}
             >
               <Link to={"./module"}>Materi belajar</Link>
             </li>
             <li
-              className={`me-5 2xl:text-xl lg:text-md ${
-                paramsSlug === "materi" && "underline decoration-farma-700"
-              }`}
+              className={`me-5 2xl:text-xl lg:text-md ${paramsSlug === "materi" && "underline decoration-farma-700"
+                }`}
             >
               <Link to={"./hitung-cepat"}>Hitung cepat</Link>
             </li>
             <li
-              className={`me-5 2xl:text-xl lg:text-md ${
-                paramsSlug === "materi" && "underline decoration-farma-700"
-              }`}
+              className={`me-5 2xl:text-xl lg:text-md ${paramsSlug === "materi" && "underline decoration-farma-700"
+                }`}
             >
               <Link to={"./community"}>Community</Link>
             </li>
             <li
-              className={`me-5 2xl:text-xl lg:text-md ${
-                paramsSlug === "materi" && "underline decoration-farma-700"
-              }`}
+              className={`me-5 2xl:text-xl lg:text-md ${paramsSlug === "materi" && "underline decoration-farma-700"
+                }`}
             >
               <Link to={"./langganan"}>Langganan</Link>
             </li>
