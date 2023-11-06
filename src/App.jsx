@@ -1,10 +1,18 @@
 import { Route, Routes } from "react-router-dom";
-import LandingPage from "./pages/landing_page/App";
+
+// component
 import Header from "./components/layouts/Header";
 import Footer from "./components/layouts/Footer";
-import Register from "./pages/register/app";
+
+// pages
+import LandingPage from "./pages/landing_page/App";
 import ModulePage from "./pages/module_page/App";
-import AccsessModule from "./pages/accsess_module_page/App";
+import RegisterPage from "./pages/register/app";
+import AccessesModulePage from './pages/Accesses_module_page/App'
+import LanggananPage from "./pages/langganan/App";
+import ForumPage from "./pages/forum/App";
+import DashboardPage from "./pages/dashboard/App";
+
 
 export default function App() {
   return (
@@ -13,10 +21,14 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/langganan" element={<LanggananPage />} />
+        <Route path="/forum" element={<ForumPage />} />
         <Route path="/modul" element={<ModulePage />} />
-        <Route path="/modul/akses" element={<AccsessModule />} />
+        <Route path="/modul/akses" element={<AccessesModulePage />} />
       </Routes>
+
       <Footer />
     </div>
   );

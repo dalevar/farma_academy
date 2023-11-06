@@ -1,4 +1,4 @@
-export default function HeaderAccsess() {
+export default function HeaderAccesses() {
   return (
     <section
       id="calculator"

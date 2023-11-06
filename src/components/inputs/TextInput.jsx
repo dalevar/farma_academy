@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 
 export default function TextInput({ name, type, placeholder, required }) {
-    console.log(required);
     return (
         <div className="relative flex items-center select-none">
             <input type={type} name={name} placeholder=" " required={required} id={name} className={"peer border-2 border-farma-200 rounded-md w-full py-2 px-2 outline-none "} />

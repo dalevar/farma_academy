@@ -2,7 +2,7 @@ import ButtonSubmit from "../../components/buttons/ButtonSubmit";
 import PasswordInput from "../../components/inputs/PasswordInput";
 import TextInput from "../../components/inputs/TextInput";
 
-export default function Register() {
+export default function RegisterPage() {
     return (
         <main className="flex-auto flex justify-center items-center">
             <div>
