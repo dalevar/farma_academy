@@ -1,4 +1,5 @@
 import Forum from "../models/Forum.js";
+// eslint-disable-next-line no-unused-vars
 import CommentForum from "../models/CommentForum.js";
 import Users from "../models/Users.js";
 import path from "path";
@@ -21,25 +22,54 @@ export const updateLike = async (req, res) => {
 };
 
 export const getAllForum = async (req, res) => {
- const commentForum =  await CommentForum.findAll({
+  const dataForum = await Forum.findAll({
     include: [{
-      model: Forum,
-    },{
-        model: Users
-    }]
- });
-  await Forum.findAll({
+      model: Users,
+      attributes: ["nama", "email", "username"],
+    }, {
+      model: CommentForum,
+    }],
+  }).then((dataForm) => {
+    let commentCount = 0;
+    dataForm.map((value) => {
+      commentCount = commentCount + value.comment_forums.length
+    })
+    let data = [...dataForm]
+    data.push({commentCount: commentCount})
+    return res.status(200).json({ status: 200, dataForum: data, message: "Success" });
+  }).catch((err) => {
+    return res.status(500).json({ status: 500, message: err.message });
+  })
+
+};
+export const getForumById = async (req, res) => {
+  // 7252eee6-bf37-428e-93b0-c463a4107fde
+  await Forum.findOne({
+    where: {
+      uuid: req.params.id,
+    },
     include: {
-      model: Users, 
+      model: Users,
+      attributes: ["nama", "email", "username"],
     },
   })
     .then(async (data) => {
-      //   const commentCount = await countCommentForum(data.id);
-
+      if (!data || data === null) {
+        return res.status(404).json({ status: 404, message: "data not found" });
+      }
+      const commentData = await CommentForum.findAll({
+        where: {
+          forumId: data.id,
+        },
+        include: {
+          model: Users,
+          attributes: ["nama", "email", "username"],
+        },
+      });
       res.status(200).json({
         status: 200,
-        data: data,
-        commentForum: commentForum,
+        dataForum: data,
+        commentData: commentData,
         message: "Success",
       });
     })
@@ -47,24 +77,7 @@ export const getAllForum = async (req, res) => {
       res.status(500).json({ status: 500, message: err.message });
     });
 };
-export const getForumById = async (req, res) => {
-  await Forum.findByPk(req.params.id, {
-    include: {
-      model: Users,
-    },
-  })
-    .then((data) => {
-      if (!data || data === null) {
-        return res.status(404).json({ status: 404, message: "data not found" });
-      }
-      res.status(200).json({ status: 200, data: data, message: "Success" });
-    })
-    .catch((err) => {
-      res.status(500).json({ status: 500, message: err.message });
-    });
-};
 export const createForum = async (req, res) => {
-    
   let file = null;
   let urlFile = null;
   let fileData = null;

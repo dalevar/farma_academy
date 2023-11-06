@@ -22,7 +22,6 @@ export const getAllCommentForum = async (req, res) => {
       res.status(500).json({ status: 500, message: err.message });
     });
 };
-
 export const getCommentForumById = async (req, res) => {
   await CommentForum.findOne({
     where: {
@@ -54,8 +53,8 @@ export const createCommentForum = async (req, res) => {
   if (req.files) {
     file = req.files.file;
     const ext = path.extname(file.name);
-    fileName = req.body.title.replace(/ /g, "_") + "-" + file.md5 + ext;
-    urlFile = `${req.protocol}://${req.get("host")}/images/forum/${fileName}`;
+    fileName = file.md5 + ext;
+    urlFile = `${req.protocol}://${req.get("host")}/files/comment_forum/${fileName}`;
     const notAllowedType = [".exe", ".c", ".js", ""];
     if (notAllowedType.includes(ext))
       return res
