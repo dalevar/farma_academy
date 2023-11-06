@@ -40,6 +40,13 @@ const Users = db.define(
         isEmail: true,
       },
     },
+    no_hp: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      validate: {
+        notEmpty: true,
+      },
+    },
     username: {
       type: DataTypes.STRING,
       allowNull: true,
