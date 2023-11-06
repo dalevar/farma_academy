@@ -20,6 +20,14 @@ const AlatPraktikum = db.define("alat_praktikum", {
             notEmpty: true,
         }
     },
+    foto_url: {
+        type: DataTypes.STRING,
+        allowNull: false,
+
+        validate: {
+            notEmpty: true,
+        }
+    },
     foto: {
         type: DataTypes.TEXT,
         allowNull: false,

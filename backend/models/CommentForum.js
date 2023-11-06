@@ -30,6 +30,14 @@ const CommentForum = db.define("comment_forum", {
       notEmpty: true,
     }
   },
+  url_file: {
+    type: DataTypes.TEXT,
+    allowNull: true,
+
+    validate: {
+      notEmpty: true,
+    }
+  },
   file: {
     type: DataTypes.TEXT,
     allowNull: true,

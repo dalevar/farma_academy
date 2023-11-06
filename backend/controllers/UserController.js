@@ -105,6 +105,10 @@ export const updateUser = async (req, res) => {
       },
     ],
   });
+  if (user === null || user === undefined)
+    return res
+      .status(404)
+      .json({ userData: user, repsonse: 404, message: "data not found" });
   const emailUser = req.body.email
     ? await Users.findOne({
         where: {
@@ -119,10 +123,21 @@ export const updateUser = async (req, res) => {
         },
       })
     : null;
+  const noHp = req.body.noHp
+    ? await Users.findOne({
+        where: {
+          no_hp: req.body.noHp,
+        },
+      })
+    : null;
   if (username && user.dataValues.uuid !== req.params.nis)
     return res
       .status(400)
       .json({ response: 400, message: "Username sudah digunakan" });
+  if (noHp && user.dataValues.uuid !== req.params.nis)
+    return res
+      .status(400)
+      .json({ response: 400, message: "No hp sudah digunakan" });
   if (emailUser && user.dataValues.uuid !== req.params.nis)
     return res
       .status(400)
@@ -234,7 +249,8 @@ export const updateUser = async (req, res) => {
     {
       nama: req.body.name,
       email: req.body.email,
-      no_hp: Number(req.body.noHp),
+      materiId: req.body.materiId,
+      no_hp: req.body.noHp,
       username: req.body.username,
       tempat_lahir: req.body.tempatLahir,
       tanggal_lahir: req.body.tglLahir ? moment(req.body.tglLahir) : null,

@@ -41,6 +41,13 @@ const Forum = db.define("forum", {
             notEmpty: true,
         }
     },
+    url_file: {
+        type: DataTypes.STRING,
+        allowNull: true,
+        validate: {
+            notEmpty: true,
+        }
+    },
     file: {
         type: DataTypes.STRING,
         allowNull: true,

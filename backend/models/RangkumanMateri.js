@@ -22,6 +22,14 @@ const RangkumanMateri = db.define(
         notEmpty: true,
       },
     },
+    url_file: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+  
+      validate: {
+        notEmpty: true,
+      }
+    },
     file: {
       type: DataTypes.STRING,
       allowNull: true,

@@ -33,6 +33,14 @@ const Materi = db.define(
         isInt: true,
       },
     },
+    gambar_url: {
+      type: DataTypes.STRING,
+      allowNull: false,
+
+      validate: {
+        notEmpty: true,
+      }
+    },
     gambar_materi: {
       type: DataTypes.STRING,
       allowNull: false,
