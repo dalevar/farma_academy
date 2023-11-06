@@ -1,10 +1,10 @@
 import BannerSection from "./BannerSection";
+import CTAsection from "./CTA";
 import CalculatorSection from "./CalculatorSection";
 import OfferSection from "./OfferSection";
 import TrustedBySection from "./TrustedBySection";
 
 const LandingPage = () => {
-
   return (
     <div>
       {/* banner */}
@@ -19,7 +19,10 @@ const LandingPage = () => {
       {/* penawaran mendaftar */}
       <OfferSection />
 
+      
 
+      {/* CTA before Footer */}
+      <CTAsection />
     </div>
   );
 };
