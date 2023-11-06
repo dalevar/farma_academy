@@ -10,9 +10,9 @@ export default function Dropdown({ listItems, tittleDropdown }) {
     const [isOpen, setIsOpen] = useState(false)
     return (
         <div className="relative select-none">
-            <button className="flex items-center" onClick={() => setIsOpen(value => !value)}>{tittleDropdown} <span className={"w-4 h-4 inline-flex transition-all items-center " + (isOpen && ' rotate-180')}><IconChevron /></span></button>
+            <button className="flex items-center whitespace-nowrap" onClick={() => setIsOpen(value => !value)}>{tittleDropdown} <span className={"w-4 h-4 inline-flex transition-all items-center " + (isOpen && ' rotate-180')}><IconChevron /></span></button>
 
-            {/* <AnimatePresence> */}
+
             {isOpen &&
                 <>
                     {/* the close button when clicked anywhere other than the dropdown content */}
@@ -30,7 +30,8 @@ export default function Dropdown({ listItems, tittleDropdown }) {
                     </motion.div>
                 </>
             }
-            {/* </AnimatePresence> */}
+
+
         </div>
     )
 }

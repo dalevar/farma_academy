@@ -1,12 +1,11 @@
-import { useState } from "react";
-import { IconBurger, IconPharmacy, IconSearch, IconSubwayBook, IconForum, IconJob, IconEvent } from "../Icons";
+import { IconBurger, IconPharmacy, IconSubwayBook, IconForum, IconJob, IconEvent } from "../Icons";
 import Dropdown from "../buttons/Dropdown";
 import LoginButton from "../buttons/LoginButton";
 import { Link } from "react-router-dom";
+import SearchInput from "../inputs/SearchInput";
 
 
 export default function Header() {
-    const [search, setSearch] = useState('')
 
     const dropdownListItems = {
         materiBelajar: [
@@ -52,18 +51,7 @@ export default function Header() {
 
                     {/* search form */}
                     <form>
-                        <div className="relative flex items-center">
-                            <input onInput={(event) => setSearch(event.target.value)} type="text" name="search" id="search" className="border border-farma-400 pr-3 pl-10 w-full outline-none py-2 rounded-md" placeholder="Materi apa yang kamu cari ?" />
-                            <label htmlFor="search" className="absolute left-2 w-6 h-6"><IconSearch /></label>
-                            {search !== '' &&
-                                <div className="absolute top-11 rounded-md w-full border border-farma-200">
-                                    <div className="border rounded-md py-1 px-2 m-2">{search}</div>
-                                    <a href="" className="px-4 py-2 mt-2 bg-farma-200 flex justify-between">
-                                        Lihat Semua Kelas <span>&gt;</span>
-                                    </a>
-                                </div>
-                            }
-                        </div>
+                        <SearchInput />
                     </form>
 
                 </div>
@@ -72,9 +60,9 @@ export default function Header() {
 
 
                 {/* nav ketika lebih dari lg */}
-                <div className="items-center gap-5 hidden lg:flex">
+                <div className="items-center gap-2 hidden lg:flex">
                     {/* Nav */}
-                    <div className="flex gap-5 text-lg mr-5">
+                    <div className="flex gap-3 whitespace-nowrap text-lg mr-4 text-base">
                         <div>
                             <Link to={'/'}>Home</Link>
                         </div>
