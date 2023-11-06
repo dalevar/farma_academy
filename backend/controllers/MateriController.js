@@ -39,7 +39,7 @@ export const createMateri = async (req, res) => {
   )}/videos/materi/${videoName}`;
 
   const allowedType = [".mp4", ".mkv", ".mp3"];
-  if (!allowedType.include(ext.toLowerCase()))
+  if (!allowedType.includes(ext.toLowerCase()))
     return res
       .status(400)
       .json({ repsonse: 400, message: "Tipe file tidak sesuai" });
@@ -80,11 +80,11 @@ export const createMateri = async (req, res) => {
               .json({ response: 500, message: err.message });
           await Materi.create({
             subBabId: req.body.subBabId,
-            nama_materi: req.body.NamaMateri,
+            nama_materi: req.body.namaMateri,
             videoId: data.id,
             gambar_materi: materiFoto,
             gambar_url: urlMateri,
-            pengantarMateri: req.body.pengantarMateri,
+            pengantar_materi: req.body.pengantarMateri,
           })
             .then(async (data) => {
               const materiData = await Materi.findByPk(data.id, {
@@ -131,7 +131,7 @@ export const updateMateri = async (req, res) => {
     const ext = path.extname(video.name);
     videoName = video.md5 + ext;
     const allowedType = [".mp4", ".mkv", ".mp3"];
-    if (!allowedType.include(ext.toLowerCase()))
+    if (!allowedType.includes(ext.toLowerCase()))
       return res
         .status(400)
         .json({ status: 400, message: "Tipe file tidak sesuai" });

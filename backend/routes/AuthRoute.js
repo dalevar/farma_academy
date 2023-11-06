@@ -4,7 +4,7 @@ import {Login, SessionInformation, Logout} from "../controllers/AuthController.j
 const route = express.Router();
 
 route.post("/login", Login);
-route.get("/sessioninformation", SessionInformation);
+route.get("/sessioninfo", SessionInformation);
 route.delete("/logout/:id", Logout);
 
 export default route

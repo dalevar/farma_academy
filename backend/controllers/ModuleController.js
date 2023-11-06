@@ -43,24 +43,24 @@ export const createModule = async (req, res) => {
       .status(400)
       .json({ response: 400, message: "Tipe file tidak sesuai" });
 
-  file
-    .mv(`./public/images/gambar_module/${moduleFoto}`, async (err) => {
-      if (err) return res.status(500).json({ response: 500, message: err });
-      await Module.create({
-        nama_module: req.body.namaModule,
-        penjelasan_materi: req.body.penjelasanMateri,
-        category: req.body.category,
-        foto_url: urlModule,
-        foto: moduleFoto,
-      }).then((data) => {
+  file.mv(`./public/images/gambar_module/${moduleFoto}`, async (err) => {
+    if (err) return res.status(500).json({ response: 500, message: err });
+    await Module.create({
+      nama_module: req.body.namaModule,
+      penjelasan_materi: req.body.penjelasanMateri,
+      category: req.body.category,
+      foto_url: urlModule,
+      foto: moduleFoto,
+    })
+      .then((data) => {
         res
           .status(201)
           .json({ response: 201, data, message: "Module baru ditambahkan" });
+      })
+      .catch((err) => {
+        res.status(500).json({ response: 500, message: err });
       });
-    })
-    .catch((err) => {
-      res.status(500).json({ response: 500, message: err });
-    });
+  });
 };
 export const updateModule = async (req, res) => {
   const moduleData = await Module.findOne({
@@ -73,51 +73,57 @@ export const updateModule = async (req, res) => {
       .status(404)
       .json({ response: 404, message: "Module tidak ditemukan" });
 
-  if (req.files === null || !req.files)
-    return res
-      .status(400)
-      .json({ response: 400, message: "Gambar tidak ditemukan" });
-
   let file;
+  let urlModule;
+  let moduleFoto;
   if (req.files) {
     file = req.files.foto;
-  }else{
-    file = moduleData.foto
+    const fileSize = file.data.length;
+    const ext = path.extname(file.name);
+    moduleFoto = req.body.namaModule.replace(/ /g, "_") + "-" + file.md5 + ext;
+    urlModule = `${req.protocol}://${req.get(
+      "host"
+    )}/images/gambar_module/${moduleFoto}`;
+    const allowedType = [".jpeg", ".jpg", ".png"];
+    if (fileSize > 10000000)
+      return res
+        .status(400)
+        .json({ response: 400, message: "Ukuran foto terlalu besar" });
+    if (!allowedType.includes(ext.toLowerCase()))
+      return res
+        .status(400)
+        .json({ response: 400, message: "Tipe file tidak sesuai" });
+  } else {
+    file = null;
+    urlModule = moduleData.foto_url;
+    moduleFoto = moduleData.foto;
   }
-  const fileSize = file.data.length;
-  const ext = path.extname(file.name);
-  const moduleFoto =
-    req.body.namaModule.replace(/ /g, "_") + "-" + file.md5 + ext;
-  const urlModule = `${req.protocol}://${req.get(
-    "host"
-  )}/images/gambar_module/${moduleFoto}`;
-  const allowedType = [".jpeg", ".jpg", ".png"];
-  if (fileSize > 10000000)
-    return res
-      .status(400)
-      .json({ response: 400, message: "Ukuran foto terlalu besar" });
-  if (!allowedType.includes(ext.toLowerCase()))
-    return res
-      .status(400)
-      .json({ response: 400, message: "Tipe file tidak sesuai" });
-
-  fs.unlinkSync("./public/images/gambar_module/${module.foto}");
-  file.mv(`./public/images/gambar_module/${moduleFoto}`, async (err) => {
-    if (err) return res.status(500).json({ response: 500, message: err });
-    await Module.update({
+  if (req.files) {
+    fs.unlinkSync(`./public/images/gambar_module/${moduleData.foto}`);
+    file.mv(`./public/images/gambar_module/${moduleFoto}`, async (err) => {
+      if (err) return res.status(500).json({ response: 500, message: err });
+    });
+  }
+  await Module.update(
+    {
       nama_module: req.body.namaModule,
       penjelasan_materi: req.body.penjelasanMateri,
       category: req.body.category,
       foto_url: urlModule,
       foto: moduleFoto,
+    },
+    {
+      where: {
+        id: req.params.id,
+      },
+    }
+  )
+    .then(() => {
+      res.status(200).json({ response: 200, message: "Success" });
     })
-      .then(() => {
-        res.status(200).json({ response: 200, message: "Success" });
-      })
-      .catch((err) => {
-        res.status(500).json({ response: 500, message: err.message });
-      });
-  });
+    .catch((err) => {
+      res.status(500).json({ response: 500, message: err.message });
+    });
 };
 // eslint-disable-next-line no-unused-vars
 export const deleteModule = async (req, res) => {
