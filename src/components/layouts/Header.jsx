@@ -24,17 +24,17 @@ export default function Header() {
             {
                 icon: <IconForum />,
                 title: 'Forum Diskusi',
-                to: '',
+                to: '/forum',
             },
             {
                 icon: <IconJob />,
                 title: 'Job',
-                to: '',
+                to: '/job',
             },
             {
                 icon: <IconEvent />,
                 title: 'Event',
-                to: '',
+                to: '/event',
             },
         ],
     }
@@ -42,7 +42,7 @@ export default function Header() {
 
     return (
         <header className="sticky top-0 select-none z-50 after:w-full after:content-[''] after:-z-10 after:absolute after:top-0 after:h-full after:bg-white/75 after:backdrop-blur-sm">
-            <nav className="flex container mx-auto items-center justify-between px-3 lg:px-0">
+            <nav className="flex container mx-auto items-center justify-between px-3">
                 <div className="flex items-center gap-2">
                     {/* logo */}
                     <Link to={'/'}>
@@ -62,7 +62,7 @@ export default function Header() {
                 {/* nav ketika lebih dari lg */}
                 <div className="items-center gap-2 hidden lg:flex">
                     {/* Nav */}
-                    <div className="flex gap-3 whitespace-nowrap text-lg mr-4 text-base">
+                    <div className="flex gap-3 whitespace-nowrap mr-4 text-sm">
                         <div>
                             <Link to={'/'}>Home</Link>
                         </div>
@@ -80,7 +80,7 @@ export default function Header() {
                         </div>
 
                         <div>
-                            <a href="">Langganan</a>
+                            <Link to="/langganan">Langganan</Link>
                         </div>
                     </div>
 

@@ -5,13 +5,13 @@ export default function BannerSection() {
     <section className="container flex items-center min-h-screen px-4 mx-auto">
       <div className="flex flex-col gap-4 px-3 md:basis-2/3 lg:px-0">
         <div>
-          <p className="text-2xl font-bold leading-tight tracking-tight break-words text-farma-950 md:text-5xl">
+          <p className="text-2xl font-bold leading-tight tracking-tight break-words text-farma-950 xl:text-5xl sm:text-3xl">
             Daftar sekarang dan jadilah apoteker dan tenaga kesehatan lainnya di
             bidang farmasi yang andal!
           </p>
         </div>
         <div>
-          <p className="text-sm leading-tight break-words  text-farma-800 md:text-xl">
+          <p className="text-xs leading-tight break-words tracking-wide text-farma-800 sm:text-sm xl:text-xl">
             Wujudkan impianmu menjadi apoteker atau tenaga kesehatan lainnya di
             bidang farmasi
           </p>

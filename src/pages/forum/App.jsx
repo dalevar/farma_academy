@@ -1,7 +1,7 @@
-export default function LanggananPage() {
+export default function ForumPage() {
     return (
         <main className="flex-auto">
-            halaman langganan
+            halaman Forum
         </main>
     )
 }

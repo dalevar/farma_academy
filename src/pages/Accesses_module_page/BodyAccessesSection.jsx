@@ -1,4 +1,4 @@
-export default function BodyAccsess() {
+export default function BodyAccesses() {
   return (
     <section className="container flex flex-col gap-5 px-3 py-32 mx-auto bg-farma-50">
       <div className="flex max-w-screen-lg mx-auto">
