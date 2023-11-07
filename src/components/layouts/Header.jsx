@@ -71,7 +71,7 @@ export default function Header() {
                         <div className="relative">
                             <Link to={'/'}>Home</Link>
                             {pathName == '/' &&
-                                <motion.span initial="false" layoutId="nav-active" className="inline-block w-full border-b-2 border-pale-grey absolute bottom-0 left-0"></motion.span>
+                                <motion.span initial={false} layout="size" layoutId="nav-active" className="inline-block w-full border-b-2 border-pale-grey absolute bottom-0 left-0"></motion.span>
                             }
                         </div>
 
@@ -91,7 +91,7 @@ export default function Header() {
                         <div className="relative">
                             <Link to="/langganan">Langganan</Link>
                             {pathName == '/langganan' &&
-                                <motion.span initial="false" layoutId="nav-active" className="inline-block w-full border-b-2 border-pale-grey absolute bottom-0 left-0"></motion.span>
+                                <motion.span initial="false" layout="size" layoutId="nav-active" className="inline-block w-full border-b-2 border-pale-grey absolute bottom-0 left-0"></motion.span>
                             }
                         </div>
                     </div>
