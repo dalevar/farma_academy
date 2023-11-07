@@ -5,7 +5,11 @@ export default ({
   theme: {
     extend: {
       colors: {
-        "white": "#FFFFFF",
+        "primary-lighter": "#DCF2ED",
+        "primary-light": "#B8EBFF",
+        "primary-dark": "#085172",
+        "primary-darkest": "#072125",
+        "pale-grey": "#33CCFF",
         "farma-50": "#EFFAFF",
         "farma-100": "#DFF4FF",
         "farma-200": "#B8EBFF",

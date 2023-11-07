@@ -1,7 +1,8 @@
 import BannerSection from "./BannerSection";
-import CTAsection from "./CTA";
+import CTASection from "./CTA";
 import CalculatorSection from "./CalculatorSection";
 import OfferSection from "./OfferSection";
+import TheSolutionOffered from "./TheSolutionOfferedSection";
 import TrustedBySection from "./TrustedBySection";
 
 const LandingPage = () => {
@@ -19,10 +20,11 @@ const LandingPage = () => {
       {/* penawaran mendaftar */}
       <OfferSection />
 
-      
-
       {/* CTA before Footer */}
-      <CTAsection />
+      <CTASection />
+
+      {/* the solution offered */}
+      <TheSolutionOffered />
     </div>
   );
 };

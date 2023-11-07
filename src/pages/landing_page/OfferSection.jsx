@@ -7,8 +7,8 @@ export default function OfferSection() {
         <section className="bg-farma-100 mt-20 text-farma-950 px-4">
             <div className="container mx-auto flex items-center min-h-screen">
                 <div className="flex-auto flex justify-center">
-                    <div className="basis-1/2 bg-farma-800 rounded-2xl relative">
-                        <img src="/images/landingPages/landingPage2.png" alt="" className="relative w-full h-full bg-farma-500 top-6 left-6 rounded-2xl" />
+                    <div className="h-full rounded-2xl relative">
+                        <img src="/images/landingPages/landingPage2.png" alt="" className="w-full h-full rounded-2xl" />
                     </div>
                 </div>
                 <div className="basis-1/2">

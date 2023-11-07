@@ -1,7 +1,7 @@
 import { IconBurger, IconPharmacy, IconSubwayBook, IconForum, IconJob, IconEvent } from "../Icons";
 import Dropdown from "../buttons/Dropdown";
-import LoginButton from "../buttons/LoginButton";
-// import { Link } from "react-router-dom";
+// import LoginButton from "../buttons/LoginButton";
+import { Link } from "react-router-dom";
 import SearchInput from "../inputs/SearchInput";
 
 
@@ -87,8 +87,10 @@ export default function Header() {
 
                     {/* Login or Regis */}
                     <div className="flex gap-2">
-                        <LoginButton />
-                        <a href={'/register'} className="inline-block px-4 py-2 text-farma-50 bg-farma-800 rounded-md">Daftar</a>
+                        {/* <LoginButton /> */}
+
+                        <Link to={'/login'} className="inline-block px-4 py-2 text-farma-800 bg-farma-200 rounded-md">Masuk</Link>
+                        <Link to={'/register'} className="inline-block px-4 py-2 text-farma-50 bg-farma-800 rounded-md">Daftar</Link>
                     </div>
                 </div>
 
