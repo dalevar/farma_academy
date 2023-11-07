@@ -23,7 +23,7 @@ export default function Dropdown({ listItems, tittleDropdown }) {
                         {
                             listItems.map((listItem, i) => {
                                 return (
-                                    <Link key={i} to={listItem.to} className="flex items-center gap-1"><span className="inline-block w-6 h-6">{listItem.icon}</span> {listItem.title}</Link>
+                                    <a key={i} href={listItem.to} className="flex items-center gap-1"><span className="inline-block w-6 h-6">{listItem.icon}</span> {listItem.title}</a>
                                 )
                             })
                         }

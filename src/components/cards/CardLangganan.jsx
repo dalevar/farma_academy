@@ -4,11 +4,11 @@ import ButtonLangganan from "../buttons/ButtonLangganan";
 
 const CardLangganan = ({ paket, harga, benefit }) => {
   return (
-    <div className="bg-gray-300 w-72 rounded-lg p-5">
-      <p className="text-farma-950 font-semibold text-3xl mt-12">
+    <div className="bg-[#F2F4FF] w-72 rounded-lg p-5">
+      <p className="text-farma-950 font-semibold text-3xl mt-5 text-center">
         Paket {paket}
       </p>
-      <p className="text-farma-950 font-normal mt-3 text-lg">Rp. {harga}</p>
+      <p className="text-farma-950 font-normal mt-3 text-lg text-center">Rp. {harga}</p>
       <ButtonLangganan>Pilih Paket</ButtonLangganan>
       <div className="mt-8 mb-5">
         {benefit.map((value, i) => {

@@ -28,7 +28,8 @@ export default function App() {
         <Route path="/forum" element={<ForumPage />} />
         <Route path="/forum/forumId" element={<DetailForum />} />
         <Route path="/modul" element={<ModulePage />} />
-        <Route path="/modul/akses" element={<AccessesModulePage />} />
+        <Route path="/modul/materi/akses" />
+        <Route path="/modul/materi" element={<AccessesModulePage />} />
       </Routes>
 
       <Footer />
