@@ -27,9 +27,9 @@ import MateriVideo from "./routes/MateriVideoRoute.js";
 import JawabanQuizRoute from "./routes/JawabanQuizRoute.js";
 import SequelizeStore from 'connect-session-sequelize';
 
-  // (async () => {
-  //   db.sync();
-  // })();
+  (async () => {
+    db.sync();
+  })();
 dotenv.config();
 const app = express();
 app.use(express.json());

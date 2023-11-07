@@ -12,8 +12,8 @@ export default function SearchInput() {
 
             <AnimatePresence >
                 {search !== '' &&
-                    <motion.div initial={{ opacity: 0 }} exit={{ opacity: 0 }} animate={{ opacity: 1 }} className="absolute top-11 rounded-md w-full border border-farma-200">
-                        <div className="border rounded-md py-1 px-2 m-2">{search}</div>
+                    <motion.div initial={{ opacity: 0 }} exit={{ opacity: 0 }} animate={{ opacity: 1 }} className="absolute top-11 rounded-md w-full border bg-white border-farma-200">
+                        <div className="border rounded-md py-1 px-2 m-2 bg-white">{search}</div>
                         <a href="" className="px-4 py-2 mt-2 bg-farma-200 flex justify-between">
                             Lihat Semua Kelas <span>&gt;</span>
                         </a>
