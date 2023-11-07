@@ -13,6 +13,7 @@ import LanggananPage from "./pages/langganan/App";
 import ForumPage from "./pages/forum/App";
 import DetailForum from "./pages/forum/DetailForum";
 import DashboardPage from "./pages/dashboard/App";
+import LoginPage from "./pages/authentication/login/App";
 
 
 export default function App() {
@@ -23,13 +24,16 @@ export default function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
-        <Route path="/register" element={<RegisterPage />} />
         <Route path="/langganan" element={<LanggananPage />} />
         <Route path="/forum" element={<ForumPage />} />
         <Route path="/forum/forumId" element={<DetailForum />} />
         <Route path="/modul" element={<ModulePage />} />
         <Route path="/modul/materi" element={<AccessesModulePage />} />
         <Route path="/modul/materi/akses" />
+
+        {/* auth page */}
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
 
       <Footer />
