@@ -1,11 +1,16 @@
 import { IconBurger, IconPharmacy, IconSubwayBook, IconForum, IconJob, IconEvent } from "../Icons";
 import Dropdown from "../buttons/Dropdown";
 // import LoginButton from "../buttons/LoginButton";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import SearchInput from "../inputs/SearchInput";
+
+import { motion } from 'framer-motion'
 
 
 export default function Header() {
+
+    const location = useLocation()
+    const pathName = location.pathname
 
     const dropdownListItems = {
         materiBelajar: [
@@ -63,8 +68,11 @@ export default function Header() {
                 <div className="items-center gap-2 hidden lg:flex">
                     {/* Nav */}
                     <div className="flex gap-3 whitespace-nowrap mr-4 text-sm">
-                        <div>
-                            <a href={'/'}>Home</a>
+                        <div className="relative">
+                            <Link to={'/'}>Home</Link>
+                            {pathName == '/' &&
+                                <motion.span initial="false" layoutId="nav-active" className="inline-block w-full border-b-2 border-pale-grey absolute bottom-0 left-0"></motion.span>
+                            }
                         </div>
 
                         <div>
@@ -73,14 +81,18 @@ export default function Header() {
 
                         <div>
                             <a href={'/#calculator'}>Hitung Cepat</a>
+
                         </div>
 
                         <div>
                             <Dropdown tittleDropdown="Community" listItems={dropdownListItems.community} />
                         </div>
 
-                        <div>
-                            <a href="/langganan">Langganan</a>
+                        <div className="relative">
+                            <Link to="/langganan">Langganan</Link>
+                            {pathName == '/langganan' &&
+                                <motion.span initial="false" layoutId="nav-active" className="inline-block w-full border-b-2 border-pale-grey absolute bottom-0 left-0"></motion.span>
+                            }
                         </div>
                     </div>
 

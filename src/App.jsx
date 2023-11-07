@@ -7,7 +7,7 @@ import Footer from "./components/layouts/Footer";
 // pages
 import LandingPage from "./pages/landing_page/App";
 import ModulePage from "./pages/module_page/App";
-import RegisterPage from "./pages/register/app";
+import RegisterPage from "./pages/authentication/register/app";
 import AccessesModulePage from './pages/Accesses_module_page/App'
 import LanggananPage from "./pages/langganan/App";
 import ForumPage from "./pages/forum/App";
