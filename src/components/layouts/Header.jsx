@@ -1,6 +1,6 @@
 import { IconBurger, IconPharmacy, IconSubwayBook, IconForum, IconJob, IconEvent } from "../Icons";
 import Dropdown from "../buttons/Dropdown";
-// import LoginButton from "../buttons/LoginButton";
+import LoginButton from "../buttons/LoginButton";
 import { Link } from "react-router-dom";
 import SearchInput from "../inputs/SearchInput";
 
@@ -45,9 +45,9 @@ export default function Header() {
             <nav className="flex container mx-auto items-center justify-between px-3">
                 <div className="flex items-center gap-2">
                     {/* logo */}
-                    <Link to={'/'}>
+                    <a href={'/'}>
                         <img src="/logos/Logo.png" alt="Logo" width={90} />
-                    </Link>
+                    </a>
 
                     {/* search form */}
                     <form>
@@ -64,7 +64,7 @@ export default function Header() {
                     {/* Nav */}
                     <div className="flex gap-3 whitespace-nowrap mr-4 text-sm">
                         <div>
-                            <Link to={'/'}>Home</Link>
+                            <a href={'/'}>Home</a>
                         </div>
 
                         <div>
@@ -72,7 +72,7 @@ export default function Header() {
                         </div>
 
                         <div>
-                            <Link to={'/#calculator'}>Hitung Cepat</Link>
+                            <a href={'/#calculator'}>Hitung Cepat</a>
                         </div>
 
                         <div>
@@ -80,15 +80,14 @@ export default function Header() {
                         </div>
 
                         <div>
-                            <Link to="/langganan">Langganan</Link>
+                            <a href="/langganan">Langganan</a>
                         </div>
                     </div>
 
 
                     {/* Login or Regis */}
                     <div className="flex gap-2">
-                        {/* <LoginButton /> */}
-                        <Link to={'/login'} className="inline-block px-4 py-2 text-farma-800 bg-farma-200 rounded-md">Masuk</Link>
+                        <LoginButton />
                         <Link to={'/register'} className="inline-block px-4 py-2 text-farma-50 bg-farma-800 rounded-md">Daftar</Link>
                     </div>
                 </div>
