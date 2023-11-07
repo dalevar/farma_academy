@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function CTAsection() {
+export default function CTASection() {
   return (
     <section className="py-[4rem] bg-farma-700 text-farma-50">
       <div className="text-center">

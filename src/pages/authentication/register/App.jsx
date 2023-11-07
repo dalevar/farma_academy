@@ -1,3 +1,4 @@
+import ButtonGoogleLogin from "../../../components/buttons/ButtonGoogleLogin";
 import ButtonSubmit from "../../../components/buttons/ButtonSubmit";
 import PasswordInput from "../../../components/inputs/PasswordInput";
 import TextInput from '../../../components/inputs/TextInput'
@@ -18,6 +19,15 @@ export default function RegisterPage() {
                     <div className="mt-5">
                         <ButtonSubmit text="Daftar" />
                     </div>
+
+                    {/* separator */}
+                    <div className="flex justify-center items-center">
+                        <div className="bg-white px-2 absolute">atau</div>
+                        <div className="border-b-2 border-black w-full"></div>
+                    </div>
+
+                    <ButtonGoogleLogin />
+
                     <div className="-mt-5">
                         <p className="break-words text-center">Sudah punya akun ? <Link to={'/login'} className="text-farma-600">Masuk Sekarang</Link></p>
                     </div>
