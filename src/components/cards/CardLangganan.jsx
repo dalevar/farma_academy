@@ -17,7 +17,7 @@ const CardLangganan = ({ paket, harga, benefit }) => {
               className="flex items-center gap-3 mt-3 text-[#072125]"
               key={i}
             >
-              <IconChecked className="w-5" />
+              <span className="inline-block w-5"><IconChecked /></span>
               <span>{value}</span>
             </div>
           );
