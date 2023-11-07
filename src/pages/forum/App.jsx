@@ -4,10 +4,10 @@ import ButtonForum from "../../components/buttons/ButtonForum.jsx";
 import InputRadio from "../../components/inputs/InputRadio.jsx";
 import CardForum from "../../components/cards/CardForum.jsx";
 import { AnimatePresence, motion } from "framer-motion";
-import { useState} from "react";
+import { useState } from "react";
 export default function ForumPage() {
   const [show, setShow] = useState(false);
-  
+
 
   return (
     <main className="flex-auto p-10 bg-red">
