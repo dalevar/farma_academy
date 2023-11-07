@@ -7,11 +7,12 @@ import Footer from "./components/layouts/Footer";
 // pages
 import LandingPage from "./pages/landing_page/App";
 import ModulePage from "./pages/module_page/App";
-import RegisterPage from "./pages/register/app";
+import RegisterPage from "./pages/authentication/register/app";
 import AccessesModulePage from './pages/Accesses_module_page/App'
 import LanggananPage from "./pages/langganan/App";
 import ForumPage from "./pages/forum/App";
 import DashboardPage from "./pages/dashboard/App";
+import LoginPage from "./pages/authentication/login/App";
 
 
 export default function App() {
@@ -22,11 +23,14 @@ export default function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
-        <Route path="/register" element={<RegisterPage />} />
         <Route path="/langganan" element={<LanggananPage />} />
         <Route path="/forum" element={<ForumPage />} />
         <Route path="/modul" element={<ModulePage />} />
         <Route path="/modul/akses" element={<AccessesModulePage />} />
+
+        {/* auth page */}
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
 
       <Footer />
