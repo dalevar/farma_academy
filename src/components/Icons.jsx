@@ -366,3 +366,51 @@ export function IconNote() {
     </svg>
   );
 }
+export function IconDecorationRight(){
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="139" className="w-full" height="272" fill="none" viewBox="0 0 139 272">
+  <rect width="96.621" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -186.592 -203.592)"/>
+  <rect width="96.621" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -396.727 -149.948)"/>
+  <rect width="96.621" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -144.839 -199.324)"/>
+  <rect width="96.621" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -356.439 -143.003)"/>
+  <rect width="96.621" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -261.987 -170.263)"/>
+  <rect width="5.866" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -202.19 -90.913)"/>
+  <rect width="129.617" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -231.378 -138.4)"/>
+  <rect width="129.617" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -249.136 -150.972)"/>
+  <rect width="129.617" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -146.536 -131.15)"/>
+  <rect width="174.222" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -221.987 -355.34)"/>
+  <rect width="96.621" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -345.186 -114.842)"/>
+  <rect width="129.617" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -314.577 -82.978)"/>
+  <rect width="129.617" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -332.335 -95.55)"/>
+  <rect width="129.617" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -262.511 -297.839)"/>
+</svg>
+
+  )
+}
+export function IconDecorationLeft(){
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" className="w-full" width="167" height="272" fill="none" viewBox="0 0 167 272">
+  <rect width="174.222" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -82.287 -243.541)"/>
+  <rect width="96.621" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -130.092 -36.37)"/>
+  <rect width="96.621" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -340.227 17.272)"/>
+  <rect width="30.932" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -324.06 -40.162)"/>
+  <rect width="96.621" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -337.454 -71.59)"/>
+  <rect width="96.621" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -88.339 -32.103)"/>
+  <rect width="96.621" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -284.302 -87.55)"/>
+  <rect width="96.621" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -299.939 24.218)"/>
+  <rect width="96.621" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -205.487 -3.043)"/>
+  <rect width="5.866" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -199.253 -25.114)"/>
+  <rect width="60.824" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -166.77 -126.669)"/>
+  <rect width="60.824" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -248.462 -70.374)"/>
+  <rect width="129.617" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -174.878 28.82)"/>
+  <rect width="129.617" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -192.636 16.249)"/>
+  <rect width="174.222" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -165.487 -188.12)"/>
+  <rect width="96.621" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -288.686 52.38)"/>
+  <rect width="5.866" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -282.452 30.308)"/>
+  <rect width="129.617" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -258.077 84.242)"/>
+  <rect width="129.617" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -275.835 71.671)"/>
+  <rect width="129.617" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -206.011 -130.618)"/>
+</svg>
+
+  )
+}

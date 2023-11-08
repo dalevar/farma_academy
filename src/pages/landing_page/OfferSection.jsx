@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function OfferSection() {
     return (
-        <section className="bg-farma-100 mt-20 text-farma-950 px-4">
+        <section className="bg-white mt-20 text-farma-950 px-4">
             <div className="container mx-auto flex items-center min-h-screen">
                 <div className="flex-auto flex justify-center">
                     <div className="h-full rounded-2xl relative">
@@ -12,7 +12,7 @@ export default function OfferSection() {
                     </div>
                 </div>
                 <div className="basis-1/2">
-                    <p className="break-words mb-1 tracking-wide">Ingin menjadi apoteker yang sukses?</p>
+                    <p className="break-words mb-1 tracking-wide text-farma-950">Ingin menjadi apoteker yang sukses?</p>
                     <p className="break-words text-4xl font-semibold tracking-tight leading-tight">Ayo, raih karier yang lebih baik bersama Farma Academy!</p>
                     <div className='flex flex-col gap-4 mt-8'>
                         <CheckedItem text='Module pembelajaran yang lenkap' />

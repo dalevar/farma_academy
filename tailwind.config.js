@@ -28,7 +28,13 @@ export default ({
       boxShadow: {
         CardShadow: '2px 4px 6px -1px #085172',
       },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      }
     },
+    
   },
   plugins: [],
 });

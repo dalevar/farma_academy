@@ -4,7 +4,11 @@ import CalculatorSection from "./CalculatorSection";
 import OfferSection from "./OfferSection";
 import TheSolutionOffered from "./TheSolutionOfferedSection";
 import TrustedBySection from "./TrustedBySection";
-
+import TestimonialSection from "./TestimonialSection";
+import ExperienceSection from "./ExperienceSection";
+import CooperationSection from "./CooperationSection";
+import MentorJob from "./MentorJob";
+import ConsultantSection from "./ConsultantSection";
 const LandingPage = () => {
   return (
     <div>
@@ -20,11 +24,26 @@ const LandingPage = () => {
       {/* penawaran mendaftar */}
       <OfferSection />
 
-      {/* CTA before Footer */}
-      <CTASection />
-
       {/* the solution offered */}
       <TheSolutionOffered />
+      
+      {/* Consultant section */}
+      <ConsultantSection />
+
+      {/* Mentor job section */}
+      <MentorJob />
+
+      {/* Cooperation section */}
+      <CooperationSection />
+
+      {/* Experience section */}
+      <ExperienceSection />
+
+      {/* Testimoni section */}
+      <TestimonialSection />
+
+      {/* CTA before Footer */}
+      <CTASection />
     </div>
   );
 };

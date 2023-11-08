@@ -1,21 +1,34 @@
-import CardCalculator from "../../components/cards/CardCalculator";
-
+// import CardCalculator from "../../components/cards/CardCalculator";
+import {
+  IconDecorationRight,
+  IconDecorationLeft,
+} from "../../components/Icons";
 export default function CalculatorSection() {
-    return (
-        <section id="calculator" className="container mx-auto flex flex-col px-3 gap-5">
-            <div>
-                <p className="text-center break-words text-farma-950 md:text-4xl text-2xl font-semibold leading-tight tracking-tight">Ingin menghitung timbangan obat dengan mudah dan cepat? </p>
-            </div>
-            <div>
-                <p className="text-center break-words text-farma-950 md:text-xl text-xs px-3 leading-tight">Gunakan perhitungan timbangan obat dari Farma Academy! <br className="hidden md:block" />
-                    Alat ini dilengkapi dengan berbagai fitur yang dapat memudahkan Anda <br className="hidden md:block" /> dalam menghitung timbangan obat</p>
-            </div>
-            <div className="flex gap-5 md:gap-16 flex-wrap justify-center mt-5">
-                <CardCalculator calculatorTitle="Kalkulator timbangan obat" href="" />
-                <CardCalculator calculatorTitle="Tabel konversi satuan" href="" />
-                <CardCalculator calculatorTitle="Kalkulator perhitungan dosis" href="" />
-                <CardCalculator calculatorTitle="Kalkulator perhitungan ekivalensi" href="" />
-            </div>
-        </section>
-    )
+  return (
+    <section id="calculator" className="flex flex-col px-3 gap-5 w-full h-96 ">
+      <div className="relative">
+        <div className="absolute -left-3">
+          <IconDecorationLeft />
+        </div>
+      </div>
+      <div className="flex justify-center relative">
+        <div className="flex justify-center">
+          <p className="text-3xl text-farma-950 font-bold w-5/12 text-center">
+            Ingin menghitung timbangan obat dengan mudah dan cepat?
+          </p>
+        </div>
+          <span>
+            Gunakan perhitungan timbangan obat dari Farma Academy! Alat ini
+            dilengkapi dengan berbagai fitur yang dapat memudahkan Anda dalam
+            menghitung timbangan obat
+          </span>
+      </div>
+
+      <div className="relative z-50">
+        <div className="absolute -right-2 ">
+          <IconDecorationRight />
+        </div>
+      </div>
+    </section>
+  );
 }
