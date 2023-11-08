@@ -18,7 +18,7 @@ export default function BannerSection() {
         </div>
         <div className="flex gap-2 mt-4 md:gap-5">
           <a
-            href=""
+            href="./login"
             className="flex items-center px-4 py-2 rounded-md bg-farma-700 whitespace-nowrap text-white hover:opacity-75"
           >
             Mulai Belajar

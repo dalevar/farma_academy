@@ -1,6 +1,6 @@
 import HeaderAccesses from "./HeaderAccessesSection";
 import BodyAccesses from "./BodyAccessesSection"
-
+import FooterAccesses from "./FooterAccessesSection"
 
 const AccessesModulePage = () => {
   return (
@@ -11,6 +11,8 @@ const AccessesModulePage = () => {
       {/* Body */}
       <BodyAccesses />
 
+      {/* Footer */}
+      <FooterAccesses />
     </div>
   );
 };

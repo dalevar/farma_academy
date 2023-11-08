@@ -65,7 +65,7 @@ export default function HeaderAccesses() {
         </div>
       </div>
       <div className="relative flex justify-end mx-14">
-        <div className="absolute top-[-65px] bg-white shadow-2xl rounded-3xl max-w-md w-80 p-5 py-8">
+        <div className="absolute top-[-65px] bg-white shadow-xl rounded-3xl max-w-md w-80 p-5 py-8">
           <button className="bg-farma-900 text-white block rounded-lg py-3 px-11 text-xl font-normal w-full hover:opacity-90 transition">
             Mulai belajar
           </button>

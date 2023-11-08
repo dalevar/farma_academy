@@ -7,7 +7,7 @@ export default function TrustedBySection() {
         Telah dipercayai Oleh
       </h2>
 
-      <div className="flex justify-center gap-4 mt-10">
+      <div className="flex justify-center gap-16 mt-10">
         <CardTrustedBy />
         <CardTrustedBy />
         <CardTrustedBy />
