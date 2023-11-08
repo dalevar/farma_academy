@@ -9,6 +9,8 @@ import { motion } from 'framer-motion'
 
 export default function Header() {
 
+    const user = sessionStorage.getItem('user')
+
     const location = useLocation()
     const pathName = location.pathname
 
@@ -99,10 +101,18 @@ export default function Header() {
 
                     {/* Login or Regis */}
                     <div className="flex gap-2">
-                        {/* <LoginButton /> */}
 
-                        <Link to={'/login'} className="inline-block px-4 py-2 text-farma-800 bg-farma-200 rounded-md">Masuk</Link>
-                        <Link to={'/register'} className="inline-block px-4 py-2 text-farma-50 bg-farma-800 rounded-md">Daftar</Link>
+                        {user ?
+                            <>
+                                <Dropdown />
+                            </>
+                            :
+                            <>
+                                <Link to={'/login'} className="inline-block px-4 py-2 text-farma-800 bg-farma-200 rounded-md">Masuk</Link>
+                                <Link to={'/register'} className="inline-block px-4 py-2 text-farma-50 bg-farma-800 rounded-md">Daftar</Link>
+                            </>
+
+                        }
                     </div>
                 </div>
 

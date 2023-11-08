@@ -22,7 +22,7 @@ export default function Dropdown({ listItems, tittleDropdown }) {
 
                     {/* dropdown content */}
                     <AnimatePresence mode="wait">
-                        <motion.div key="modal" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="overflow-hidden absolute z-10 top-10 border bg-white border-farma-200 whitespace-nowrap rounded-md p-3 left-3 flex flex-col gap-3">
+                        <motion.div key="modal" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="overflow-hidden absolute z-10 top-10 border bg-white border-farma-200 whitespace-nowrap rounded-md p-3 right-3 flex flex-col gap-3">
                             {
                                 listItems.map((listItem, i) => {
                                     return (

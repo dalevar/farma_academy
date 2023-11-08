@@ -1,16 +1,26 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ButtonSubmit from "../../../components/buttons/ButtonSubmit";
 import PasswordInput from "../../../components/inputs/PasswordInput";
 import TextInput from '../../../components/inputs/TextInput'
 import ButtonGoogleLogin from "../../../components/buttons/ButtonGoogleLogin";
+import login from "../../../services/auth/login";
 
 export default function LoginPage() {
+    const navigate = useNavigate()
+
+    const handleLoginForm = (event) => {
+        event.preventDefault()
+        const email = event.target.email.value
+        login(email)
+        navigate('/dashboard')
+    }
+
     return (
         <main className="flex-auto flex justify-center items-center">
             <div className="max-w-xl w-full">
                 <h1 className="text-5xl tracking-tight mb-16 text-center border-b-2 border-black pb-5">Masuk akun</h1>
 
-                <form className="w-full flex gap-10 flex-col px-3">
+                <form className="w-full flex gap-10 flex-col px-3" onSubmit={handleLoginForm}>
                     <TextInput name="email" placeholder="Email" type={'email'} required />
                     <PasswordInput name="password" placeholder="Password" />
                     <div className="mt-5">
