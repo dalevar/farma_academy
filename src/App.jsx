@@ -25,11 +25,15 @@ export default function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/langganan" element={<LanggananPage />} />
+
+        {/* forum */}
         <Route path="/forum" element={<ForumPage />} />
         <Route path="/forum/forumId" element={<DetailForum />} />
+
+        {/* module */}
         <Route path="/modul" element={<ModulePage />} />
-        <Route path="/modul/materi"/>
-        <Route path="/modul/materi/akses" element={<AccessesModulePage />}/>
+        <Route path="/modul/materi" />
+        <Route path="/modul/materi/akses" element={<AccessesModulePage />} />
 
         {/* auth page */}
         <Route path="/register" element={<RegisterPage />} />
