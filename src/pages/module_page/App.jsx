@@ -26,15 +26,15 @@ const ModulePage = () => {
         </h1>
 
         <div className="grid grid-cols-4 gap-8 mt-8">
-          <CardModule moduleTitle="ilmu Resep" to="" />
-          <CardModule moduleTitle="ilmu Resep" to="" />
-          <CardModule moduleTitle="ilmu Resep" to="" />
-          <CardModule moduleTitle="ilmu Resep" to="" />
-          <CardModule moduleTitle="ilmu Resep" to="" />
-          <CardModule moduleTitle="ilmu Resep" to="" />
-          <CardModule moduleTitle="ilmu Resep" to="" />
-          <CardModule moduleTitle="ilmu Resep" to="" />
-          <CardModule moduleTitle="ilmu Resep" to="" />
+          <CardModule moduleTitle="ilmu Resep" to="/module/materi" />
+          <CardModule moduleTitle="ilmu Resep" to="/module/materi" />
+          <CardModule moduleTitle="ilmu Resep" to="/module/materi" />
+          <CardModule moduleTitle="ilmu Resep" to="/module/materi" />
+          <CardModule moduleTitle="ilmu Resep" to="/module/materi" />
+          <CardModule moduleTitle="ilmu Resep" to="/module/materi" />
+          <CardModule moduleTitle="ilmu Resep" to="/module/materi" />
+          <CardModule moduleTitle="ilmu Resep" to="/module/materi" />
+          <CardModule moduleTitle="ilmu Resep" to="/module/materi" />
         </div>
 
       </div>

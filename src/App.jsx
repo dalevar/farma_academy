@@ -6,14 +6,19 @@ import Footer from "./components/layouts/Footer";
 
 // pages
 import LandingPage from "./pages/landing_page/App";
-import ModulePage from "./pages/module_page/App";
+// auth page
+import LoginPage from "./pages/authentication/login/App";
 import RegisterPage from "./pages/authentication/register/app";
-import AccessesModulePage from './pages/Accesses_module_page/App'
-import LanggananPage from "./pages/langganan/App";
+// module page
+import ModulePage from "./pages/module_page/App";
+import DetailModule from "./pages/module_page/detail_module/App";
+import AccessMateriPage from "./pages/module_page/detail_module/detail_materi/App";
+// forum
 import ForumPage from "./pages/forum/App";
 import DetailForum from "./pages/forum/DetailForum";
+
 import DashboardPage from "./pages/dashboard/App";
-import LoginPage from "./pages/authentication/login/App";
+import LanggananPage from "./pages/langganan/App";
 
 
 export default function App() {
@@ -31,9 +36,9 @@ export default function App() {
         <Route path="/forum/forumId" element={<DetailForum />} />
 
         {/* module */}
-        <Route path="/modul" element={<ModulePage />} />
-        <Route path="/modul/materi" />
-        <Route path="/modul/materi/akses" element={<AccessesModulePage />} />
+        <Route path="/module" element={<ModulePage />} />
+        <Route path="/module/materi" element={<DetailModule />} />
+        <Route path="/module/materi/access" element={<AccessMateriPage />} />
 
         {/* auth page */}
         <Route path="/register" element={<RegisterPage />} />

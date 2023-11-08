@@ -17,7 +17,7 @@ export default function Header() {
             {
                 icon: <IconSubwayBook />,
                 title: 'Module Belajar',
-                to: '/modul',
+                to: '/module',
             },
             {
                 icon: <IconPharmacy />,
