@@ -16,19 +16,19 @@ export default function BannerSection() {
             bidang farmasi
           </p>
         </div>
-        <div className="flex gap-2 pl-4 mt-4 md:gap-5">
+        <div className="flex gap-2 mt-4 md:gap-5">
           <a
             href=""
-            className="flex items-center px-4 py-2 rounded-md bg-farma-700 whitespace-nowrap text-white"
+            className="flex items-center px-4 py-2 rounded-md bg-farma-700 whitespace-nowrap text-white hover:opacity-75"
           >
             Mulai Belajar
           </a>
           <span className="border-l-2 border-black"></span>
           <a
             href=""
-            className="px-4 py-2 rounded-md bg-farma-200 text-[#20484F]"
+            className="px-4 py-2 rounded-md bg-farma-200 text-[#20484F] hover:opacity-75"
           >
-            Sign up
+            Telusuri
           </a>
         </div>
       </div>
