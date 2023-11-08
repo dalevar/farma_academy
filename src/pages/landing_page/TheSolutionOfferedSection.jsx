@@ -9,16 +9,16 @@ export default function TheSolutionOffered() {
             </div>
             <div className="flex container mx-auto px-3 mt-5">
                 <div className="flex-auto flex gap-3 flex-col">
-                    <div className="py-2 bg-primary-darkest text-white rounded-md text-center text-xl">
+                    <div className="py-4 bg-primary-darkest max-w-sm w-full text-white rounded-md pl-3 text-xl">
                         Program pembelajaran yang lengkap dan komprehensif
                     </div>
-                    <div className="py-2 border-2 rounded-md text-center text-xl">
+                    <div className="py-4 border-2 rounded-md pl-3 max-w-sm w-full text-xl">
                         Fitur pembelajaran yang interaktif dan biaya yang terjangkau
                     </div>
-                    <div className="py-2 border-2 rounded-md text-center text-xl">
+                    <div className="py-4 border-2 rounded-md pl-3 text-xl max-w-sm w-full">
                         Konsultan pengajar yang kompeten dan profesional
                     </div>
-                    <div className="py-2 border-2 rounded-md text-center text-xl">
+                    <div className="py-4 pl-3 border-2 rounded-md text-xl max-w-sm w-full">
                         Pelajari dan langsung coba experience ditempat kerja yang sesuungguhnya.
                     </div>
                 </div>
