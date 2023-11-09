@@ -1,9 +1,4 @@
-import {
-  Route,
-  Routes,
-  ScrollRestoration,
-  useLocation,
-} from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 
 // component
 import Header from "./components/layouts/Header";
@@ -18,10 +13,7 @@ import RegisterPage from "./pages/authentication/register/App";
 import ModulePage from "./pages/module_page/App";
 import DetailModule from "./pages/module_page/detail_module/App";
 import AccessMateriPage from "./pages/module_page/detail_module/detail_materi/App";
-// Hitung Cepat page
-import HitungPage from "./pages/hitung_page/App";
-import HitungDetail from "./pages/hitung_page/HitungDetail";
-
+import LearingModule from "./pages/module_page/learning_module/App";
 // forum
 import ForumPage from "./pages/forum/App";
 import DetailForum from "./pages/forum/DetailForum";
@@ -29,6 +21,8 @@ import DetailForum from "./pages/forum/DetailForum";
 import DashboardPage from "./pages/dashboard/App";
 import LanggananPage from "./pages/langganan/App";
 import { useEffect } from "react";
+import LogoutPage from "./pages/authentication/logout/App";
+
 
 export default function App() {
   const { pathname } = useLocation();
@@ -46,7 +40,8 @@ export default function App() {
     <div className="flex flex-col min-h-screen">
       <Header />
 
-      <Routes>
+
+      <Routes >
         <Route path="/" element={<LandingPage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/langganan" element={<LanggananPage />} />
@@ -63,11 +58,16 @@ export default function App() {
         {/* Hitung Cepat Page */}
         <Route path="/hitung-cepat" element={<HitungPage />} />
         <Route path="/hitung-cepat/hitungId" element={<HitungDetail />} />
+        <Route path="/module/materi/access/learning" element={<LearingModule />} />
 
         {/* auth page */}
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/logout" element={<LogoutPage />} />
       </Routes>
+
+
+
 
       <Footer />
     </div>

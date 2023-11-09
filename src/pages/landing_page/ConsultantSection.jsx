@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { IconChat } from "../../components/Icons";
 const ConsultantSection = () => {
   return (
     <div className="bg-white flex flex-col px-20 max-md:px-5">
@@ -26,11 +28,9 @@ const ConsultantSection = () => {
                 <div className="text-teal-900 text-xs leading-4 self-stretch whitespace-nowrap mt-3">
                   Sertifikat Asesor
                 </div>
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/faf0b47a-4419-46d0-ba8b-abcbc0c4a5e8?apiKey=6f0257302a85476b9d26590be3d78938&"
-                  className="aspect-square object-contain object-center w-10 overflow-hidden max-w-full mt-4 self-end"
-                />
+                <span className="aspect-square object-contain object-center overflow-hidden max-w-full mt-4 self-end">
+                  <IconChat />
+                </span>
               </div>
             </div>
             <div className="flex flex-col items-stretch w-3/12 ml-5 max-md:w-full max-md:ml-0">
@@ -48,11 +48,9 @@ const ConsultantSection = () => {
                 <div className="text-teal-900 text-xs leading-4 self-stretch whitespace-nowrap mt-3">
                   Sertifikat Asesor
                 </div>
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/2fa4f62f-99bc-4e2c-abe5-9dba74b4b13c?apiKey=6f0257302a85476b9d26590be3d78938&"
-                  className="aspect-square object-contain object-center w-10 overflow-hidden max-w-full mt-4 self-end"
-                />
+                <span className="aspect-square object-contain object-center overflow-hidden max-w-full mt-4 self-end">
+                  <IconChat />
+                </span>
               </div>
             </div>
             <div className="flex flex-col items-stretch w-3/12 ml-5 max-md:w-full max-md:ml-0">
@@ -70,11 +68,8 @@ const ConsultantSection = () => {
                 <div className="text-teal-900 text-xs leading-4 self-stretch whitespace-nowrap mt-3">
                   Sertifikat Asesor
                 </div>
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/65ca5167-370b-42f5-8f88-8eec0c6e3e92?apiKey=6f0257302a85476b9d26590be3d78938&"
-                  className="aspect-square object-contain object-center w-10 overflow-hidden max-w-full mt-4 self-end"
-                />
+                <span className="aspect-square object-contain object-center overflow-hidden max-w-full mt-4 self-end"><IconChat /></span>
+
               </div>
             </div>
             <div className="flex flex-col items-stretch w-3/12 ml-5 max-md:w-full max-md:ml-0">
@@ -92,16 +87,13 @@ const ConsultantSection = () => {
                 <div className="text-teal-900 text-xs leading-4 self-stretch whitespace-nowrap mt-3">
                   Sertifikat Asesor
                 </div>
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/bdfe4d7d-7d6a-4c1b-876f-7496d1a675e1?apiKey=6f0257302a85476b9d26590be3d78938&"
-                  className="aspect-square object-contain object-center w-10 overflow-hidden max-w-full mt-4 self-end"
-                />
+                <span className="aspect-square object-contain object-center overflow-hidden max-w-full mt-4 self-end"><IconChat /></span>
+
               </div>
             </div>
           </div>
         </div>
-        <div className="flex w-[210px] max-w-full items-start gap-1.5 mt-20 self-end max-md:mt-10">
+        <a href="./consultant" className="flex w-[210px] max-w-full items-start gap-1.5 mt-20 self-end max-md:mt-10">
           <div className="text-sky-700 text-lg leading-7 underline">
             Lihat Semua Konsultan
           </div>
@@ -110,7 +102,7 @@ const ConsultantSection = () => {
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/9bffda43-f717-48a9-a7c7-e6b79e71b22f?apiKey=6f0257302a85476b9d26590be3d78938&"
             className="aspect-[1.27] object-contain object-center w-3.5 fill-sky-700 overflow-hidden self-center max-w-full my-auto"
           />
-        </div>
+        </a>
       </div>
     </div>
   );

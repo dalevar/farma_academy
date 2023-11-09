@@ -14,9 +14,9 @@ const MentorJob = () => {
                   <br />
                   farmasi di seluruh Indonesia
                 </div>
-                <div className="text-white text-lg leading-7 whitespace-nowrap items-start bg-sky-900 w-[190px] max-w-full grow mt-9 px-9 py-4 rounded-lg self-start max-md:px-5">
+                <button className="text-white text-lg leading-7 whitespace-nowrap items-start bg-sky-900 w-[190px] max-w-full grow mt-9 px-9 py-4 rounded-lg self-start max-md:px-5" onClick={() => window.location.href="./daftarmentor"}>
                   Daftar Mentor
-                </div>
+                </button>
               </div>
             </div>
             <div className="flex flex-col items-stretch w-6/12 ml-5 max-md:w-full max-md:ml-0">
