@@ -10,7 +10,6 @@ import Dropdown from "../buttons/Dropdown";
 // import LoginButton from "../buttons/LoginButton";
 import { Link, useLocation } from "react-router-dom";
 import SearchInput from "../inputs/SearchInput";
-import { motion } from "framer-motion";
 import Navbar from "./navbar/Navbar";
 
 export default function Header() {

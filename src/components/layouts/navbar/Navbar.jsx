@@ -40,22 +40,26 @@ export default function Navbar() {
     return (
         <>
             {user ?
-                <div className="flex gap-3 whitespace-nowrap mr-4 text-sm">
+                <div className="flex gap-3 whitespace-nowrap text-sm mr-10">
                     <div className="relative">
                         <Link to={'/dashboard'}>Home</Link>
+                        <NavActiveAnimation to="/dashboard" />
                     </div>
                     <div className="relative">
                         <Link to={'/academy'}>Academy</Link>
-
+                        <NavActiveAnimation to="/academy" />
                     </div>
                     <div className="relative">
                         <Link to={'/calculator'}>Hitung Cepat</Link>
+                        <NavActiveAnimation to="/calculator" />
                     </div>
                     <div className="relative">
                         <Link to={'/forum'}>Community</Link>
+                        <NavActiveAnimation to="/forum" />
                     </div>
                     <div className="relative">
                         <Link to={'/job'}>Job</Link>
+                        <NavActiveAnimation to="/job" />
                     </div>
                 </div>
                 :
