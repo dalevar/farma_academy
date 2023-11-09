@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { IconCheckedV2 } from "../../../components/Icons";
 
 const DefinisiDosis = () => {
@@ -51,43 +51,33 @@ const DefinisiDosis = () => {
 
 const MacamDosis = () => {
   const videoRef = useRef(null);
-  const [isPaused, setPaused] = useState(true);
-  const [showQuestions, setShowQuestions] = useState(false);
+  const [showButton, setShowButton] = useState(false);
 
-  const handleButtonClick = () => {
-    setShowQuestions(true);
-    setPaused(!isPaused);
+  const handlePlayClick = () => {
+    videoRef.current.play();
+    setShowButton(false);
+  };
 
-    if (videoRef.current) {
+  const handleTimeUpdate = () => {
+    if (videoRef.current.currentTime >= 10 && !showButton) {
       videoRef.current.pause();
+      setShowButton(true);
     }
   };
-  const handleAnswerClick = (answer) => {
-    // Handle user's answer logic here
-    console.log(`User selected answer: ${answer}`);
 
-    // Resume video and hide questions
-    setPaused(false);
-    setShowQuestions(false);
-    videoRef.current.play();
+  const handleFullScreenChange = () => {
+    if (!document.fullscreenElement) {
+      setShowButton(false);
+    }
   };
-  useEffect(() => {
-    const videoElement = videoRef.current;
 
-    const handleTimeUpdate = () => {
-      // Tampilkan tombol pada detik ke-10 (sesuaikan dengan kebutuhan Anda)
-      if (videoElement.currentTime >= 10 && videoElement.currentTime < 11) {
-        isPaused ? videoRef.current.pause() : videoRef.current.play();
-        setShowQuestions(true);
-      }
-    };
-
-    videoElement.addEventListener("timeupdate", handleTimeUpdate);
-
+  React.useEffect(() => {
+    document.addEventListener("fullscreenchange", handleFullScreenChange);
     return () => {
-      videoElement.removeEventListener("timeupdate", handleTimeUpdate);
+      document.removeEventListener("fullscreenchange", handleFullScreenChange);
     };
   }, []);
+
   return (
     <>
       <div className="[Jakarta Sans'] flex-shrink-0 w-[537px] h-[1.375rem] text-[#02628a] text-justify font-['Plus text-2xl font-bold leading-[normal] mt-8">
@@ -165,35 +155,17 @@ const MacamDosis = () => {
         </p>
       </div>
 
-      <div className="bg-black rounded-xl">
-        <div className="relative w-full rounded-xl">
-          <video ref={videoRef} className="w-full rounded-xl h-96" controls>
-            <source src="/videos/blank.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          {showQuestions && (
-            <div>
-              <div className="absolute inset-0 items-end justify-center">
-                <div className="p-8 rounded-lg">
-                  <div className="mt-4 flex justify-center items-end space-x-4">
-                    <button
-                      className="bg-farma-500  text-white font-bold py-4 px-12 rounded"
-                      onClick={() => handleAnswerClick("A")}
-                    >
-                      A
-                    </button>
-                    <button
-                      className="bg-farma-500  text-white font-bold py-4 px-12 rounded"
-                      onClick={() => handleAnswerClick("B")}
-                    >
-                      B
-                    </button>
-                    {/* Add more answer buttons as needed */}
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
+      <div className="bg-red-300 rounded-xl">
+        
+        <div className="">
+          <video
+            ref={videoRef}
+            src="/videos/blank.mp4"
+            onTimeUpdate={handleTimeUpdate}
+            controls={showButton}
+            onClick={showButton ? handlePlayClick : null}
+          />
+          {showButton && <button onClick={handlePlayClick}>Play</button>}
         </div>
       </div>
     </>
