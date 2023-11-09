@@ -39,74 +39,56 @@ export default function Navbar() {
 
     return (
         <>
-            { }
-            {/* Nav Not Login*/}
-            <div className="flex gap-3 whitespace-nowrap mr-4 text-sm" >
-                <div className="relative">
-                    <Link to={"/"}>Home</Link>
-                    <NavActiveAnimation to="/" />
-                </div>
+            {user ?
+                <div className="flex gap-3 whitespace-nowrap mr-4 text-sm">
+                    <div className="relative">
+                        <Link to={'/dashboard'}>Home</Link>
+                    </div>
+                    <div className="relative">
+                        <Link to={'/academy'}>Academy</Link>
 
-                <div>
-                    <Dropdown
-                        tittleDropdown="Materi Belajar"
-                        listItems={dropdownListItems.materiBelajar}
-                    />
-                </div>
+                    </div>
+                    <Link to={'/academy'}>Academy</Link>
+                    <div className="relative">
 
-                <div className="relative">
-                    <Link to={"/calculator"}>Hitung Cepat</Link>
-                    <NavActiveAnimation to="/calculator" />
+                    </div>
+                    <div className="relative"></div>
+                    <div className="relative"></div>
                 </div>
+                :
+                <div className="flex gap-3 whitespace-nowrap mr-4 text-sm" >
+                    <div className="relative">
+                        <Link to={"/"}>Home</Link>
+                        <NavActiveAnimation to="/" />
+                    </div>
 
-                <div>
-                    <Dropdown
-                        tittleDropdown="Community"
-                        listItems={dropdownListItems.community}
-                    />
-                </div>
+                    <div>
+                        <Dropdown
+                            tittleDropdown="Materi Belajar"
+                            listItems={dropdownListItems.materiBelajar}
+                        />
+                    </div>
 
-                <div className="relative">
-                    <Link preventScrollReset to="/langganan">
-                        Langganan
-                    </Link>
-                    <NavActiveAnimation to="/langganan" />
-                </div>
-            </div >
+                    <div className="relative">
+                        <Link to={"/calculator"}>Hitung Cepat</Link>
+                        <NavActiveAnimation to="/calculator" />
+                    </div>
 
-            {/* nav Login */}
-            <div className="flex gap-3 whitespace-nowrap mr-4 text-sm" >
-                <div className="relative">
-                    <Link to={"/"}>Home</Link>
-                    <NavActiveAnimation to="/" />
-                </div>
+                    <div>
+                        <Dropdown
+                            tittleDropdown="Community"
+                            listItems={dropdownListItems.community}
+                        />
+                    </div>
 
-                <div>
-                    <Dropdown
-                        tittleDropdown="Materi Belajar"
-                        listItems={dropdownListItems.materiBelajar}
-                    />
-                </div>
-
-                <div className="relative">
-                    <Link to={"/calculator"}>Hitung Cepat</Link>
-                    <NavActiveAnimation to="/calculator" />
-                </div>
-
-                <div>
-                    <Dropdown
-                        tittleDropdown="Community"
-                        listItems={dropdownListItems.community}
-                    />
-                </div>
-
-                <div className="relative">
-                    <Link preventScrollReset to="/langganan">
-                        Langganan
-                    </Link>
-                    <NavActiveAnimation to="/langganan" />
-                </div>
-            </div >
+                    <div className="relative">
+                        <Link preventScrollReset to="/langganan">
+                            Langganan
+                        </Link>
+                        <NavActiveAnimation to="/langganan" />
+                    </div>
+                </div >
+            }
         </>
     )
 }
