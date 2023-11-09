@@ -16,28 +16,28 @@ export default function Footer() {
                     <div className="flex flex-col gap-4">
                         <span className="font-semibold">Our Company</span>
                         <ul className="flex flex-col gap-2 text-farma-200">
-                            <li><Link to={''}>Our Team</Link></li>
-                            <li><Link to={''}>Company Vision</Link></li>
-                            <li><Link to={''}>Our History</Link></li>
-                            <li><Link to={''}>Investorys</Link></li>
+                            <li><Link to={''} preventScrollReset>Our Team</Link></li>
+                            <li><Link to={''} preventScrollReset>Company Vision</Link></li>
+                            <li><Link to={''} preventScrollReset>Our History</Link></li>
+                            <li><Link to={''} preventScrollReset>Investorys</Link></li>
                         </ul>
                     </div>
                     <div className="flex flex-col gap-4">
                         <span className="font-semibold">Our Resources</span>
                         <ul className="flex flex-col gap-2 text-farma-200">
-                            <li><Link to={''}>The Blog</Link></li>
-                            <li><Link to={''}>Downloads</Link></li>
-                            <li><Link to={''}>Change Log</Link></li>
-                            <li><Link to={''}>Slack Channel</Link></li>
+                            <li><Link to={''} preventScrollReset>The Blog</Link></li>
+                            <li><Link to={''} preventScrollReset>Downloads</Link></li>
+                            <li><Link to={''} preventScrollReset>Change Log</Link></li>
+                            <li><Link to={''} preventScrollReset>Slack Channel</Link></li>
                         </ul>
                     </div>
                     <div className="flex flex-col gap-4">
                         <span className="font-semibold">Our Product</span>
                         <ul className="flex flex-col gap-2 text-farma-200">
-                            <li><Link to={''}>New Features</Link></li>
-                            <li><Link to={''}>Roadmap</Link></li>
-                            <li><Link to={''}>Product Demo</Link></li>
-                            <li><Link to={''}>Pricing</Link></li>
+                            <li><Link to={''} preventScrollReset>New Features</Link></li>
+                            <li><Link to={''} preventScrollReset>Roadmap</Link></li>
+                            <li><Link to={''} preventScrollReset>Product Demo</Link></li>
+                            <li><Link to={''} preventScrollReset>Pricing</Link></li>
                         </ul>
                     </div>
                 </div>

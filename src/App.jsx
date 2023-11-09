@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, ScrollRestoration } from "react-router-dom";
 
 // component
 import Header from "./components/layouts/Header";
@@ -25,8 +25,9 @@ export default function App() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-
-      <Routes>
+      
+      <ScrollRestoration  >
+      <Routes >
         <Route path="/" element={<LandingPage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/langganan" element={<LanggananPage />} />
@@ -44,6 +45,9 @@ export default function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
       </Routes>
+
+      </ScrollRestoration>
+      
 
       <Footer />
     </div>

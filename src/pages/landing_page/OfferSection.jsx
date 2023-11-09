@@ -20,7 +20,7 @@ export default function OfferSection() {
                         <CheckedItem text='Hitungan yang cepat dan tepat' />
                         <CheckedItem text='Konsultan mentor yang professional' />
                     </div>
-                    <Link to={'/register'} className='px-4 py-2 bg-farma-600 rounded-md mt-8 inline-block text-farma-50'>Daftar Sekarang</Link>
+                    <Link preventScrollReset to={'/register'} className='px-4 py-2 bg-farma-600 rounded-md mt-8 inline-block text-farma-50'>Daftar Sekarang</Link>
                 </div>
             </div>
         </section>

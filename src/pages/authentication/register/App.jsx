@@ -29,7 +29,7 @@ export default function RegisterPage() {
                     <ButtonGoogleLogin />
 
                     <div className="-mt-5">
-                        <p className="break-words text-center">Sudah punya akun ? <Link to={'/login'} className="text-farma-600">Masuk Sekarang</Link></p>
+                        <p className="break-words text-center">Sudah punya akun ? <Link preventScrollReset to={'/login'} className="text-farma-600">Masuk Sekarang</Link></p>
                     </div>
                 </form>
             </div>

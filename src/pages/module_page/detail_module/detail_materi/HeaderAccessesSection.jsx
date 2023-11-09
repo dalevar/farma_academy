@@ -58,7 +58,7 @@ export default function HeaderAccesses() {
                 <IconPath />
               </span>
               <span className="text-farma-700 font-thin underline">
-                <Link>Ilmu Resep & Farmakologi</Link>
+                <Link preventScrollReset>Ilmu Resep & Farmakologi</Link>
               </span>
             </div>
           </div>

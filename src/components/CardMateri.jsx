@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const CardMateri = ({ materi }) => {
   return (
     <div className="card-materi">
-      <Link to={`/materi/${materi.slug}`}>
+      <Link to={`/materi/${materi.slug}`} preventScrollReset>
         <div className="card-materi__img">
           <img
             src={`/images/${materi.image}`}

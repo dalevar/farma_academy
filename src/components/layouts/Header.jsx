@@ -71,7 +71,7 @@ export default function Header() {
                     {/* Nav */}
                     <div className="flex gap-3 whitespace-nowrap mr-4 text-sm">
                         <div className="relative">
-                            <Link to={'/'}>Home</Link>
+                            <Link to={'/'} preventScrollReset>Home</Link>
                             {pathName == '/' &&
                                 <motion.span initial={false} layout="size" layoutId="nav-active" className="inline-block w-full border-b-2 border-pale-grey absolute bottom-0 left-0"></motion.span>
                             }
@@ -91,7 +91,7 @@ export default function Header() {
                         </div>
 
                         <div className="relative">
-                            <Link to="/langganan">Langganan</Link>
+                            <Link preventScrollReset to="/langganan">Langganan</Link>
                             {pathName == '/langganan' &&
                                 <motion.span initial="false" layout="size" layoutId="nav-active" className="inline-block w-full border-b-2 border-pale-grey absolute bottom-0 left-0 rounded-xl"></motion.span>
                             }
@@ -108,8 +108,8 @@ export default function Header() {
                             </>
                             :
                             <>
-                                <Link to={'/login'} className="inline-block px-4 py-2 text-farma-800 bg-farma-200 rounded-md">Masuk</Link>
-                                <Link to={'/register'} className="inline-block px-4 py-2 text-farma-50 bg-farma-800 rounded-md">Daftar</Link>
+                                <Link preventScrollReset to={'/login'} className="inline-block px-4 py-2 text-farma-800 bg-farma-200 rounded-md">Masuk</Link>
+                                <Link preventScrollReset to={'/register'} className="inline-block px-4 py-2 text-farma-50 bg-farma-800 rounded-md">Daftar</Link>
                             </>
 
                         }

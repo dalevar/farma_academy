@@ -15,14 +15,14 @@ export default function CTASection() {
         </p>
       </div>
       <div className="flex flex-col items-center justify-center mx-2 mt-7 md:flex-row gap-8">
-        <Link
+        <Link preventScrollReset
           to={"/register"}
           className="inline-flex items-start gap-2.5 pb-[0.9375rem] pt-4 px-9 rounded-lg bg-[#0075a7] Jakarta Sans'] text-white font-['Plus text-lg leading-[150%]"
         >
           Daftar Sekarang
         </Link>
 
-        <Link
+        <Link preventScrollReset
           to={"/register"}
           className="inline-flex items-start gap-2.5 pb-[0.9375rem] pt-4 px-9 rounded-lg bg-[#0075a7] Jakarta Sans'] text-white font-['Plus text-lg leading-[150%]"
         >

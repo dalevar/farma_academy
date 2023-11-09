@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function CardModule({ moduleTitle, to }) {
   return (
-    <Link to={to} className="border-2 border-primary-dark rounded-2xl">
+    <Link to={to} preventScrollReset className="border-2 border-primary-dark rounded-2xl">
       <div className="flex justify-center">
         <img src="/images/modul/modul.png" alt="" />
       </div>

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function CardMateri() {
     return (
-        <Link to={'/module/materi/access'}
+        <Link to={'/module/materi/access'} preventScrollReset
             className="border border-[color:var(--Pale-grey,#3CF)] bg-white w-full max-w-[407px] mx-auto pl-7 pr-20 py-9 rounded-3xl border-solid max-md:mt-9 max-md:px-5"
             role="region"
             aria-label="Updated Component"

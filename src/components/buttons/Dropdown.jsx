@@ -27,7 +27,7 @@ export default function Dropdown({ listItems, tittleDropdown }) {
                                 listItems.map((listItem, i) => {
                                     return (
                                         <div key={i} className="relative">
-                                            <Link to={listItem.to} className="flex items-center gap-1 mb-1"><span className="inline-block w-6 h-6">{listItem.icon}</span> {listItem.title}</Link>
+                                            <Link to={listItem.to} preventScrollReset className="flex items-center gap-1 mb-1"><span className="inline-block w-6 h-6">{listItem.icon}</span> {listItem.title}</Link>
                                             {pathName == listItem.to &&
                                                 <motion.span initial={{ width: 0 }} layout={'size'} animate={{ width: '100%' }} exit={{ width: 0 }} layoutId="dropdownActive" className="border-pale-grey border-b-2 absolute bottom-0 left-0"></motion.span>
                                             }

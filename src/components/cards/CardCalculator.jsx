@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function CardCalculator({ calculatorTitle, href }) {
     return (
-        <Link to={href} className="border-2 rounded-lg border-farma-600 p-4 flex flex-col items-center">
+        <Link to={href} preventScrollReset className="border-2 rounded-lg border-farma-600 p-4 flex flex-col items-center">
             <div className="w-10 h-10">
                 <IconCalculator />
             </div>
