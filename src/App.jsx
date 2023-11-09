@@ -22,6 +22,9 @@ import HitungDetail from "./pages/hitung_page/HitungDetail";
 import ForumPage from "./pages/forum/App";
 import DetailForum from "./pages/forum/DetailForum";
 
+// Consultant
+import ConsultantPage from "./pages/consultant/App";
+
 import DashboardPage from "./pages/dashboard/App";
 import LanggananPage from "./pages/langganan/App";
 import { useEffect } from "react";
@@ -69,6 +72,9 @@ export default function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/logout" element={<LogoutPage />} />
+
+        {/* Konsultan */}
+        <Route path="/consultant" element={<ConsultantPage />} />
       </Routes>
 
       <Footer />
