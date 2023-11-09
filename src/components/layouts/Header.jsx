@@ -1,10 +1,13 @@
 import {
+    IconDashboard,
     IconBurger,
     IconPharmacy,
     IconSubwayBook,
     IconForum,
     IconJob,
     IconEvent,
+    IconPeople,
+    IconLogout,
 } from "../Icons";
 import Dropdown from "../buttons/Dropdown";
 // import LoginButton from "../buttons/LoginButton";
@@ -20,14 +23,24 @@ export default function Header() {
     const dropdownListItems = {
         profilePicture: [
             {
-                icon: <IconForum />,
+                icon: <IconDashboard />,
                 title: "Dashboard",
                 to: "/dashboard",
+            },
+            {
+                icon: <IconPeople />,
+                title: "Profile saya",
+                to: "/forum",
             },
             {
                 icon: <IconForum />,
                 title: "Forum diskusi",
                 to: "/forum",
+            },
+            {
+                icon: <IconLogout />,
+                title: "Logout",
+                to: "/logout",
             },
         ],
         materiBelajar: [
@@ -89,14 +102,18 @@ export default function Header() {
                 <nav className="flex container mx-auto items-center justify-between px-3">
                     <div className="flex items-center gap-2">
                         {/* logo */}
-                        <a href={"/"}>
+                        <Link to={"/"}>
                             <img src="/logos/Logo.png" alt="Logo" width={90} />
-                        </a>
+                        </Link>
 
                         {/* search form */}
-                        <form>
-                            <SearchInput />
-                        </form>
+                        {
+                            user ? '' :
+                                <form>
+                                    <SearchInput />
+                                </form>
+
+                        }
                     </div>
 
                     {/* nav ketika lebih dari lg */}

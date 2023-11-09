@@ -1,7 +1,7 @@
 import {
   IconBook,
   IconStar,
-  IconPeople,
+  IconPersons,
   IconPath,
 } from "../../../../components/Icons";
 import { Link } from "react-router-dom";
@@ -13,7 +13,7 @@ export default function HeaderAccesses() {
           <div className="border-2 border-farma-300 rounded-3xl p-24 w-28 h-28"></div>
           <p className="flex justify-center text-farma-950 items-center text-xs my-auto mt-1">
             <span className="w-6 flex">
-              <IconPeople />
+              <IconPersons />
             </span>
             1,200 Siswa
           </p>
@@ -66,7 +66,7 @@ export default function HeaderAccesses() {
       </div>
       <div className="relative flex justify-end mx-14">
         <div className="absolute top-[-65px] bg-white shadow-xl rounded-3xl max-w-md w-80 p-5 py-8">
-          <button className="bg-farma-900 text-white block rounded-lg py-3 px-11 text-xl font-normal w-full hover:opacity-90 transition" onClick={() => window.location.href="./access/learning"}>
+          <button className="bg-farma-900 text-white block rounded-lg py-3 px-11 text-xl font-normal w-full hover:opacity-90 transition" onClick={() => window.location.href = "./access/learning"}>
             Mulai belajar
           </button>
           <hr className="my-5" />

@@ -1,4 +1,4 @@
-import { Route, Routes, ScrollRestoration, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 
 // component
 import Header from "./components/layouts/Header";
@@ -21,6 +21,7 @@ import DetailForum from "./pages/forum/DetailForum";
 import DashboardPage from "./pages/dashboard/App";
 import LanggananPage from "./pages/langganan/App";
 import { useEffect } from "react";
+import LogoutPage from "./pages/authentication/logout/App";
 
 
 export default function App() {
@@ -40,8 +41,8 @@ export default function App() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      
-      
+
+
       <Routes >
         <Route path="/" element={<LandingPage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
@@ -60,10 +61,11 @@ export default function App() {
         {/* auth page */}
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/logout" element={<LogoutPage />} />
       </Routes>
 
-      
-      
+
+
 
       <Footer />
     </div>

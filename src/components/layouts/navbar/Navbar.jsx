@@ -40,9 +40,10 @@ export default function Navbar() {
     return (
         <>
             {user ?
+                // login
                 <div className="flex gap-3 whitespace-nowrap text-sm mr-10">
                     <div className="relative">
-                        <Link to={'/dashboard'}>Home</Link>
+                        <Link to={'/dashboard'}>Beranda</Link>
                         <NavActiveAnimation to="/dashboard" />
                     </div>
                     <div className="relative">
@@ -52,11 +53,11 @@ export default function Navbar() {
                         />
                     </div>
                     <div className="relative">
-                        <Link to={'/calculator'}>Hitung Cepat</Link>
+                        <Link to={'/calculator'}>Kalkulator Rumus</Link>
                         <NavActiveAnimation to="/calculator" />
                     </div>
                     <div className="relative">
-                        <Link to={'/forum'}>Community</Link>
+                        <Link to={'/forum'}>Komunitas</Link>
                         <NavActiveAnimation to="/forum" />
                     </div>
                     <div className="relative">
@@ -65,9 +66,11 @@ export default function Navbar() {
                     </div>
                 </div>
                 :
+
+                // not login 
                 <div className="flex gap-3 whitespace-nowrap mr-4 text-sm" >
                     <div className="relative">
-                        <Link to={"/"}>Home</Link>
+                        <Link to={"/"}>Beranda</Link>
                         <NavActiveAnimation to="/" />
                     </div>
 
@@ -79,13 +82,13 @@ export default function Navbar() {
                     </div>
 
                     <div className="relative">
-                        <Link to={"/calculator"}>Hitung Cepat</Link>
+                        <Link to={"/calculator"}>Kalkulator Rumus</Link>
                         <NavActiveAnimation to="/calculator" />
                     </div>
 
                     <div>
                         <Dropdown
-                            tittleDropdown="Community"
+                            tittleDropdown="komunitas"
                             listItems={dropdownListItems.community}
                         />
                     </div>
