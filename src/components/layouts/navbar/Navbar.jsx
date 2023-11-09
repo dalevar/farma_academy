@@ -48,12 +48,15 @@ export default function Navbar() {
                         <Link to={'/academy'}>Academy</Link>
 
                     </div>
-                    <Link to={'/academy'}>Academy</Link>
                     <div className="relative">
-
+                        <Link to={'/calculator'}>Hitung Cepat</Link>
                     </div>
-                    <div className="relative"></div>
-                    <div className="relative"></div>
+                    <div className="relative">
+                        <Link to={'/forum'}>Community</Link>
+                    </div>
+                    <div className="relative">
+                        <Link to={'/job'}>Job</Link>
+                    </div>
                 </div>
                 :
                 <div className="flex gap-3 whitespace-nowrap mr-4 text-sm" >
