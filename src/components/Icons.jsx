@@ -1,4 +1,6 @@
 /* eslint-disable react/no-unknown-property */
+import { Link } from "react-router-dom";
+
 export function IconSearch() {
   return (
     <svg

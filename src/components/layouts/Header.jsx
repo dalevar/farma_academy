@@ -121,50 +121,29 @@ export default function Header() {
                         {/* Nav Not Login*/}
                         <Navbar />
 
-                        {/* Login or Regis */}
-                        <div className="flex gap-2">
-                            {user ? (
-                                <>
-                                    <Dropdown
-                                        tittleDropdown={
-                                            <img
-                                                src="/images/landingPages/landingPage3.png"
-                                                alt=""
-                                                className="w-10 h-10 object-cover rounded-full"
-                                            />
-                                        }
-                                        listItems={dropdownListItems.profilePicture}
-                                    />
-                                </>
-                            ) : (
-                                <>
-                                    <Link
-                                        preventScrollReset
-                                        to={"/login"}
-                                        className="inline-block px-4 py-2 text-farma-800 bg-farma-200 rounded-md"
-                                    >
-                                        Masuk
-                                    </Link>
-                                    <Link
-                                        preventScrollReset
-                                        to={"/register"}
-                                        className="inline-block px-4 py-2 text-farma-50 bg-farma-800 rounded-md"
-                                    >
-                                        Daftar
-                                    </Link>
-                                </>
-                            )}
-                        </div>
-                    </div>
+                    {/* Login or Regis */}
+                    <div className="flex gap-2">
 
-                    {/* nav ketika kurang dari lg */}
-                    <div className="lg:hidden">
-                        <button type="button" className="w-14 h-14">
-                            <IconBurger />
-                        </button>
+                        {user ?
+                            <>
+                                <Dropdown tittleDropdown={<img src="/images/landingPages/landingPage3.png" alt="" className="w-10 h-10 object-cover rounded-full"/>} listItems={dropdownListItems.profilePicture} />
+                            </>
+                            :
+                            <>
+                                <Link preventScrollReset to={'/login'} className="inline-block px-4 py-2 text-farma-800 bg-farma-200 rounded-md">Masuk</Link>
+                                <Link preventScrollReset to={'/register'} className="inline-block px-4 py-2 text-farma-50 bg-farma-800 rounded-md">Daftar</Link>
+                            </>
+
+                        }
                     </div>
-                </nav>
-            </header>
-        );
-    }
+                </div>
+
+                {/* nav ketika kurang dari lg */}
+                <div className="lg:hidden">
+                    <button type="button" className="w-14 h-14"><IconBurger /></button>
+                </div>
+            </nav>
+
+        </header >
+    )
 }

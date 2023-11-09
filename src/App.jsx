@@ -25,7 +25,6 @@ import LogoutPage from "./pages/authentication/logout/App";
 
 
 export default function App() {
-
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -36,7 +35,6 @@ export default function App() {
       behavior: "instant", // Optional if you want to skip the scrolling animation
     });
   }, [pathname]);
-
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -56,6 +54,10 @@ export default function App() {
         <Route path="/module" element={<ModulePage />} />
         <Route path="/module/materi" element={<DetailModule />} />
         <Route path="/module/materi/access" element={<AccessMateriPage />} />
+
+        {/* Hitung Cepat Page */}
+        <Route path="/hitung-cepat" element={<HitungPage />} />
+        <Route path="/hitung-cepat/hitungId" element={<HitungDetail />} />
         <Route path="/module/materi/access/learning" element={<LearingModule />} />
 
         {/* auth page */}
