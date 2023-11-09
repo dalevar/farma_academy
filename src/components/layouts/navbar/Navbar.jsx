@@ -46,8 +46,10 @@ export default function Navbar() {
                         <NavActiveAnimation to="/dashboard" />
                     </div>
                     <div className="relative">
-                        <Link to={'/academy'}>Academy</Link>
-                        <NavActiveAnimation to="/academy" />
+                        <Dropdown
+                            tittleDropdown="Academy"
+                            listItems={dropdownListItems.materiBelajar}
+                        />
                     </div>
                     <div className="relative">
                         <Link to={'/calculator'}>Hitung Cepat</Link>
