@@ -368,93 +368,475 @@ export function IconNote() {
 }
 export function IconDecorationRight() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="139" className="w-full" height="272" fill="none" viewBox="0 0 139 272">
-      <rect width="96.621" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -186.592 -203.592)" />
-      <rect width="96.621" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -396.727 -149.948)" />
-      <rect width="96.621" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -144.839 -199.324)" />
-      <rect width="96.621" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -356.439 -143.003)" />
-      <rect width="96.621" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -261.987 -170.263)" />
-      <rect width="5.866" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -202.19 -90.913)" />
-      <rect width="129.617" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -231.378 -138.4)" />
-      <rect width="129.617" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -249.136 -150.972)" />
-      <rect width="129.617" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -146.536 -131.15)" />
-      <rect width="174.222" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -221.987 -355.34)" />
-      <rect width="96.621" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -345.186 -114.842)" />
-      <rect width="129.617" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -314.577 -82.978)" />
-      <rect width="129.617" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -332.335 -95.55)" />
-      <rect width="129.617" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -262.511 -297.839)" />
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="139"
+      className="w-full"
+      height="272"
+      fill="none"
+      viewBox="0 0 139 272"
+    >
+      <rect
+        width="96.621"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -186.592 -203.592)"
+      />
+      <rect
+        width="96.621"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -396.727 -149.948)"
+      />
+      <rect
+        width="96.621"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -144.839 -199.324)"
+      />
+      <rect
+        width="96.621"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -356.439 -143.003)"
+      />
+      <rect
+        width="96.621"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -261.987 -170.263)"
+      />
+      <rect
+        width="5.866"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -202.19 -90.913)"
+      />
+      <rect
+        width="129.617"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -231.378 -138.4)"
+      />
+      <rect
+        width="129.617"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -249.136 -150.972)"
+      />
+      <rect
+        width="129.617"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -146.536 -131.15)"
+      />
+      <rect
+        width="174.222"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -221.987 -355.34)"
+      />
+      <rect
+        width="96.621"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -345.186 -114.842)"
+      />
+      <rect
+        width="129.617"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -314.577 -82.978)"
+      />
+      <rect
+        width="129.617"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -332.335 -95.55)"
+      />
+      <rect
+        width="129.617"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -262.511 -297.839)"
+      />
     </svg>
-
-  )
+  );
 }
 export function IconDecorationLeft() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" className="w-full" width="167" height="272" fill="none" viewBox="0 0 167 272">
-      <rect width="174.222" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -82.287 -243.541)" />
-      <rect width="96.621" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -130.092 -36.37)" />
-      <rect width="96.621" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -340.227 17.272)" />
-      <rect width="30.932" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -324.06 -40.162)" />
-      <rect width="96.621" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -337.454 -71.59)" />
-      <rect width="96.621" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -88.339 -32.103)" />
-      <rect width="96.621" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -284.302 -87.55)" />
-      <rect width="96.621" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -299.939 24.218)" />
-      <rect width="96.621" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -205.487 -3.043)" />
-      <rect width="5.866" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -199.253 -25.114)" />
-      <rect width="60.824" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -166.77 -126.669)" />
-      <rect width="60.824" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -248.462 -70.374)" />
-      <rect width="129.617" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -174.878 28.82)" />
-      <rect width="129.617" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -192.636 16.249)" />
-      <rect width="174.222" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -165.487 -188.12)" />
-      <rect width="96.621" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -288.686 52.38)" />
-      <rect width="5.866" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -282.452 30.308)" />
-      <rect width="129.617" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -258.077 84.242)" />
-      <rect width="129.617" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -275.835 71.671)" />
-      <rect width="129.617" height="4" fill="#0075A7" rx="2" transform="scale(-1 1) rotate(37.338 -206.011 -130.618)" />
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-full"
+      width="167"
+      height="272"
+      fill="none"
+      viewBox="0 0 167 272"
+    >
+      <rect
+        width="174.222"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -82.287 -243.541)"
+      />
+      <rect
+        width="96.621"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -130.092 -36.37)"
+      />
+      <rect
+        width="96.621"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -340.227 17.272)"
+      />
+      <rect
+        width="30.932"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -324.06 -40.162)"
+      />
+      <rect
+        width="96.621"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -337.454 -71.59)"
+      />
+      <rect
+        width="96.621"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -88.339 -32.103)"
+      />
+      <rect
+        width="96.621"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -284.302 -87.55)"
+      />
+      <rect
+        width="96.621"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -299.939 24.218)"
+      />
+      <rect
+        width="96.621"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -205.487 -3.043)"
+      />
+      <rect
+        width="5.866"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -199.253 -25.114)"
+      />
+      <rect
+        width="60.824"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -166.77 -126.669)"
+      />
+      <rect
+        width="60.824"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -248.462 -70.374)"
+      />
+      <rect
+        width="129.617"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -174.878 28.82)"
+      />
+      <rect
+        width="129.617"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -192.636 16.249)"
+      />
+      <rect
+        width="174.222"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -165.487 -188.12)"
+      />
+      <rect
+        width="96.621"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -288.686 52.38)"
+      />
+      <rect
+        width="5.866"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -282.452 30.308)"
+      />
+      <rect
+        width="129.617"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -258.077 84.242)"
+      />
+      <rect
+        width="129.617"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -275.835 71.671)"
+      />
+      <rect
+        width="129.617"
+        height="4"
+        fill="#0075A7"
+        rx="2"
+        transform="scale(-1 1) rotate(37.338 -206.011 -130.618)"
+      />
     </svg>
-
-  )
+  );
 }
 
 export function IconCalculator() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" className="w-full h-full" viewBox="0 0 45 45" fill="none">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-full h-full"
+      viewBox="0 0 45 45"
+      fill="none"
+    >
       <g filter="url(#filter0_ii_1151_2960)">
         <rect width="45" height="44.0816" rx="7" fill="#0092CE" />
       </g>
-      <path d="M35.4095 22.3787C35.4095 29.3452 35.4095 32.8284 33.5189 34.992C31.6284 37.157 28.5845 37.157 22.4997 37.157C16.4134 37.157 13.371 37.157 11.4804 34.992C9.58984 32.8299 9.58984 29.3452 9.58984 22.3787C9.58984 15.4122 9.58984 11.9289 11.4804 9.76389C13.371 7.60034 16.4148 7.60034 22.4997 7.60034C28.5859 7.60034 31.6284 7.60034 33.5189 9.76389C34.7755 11.2033 35.1972 13.2264 35.3378 16.4673" stroke="white" stroke-width="1.5" stroke-linecap="round" />
-      <path d="M15.3281 16.4674C15.3281 15.7802 15.3281 15.4373 15.4013 15.1551C15.4991 14.7795 15.6911 14.4371 15.958 14.1621C16.2248 13.8871 16.5572 13.6893 16.9218 13.5886C17.1986 13.5117 17.5314 13.5117 18.197 13.5117H26.8035C27.4705 13.5117 27.8033 13.5117 28.0773 13.5871C28.4418 13.6879 28.7742 13.8857 29.0411 14.1606C29.308 14.4356 29.5 14.778 29.5978 15.1536C29.6724 15.4388 29.6724 15.7817 29.6724 16.4674C29.6724 17.1531 29.6724 17.4974 29.5992 17.7797C29.5014 18.1553 29.3094 18.4977 29.0425 18.7727C28.7757 19.0476 28.4433 19.2454 28.0787 19.3462C27.8033 19.423 27.4691 19.423 26.8035 19.423H18.197C17.53 19.423 17.1972 19.423 16.9232 19.3477C16.5587 19.2469 16.2263 19.0491 15.9594 18.7741C15.6925 18.4992 15.5005 18.1567 15.4027 17.7812C15.3281 17.496 15.3281 17.1531 15.3281 16.4674Z" stroke="white" stroke-width="1.5" />
-      <path d="M16.7626 25.3343C17.5548 25.3343 18.197 24.6727 18.197 23.8565C18.197 23.0403 17.5548 22.3787 16.7626 22.3787C15.9703 22.3787 15.3281 23.0403 15.3281 23.8565C15.3281 24.6727 15.9703 25.3343 16.7626 25.3343Z" fill="white" />
-      <path d="M16.7626 31.2457C17.5548 31.2457 18.197 30.5841 18.197 29.7679C18.197 28.9517 17.5548 28.29 16.7626 28.29C15.9703 28.29 15.3281 28.9517 15.3281 29.7679C15.3281 30.5841 15.9703 31.2457 16.7626 31.2457Z" fill="white" />
-      <path d="M22.5008 25.3343C23.293 25.3343 23.9353 24.6727 23.9353 23.8565C23.9353 23.0403 23.293 22.3787 22.5008 22.3787C21.7086 22.3787 21.0664 23.0403 21.0664 23.8565C21.0664 24.6727 21.7086 25.3343 22.5008 25.3343Z" fill="white" />
-      <path d="M22.5008 31.2457C23.293 31.2457 23.9353 30.5841 23.9353 29.7679C23.9353 28.9517 23.293 28.29 22.5008 28.29C21.7086 28.29 21.0664 28.9517 21.0664 29.7679C21.0664 30.5841 21.7086 31.2457 22.5008 31.2457Z" fill="white" />
-      <path d="M28.2391 25.3343C29.0313 25.3343 29.6735 24.6727 29.6735 23.8565C29.6735 23.0403 29.0313 22.3787 28.2391 22.3787C27.4469 22.3787 26.8047 23.0403 26.8047 23.8565C26.8047 24.6727 27.4469 25.3343 28.2391 25.3343Z" fill="white" />
-      <path d="M28.2391 31.2457C29.0313 31.2457 29.6735 30.5841 29.6735 29.7679C29.6735 28.9517 29.0313 28.29 28.2391 28.29C27.4469 28.29 26.8047 28.9517 26.8047 29.7679C26.8047 30.5841 27.4469 31.2457 28.2391 31.2457Z" fill="white" />
+      <path
+        d="M35.4095 22.3787C35.4095 29.3452 35.4095 32.8284 33.5189 34.992C31.6284 37.157 28.5845 37.157 22.4997 37.157C16.4134 37.157 13.371 37.157 11.4804 34.992C9.58984 32.8299 9.58984 29.3452 9.58984 22.3787C9.58984 15.4122 9.58984 11.9289 11.4804 9.76389C13.371 7.60034 16.4148 7.60034 22.4997 7.60034C28.5859 7.60034 31.6284 7.60034 33.5189 9.76389C34.7755 11.2033 35.1972 13.2264 35.3378 16.4673"
+        stroke="white"
+        stroke-width="1.5"
+        stroke-linecap="round"
+      />
+      <path
+        d="M15.3281 16.4674C15.3281 15.7802 15.3281 15.4373 15.4013 15.1551C15.4991 14.7795 15.6911 14.4371 15.958 14.1621C16.2248 13.8871 16.5572 13.6893 16.9218 13.5886C17.1986 13.5117 17.5314 13.5117 18.197 13.5117H26.8035C27.4705 13.5117 27.8033 13.5117 28.0773 13.5871C28.4418 13.6879 28.7742 13.8857 29.0411 14.1606C29.308 14.4356 29.5 14.778 29.5978 15.1536C29.6724 15.4388 29.6724 15.7817 29.6724 16.4674C29.6724 17.1531 29.6724 17.4974 29.5992 17.7797C29.5014 18.1553 29.3094 18.4977 29.0425 18.7727C28.7757 19.0476 28.4433 19.2454 28.0787 19.3462C27.8033 19.423 27.4691 19.423 26.8035 19.423H18.197C17.53 19.423 17.1972 19.423 16.9232 19.3477C16.5587 19.2469 16.2263 19.0491 15.9594 18.7741C15.6925 18.4992 15.5005 18.1567 15.4027 17.7812C15.3281 17.496 15.3281 17.1531 15.3281 16.4674Z"
+        stroke="white"
+        stroke-width="1.5"
+      />
+      <path
+        d="M16.7626 25.3343C17.5548 25.3343 18.197 24.6727 18.197 23.8565C18.197 23.0403 17.5548 22.3787 16.7626 22.3787C15.9703 22.3787 15.3281 23.0403 15.3281 23.8565C15.3281 24.6727 15.9703 25.3343 16.7626 25.3343Z"
+        fill="white"
+      />
+      <path
+        d="M16.7626 31.2457C17.5548 31.2457 18.197 30.5841 18.197 29.7679C18.197 28.9517 17.5548 28.29 16.7626 28.29C15.9703 28.29 15.3281 28.9517 15.3281 29.7679C15.3281 30.5841 15.9703 31.2457 16.7626 31.2457Z"
+        fill="white"
+      />
+      <path
+        d="M22.5008 25.3343C23.293 25.3343 23.9353 24.6727 23.9353 23.8565C23.9353 23.0403 23.293 22.3787 22.5008 22.3787C21.7086 22.3787 21.0664 23.0403 21.0664 23.8565C21.0664 24.6727 21.7086 25.3343 22.5008 25.3343Z"
+        fill="white"
+      />
+      <path
+        d="M22.5008 31.2457C23.293 31.2457 23.9353 30.5841 23.9353 29.7679C23.9353 28.9517 23.293 28.29 22.5008 28.29C21.7086 28.29 21.0664 28.9517 21.0664 29.7679C21.0664 30.5841 21.7086 31.2457 22.5008 31.2457Z"
+        fill="white"
+      />
+      <path
+        d="M28.2391 25.3343C29.0313 25.3343 29.6735 24.6727 29.6735 23.8565C29.6735 23.0403 29.0313 22.3787 28.2391 22.3787C27.4469 22.3787 26.8047 23.0403 26.8047 23.8565C26.8047 24.6727 27.4469 25.3343 28.2391 25.3343Z"
+        fill="white"
+      />
+      <path
+        d="M28.2391 31.2457C29.0313 31.2457 29.6735 30.5841 29.6735 29.7679C29.6735 28.9517 29.0313 28.29 28.2391 28.29C27.4469 28.29 26.8047 28.9517 26.8047 29.7679C26.8047 30.5841 27.4469 31.2457 28.2391 31.2457Z"
+        fill="white"
+      />
       <defs>
-        <filter id="filter0_ii_1151_2960" x="-1.23" y="-1.23" width="47.46" height="46.5415" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <filter
+          id="filter0_ii_1151_2960"
+          x="-1.23"
+          y="-1.23"
+          width="47.46"
+          height="46.5415"
+          filterUnits="userSpaceOnUse"
+          color-interpolation-filters="sRGB"
+        >
           <feFlood flood-opacity="0" result="BackgroundImageFix" />
-          <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="BackgroundImageFix"
+            result="shape"
+          />
+          <feColorMatrix
+            in="SourceAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+            result="hardAlpha"
+          />
           <feOffset dx="1.84" dy="1.84" />
           <feGaussianBlur stdDeviation="0.615" />
           <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
-          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-          <feBlend mode="normal" in2="shape" result="effect1_innerShadow_1151_2960" />
-          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+          />
+          <feBlend
+            mode="normal"
+            in2="shape"
+            result="effect1_innerShadow_1151_2960"
+          />
+          <feColorMatrix
+            in="SourceAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+            result="hardAlpha"
+          />
           <feOffset dx="-1.23" dy="-1.23" />
           <feGaussianBlur stdDeviation="0.615" />
           <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
-          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-          <feBlend mode="normal" in2="effect1_innerShadow_1151_2960" result="effect2_innerShadow_1151_2960" />
+          <feColorMatrix
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+          />
+          <feBlend
+            mode="normal"
+            in2="effect1_innerShadow_1151_2960"
+            result="effect2_innerShadow_1151_2960"
+          />
         </filter>
       </defs>
     </svg>
-  )
+  );
 }
 
 export function IconArrowRight() {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" className="w-full h-full" viewBox="0 0 11 11" fill="none">
-      <path d="M11 0.868359V8.39414C11 8.62444 10.9085 8.84531 10.7457 9.00816C10.5829 9.17101 10.362 9.2625 10.1318 9.2625C9.90148 9.2625 9.68064 9.17101 9.51781 9.00816C9.35499 8.84531 9.26351 8.62444 9.26351 8.39414V2.96689L1.48476 10.7452C1.32165 10.9084 1.10042 11 0.869751 11C0.639079 11 0.417854 10.9084 0.254744 10.7452C0.0916343 10.5821 0 10.3608 0 10.1301C0 9.89943 0.0916343 9.67818 0.254744 9.51505L8.0335 1.73672H2.60696C2.37669 1.73672 2.15585 1.64523 1.99302 1.48238C1.8302 1.31953 1.73872 1.09866 1.73872 0.868359C1.73872 0.638056 1.8302 0.417185 1.99302 0.254336C2.15585 0.0914875 2.37669 0 2.60696 0H10.1318C10.362 0 10.5829 0.0914875 10.7457 0.254336C10.9085 0.417185 11 0.638056 11 0.868359Z" fill="white" />
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-full h-full"
+      viewBox="0 0 11 11"
+      fill="none"
+    >
+      <path
+        d="M11 0.868359V8.39414C11 8.62444 10.9085 8.84531 10.7457 9.00816C10.5829 9.17101 10.362 9.2625 10.1318 9.2625C9.90148 9.2625 9.68064 9.17101 9.51781 9.00816C9.35499 8.84531 9.26351 8.62444 9.26351 8.39414V2.96689L1.48476 10.7452C1.32165 10.9084 1.10042 11 0.869751 11C0.639079 11 0.417854 10.9084 0.254744 10.7452C0.0916343 10.5821 0 10.3608 0 10.1301C0 9.89943 0.0916343 9.67818 0.254744 9.51505L8.0335 1.73672H2.60696C2.37669 1.73672 2.15585 1.64523 1.99302 1.48238C1.8302 1.31953 1.73872 1.09866 1.73872 0.868359C1.73872 0.638056 1.8302 0.417185 1.99302 0.254336C2.15585 0.0914875 2.37669 0 2.60696 0H10.1318C10.362 0 10.5829 0.0914875 10.7457 0.254336C10.9085 0.417185 11 0.638056 11 0.868359Z"
+        fill="white"
+      />
     </svg>
-  )
+  );
 }
+
+export function IconChat() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="48"
+      height="48"
+      fill="none"
+      viewBox="0 0 48 48"
+    >
+      <path
+        fill="#4B41F1"
+        d="M24.004 16c-4.418 0-8 3.58-8.004 7.998a7.965 7.965 0 0 0 .904 3.7c.056.107.106.214.163.314.128.246.153.532.071.797a15.644 15.644 0 0 0-.569 1.864c0 .313.093.498.427.498.608-.136 1.206-.31 1.793-.52.255-.066.524-.048.768.05.22.114.42.278.64.378h.072A8.002 8.002 0 0 0 32 23.999 8.004 8.004 0 0 0 24.004 16Z"
+        opacity=".4"
+      />
+      <g filter="url(#a)">
+        <rect width="40" height="40" x="4" y="4" fill="#fff" rx="20" />
+        <rect width="40" height="40" x="4" y="4" stroke="#979797" rx="20" />
+      </g>
+      <path
+        fill="#3CF"
+        d="M24.004 16c-4.418 0-8 3.58-8.004 7.998a7.965 7.965 0 0 0 .904 3.7c.056.107.106.214.163.314.128.246.153.532.071.797a15.644 15.644 0 0 0-.569 1.864c0 .313.093.498.427.498.608-.136 1.206-.31 1.793-.52.255-.066.524-.048.768.05.22.114.42.278.64.378h.072A8.002 8.002 0 0 0 32 23.999 8.004 8.004 0 0 0 24.004 16Z"
+        opacity=".4"
+      />
+      <defs>
+        <filter
+          id="a"
+          width="48"
+          height="48"
+          x="0"
+          y="0"
+          color-interpolation-filters="sRGB"
+          filterUnits="userSpaceOnUse"
+        >
+          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feColorMatrix
+            in="SourceAlpha"
+            result="hardAlpha"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          />
+          <feMorphology
+            in="SourceAlpha"
+            operator="dilate"
+            radius="2"
+            result="effect1_dropShadow_1115_2692"
+          />
+          <feOffset />
+          <feGaussianBlur stdDeviation="1" />
+          <feColorMatrix values="0 0 0 0 0.0784314 0 0 0 0 0.4 0 0 0 0 0.8 0 0 0 0.16 0" />
+          <feBlend
+            in2="BackgroundImageFix"
+            result="effect1_dropShadow_1115_2692"
+          />
+          <feBlend
+            in="SourceGraphic"
+            in2="effect1_dropShadow_1115_2692"
+            result="shape"
+          />
+        </filter>
+      </defs>
+    </svg>
+  );
+}
+
+export function IconCheckedV2() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="inline"
+      width="16"
+      height="14"
+      fill="none"
+      viewBox="0 0 16 14"
+    >
+      <path
+        stroke="#0075A7"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="m1 7.816 5.112 5.112L14.632 1"
+      />
+    </svg>
+  );
+}
+// export function IconMedical(){
+//   return(
+
+//   )
+// }

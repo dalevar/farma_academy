@@ -13,6 +13,7 @@ import RegisterPage from "./pages/authentication/register/App";
 import ModulePage from "./pages/module_page/App";
 import DetailModule from "./pages/module_page/detail_module/App";
 import AccessMateriPage from "./pages/module_page/detail_module/detail_materi/App";
+import LearingModule from "./pages/module_page/learning_module/App";
 // forum
 import ForumPage from "./pages/forum/App";
 import DetailForum from "./pages/forum/DetailForum";
@@ -54,6 +55,7 @@ export default function App() {
         <Route path="/module" element={<ModulePage />} />
         <Route path="/module/materi" element={<DetailModule />} />
         <Route path="/module/materi/access" element={<AccessMateriPage />} />
+        <Route path="/module/materi/access/learning" element={<LearingModule />} />
 
         {/* auth page */}
         <Route path="/register" element={<RegisterPage />} />
