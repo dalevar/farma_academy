@@ -59,7 +59,7 @@ const MacamDosis = () => {
     setPaused(!isPaused);
 
     if (videoRef.current) {
-      isPaused ? videoRef.current.play() : videoRef.current.pause();
+      videoRef.current.pause();
     }
   };
   const handleAnswerClick = (answer) => {
@@ -69,10 +69,7 @@ const MacamDosis = () => {
     // Resume video and hide questions
     setPaused(false);
     setShowQuestions(false);
-
-    if (videoRef.current) {
-      videoRef.current.play();
-    }
+    videoRef.current.play();
   };
   useEffect(() => {
     const videoElement = videoRef.current;
@@ -80,9 +77,8 @@ const MacamDosis = () => {
     const handleTimeUpdate = () => {
       // Tampilkan tombol pada detik ke-10 (sesuaikan dengan kebutuhan Anda)
       if (videoElement.currentTime >= 10 && videoElement.currentTime < 11) {
+        isPaused ? videoRef.current.pause() : videoRef.current.play();
         setShowQuestions(true);
-        console.log("true");
-        console.log(showQuestions);
       }
     };
 
@@ -179,18 +175,18 @@ const MacamDosis = () => {
             <div>
               <div className="absolute inset-0 items-end justify-center">
                 <div className="p-8 rounded-lg">
-                  <div className="mt-4 flex space-x-4">
+                  <div className="mt-4 flex justify-center items-end space-x-4">
                     <button
                       className="bg-farma-500  text-white font-bold py-4 px-12 rounded"
                       onClick={() => handleAnswerClick("A")}
                     >
-                       A
+                      A
                     </button>
                     <button
                       className="bg-farma-500  text-white font-bold py-4 px-12 rounded"
                       onClick={() => handleAnswerClick("B")}
                     >
-                       B
+                      B
                     </button>
                     {/* Add more answer buttons as needed */}
                   </div>
