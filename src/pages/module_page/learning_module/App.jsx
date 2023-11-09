@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { IconCheckedV2 } from "../../../components/Icons";
 
 const DefinisiDosis = () => {
@@ -50,18 +50,155 @@ const DefinisiDosis = () => {
 };
 
 const MacamDosis = () => {
+  const videoRef = useRef(null);
+  const [isPaused, setPaused] = useState(true);
+  const [showQuestions, setShowQuestions] = useState(false);
+
+  const handleButtonClick = () => {
+    setShowQuestions(true);
+    setPaused(!isPaused);
+
+    if (videoRef.current) {
+      isPaused ? videoRef.current.play() : videoRef.current.pause();
+    }
+  };
+  const handleAnswerClick = (answer) => {
+    // Handle user's answer logic here
+    console.log(`User selected answer: ${answer}`);
+
+    // Resume video and hide questions
+    setPaused(false);
+    setShowQuestions(false);
+
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  };
+  useEffect(() => {
+    const videoElement = videoRef.current;
+
+    const handleTimeUpdate = () => {
+      // Tampilkan tombol pada detik ke-10 (sesuaikan dengan kebutuhan Anda)
+      if (videoElement.currentTime >= 10 && videoElement.currentTime < 11) {
+        setShowQuestions(true);
+        console.log("true");
+        console.log(showQuestions);
+      }
+    };
+
+    videoElement.addEventListener("timeupdate", handleTimeUpdate);
+
+    return () => {
+      videoElement.removeEventListener("timeupdate", handleTimeUpdate);
+    };
+  }, []);
   return (
     <>
       <div className="[Jakarta Sans'] flex-shrink-0 w-[537px] h-[1.375rem] text-[#02628a] text-justify font-['Plus text-2xl font-bold leading-[normal] mt-8">
-       Macam-macam Dosis :
+        Macam-macam Dosis :
       </div>
-      <div className="[Jakarta Sans'] flex-shrink-0 w-[1012px] h-[1200px] text-[#5c5c5c] text-justify font-['Plus text-lg leading-[150%] mt-10 font-thin">
-      Terdapat beberapa jenis dosis yang digunakan dalam penggunaan obat atau zat lainnya, tergantung pada penggunaannya. Berikut adalah beberapa macam dosis yang umum :
+      <div className="[Jakarta Sans'] flex-shrink-0 w-[1012px] text-[#5c5c5c] text-justify font-['Plus text-lg leading-[150%] mt-7 font-thin">
+        Terdapat beberapa jenis dosis yang digunakan dalam penggunaan obat atau
+        zat lainnya, tergantung pada penggunaannya. Berikut adalah beberapa
+        macam dosis yang umum :
       </div>
-      <div className="[Jakarta Sans'] flex-shrink-0 w-[1012px] h-[1200px] text-[#5c5c5c] text-justify font-['Plus text-lg leading-[150%] font-thin">
-        <ul>
-            <li>Bapak kenapa hilang</li>
-        </ul>
+      <div className="[Jakarta Sans'] flex-shrink-0 w-[1012px] text-[#5c5c5c] text-justify font-['Plus text-lg leading-[150%] ml-5 mt-10 font-thin">
+        <ol className="list-decimal">
+          <li>
+            <span className="font-bold me-1">Dosis lazim:</span>
+            Dosis ini seperti saran umum tentang seberapa banyak obat atau zat
+            yang seharusnya digunakan. Tidak mengikat, tetapi memberikan pedoman
+            umum.
+          </li>
+          <li className="mt-5">
+            <span className="font-bold me-1">Dosis terapi:</span>
+            Ini adalah takaran obat yang diberikan dalam keadaan biasa dan dapat
+            menyembuhkan penderita. Ini seperti resep dokter untuk membantu
+            pemulihan.{" "}
+          </li>
+          <li className="mt-5">
+            <span className="font-bold me-1">Dosis minimum:</span>
+            Ini adalah takaran obat terkecil yang masih dapat menyembuhkan.
+            Biasanya digunakan sekali sehari dan tidak menimbulkan resistensi
+            pada penderita.{" "}
+          </li>
+          <li className="mt-5">
+            <span className="font-bold me-1">Dosis maksimum:</span>
+            takaran obat terbesar yang dapat diberikan pada penderita yang masih
+            dapat menyembuhkan, untuk pemakaian sekali dan sehari, tanpa
+            menimbulkan keracunan atau membahayakan penderita. Dosis maksimum
+            ini berlaku untuk pemakaian sekali dan sehari (24 jam).{" "}
+            <p className="mt-5">
+              Penyerahan obat yang melebihi dosis maksimum dapat dilakukan jika
+              :
+            </p>
+            <ol className="list-disc ml-7">
+              <li>Ada paraf dan tanda seru dokter penulis resep</li>
+              <li>Nama obat diberi garis bawah</li>
+              <li>
+                Banyaknya obat hendaknya ditulis dengan huruf yang lengkap
+              </li>
+            </ol>
+          </li>
+          <li className="mt-5">
+            <span className="font-bold me-1">Dosis Toksik :</span>
+            takaran obat dalam keadaan biasa yang dapat menyebabkan keracunan
+            pada penderita. Harus di hindari karena dapat membayakan kesehatan
+          </li>
+          <li className="mt-5">
+            <span className="font-bold me-1">Dosis Letalis :</span>
+            dosis yang dalam keadaan biasa dapat menyebabkan kematian pada
+            penderita, Dosis letalis terdiri atas: <br />
+            <p>
+              {" "}
+              - LD 50 : dosis yang menyebabkan kematian pada 50% hewan
+              percobaan. Sebuah ukuran yang sangat serius dari tingkat
+              toksisitas suatu zat.
+            </p>
+            <p>
+              - LD 100 : dosis yang menyebabkan kematian pada 100% hewan
+              percobaan. Sangat penting untuk menghindari dosis ini, karena itu
+              berarti kematian pasti.
+            </p>
+          </li>
+        </ol>
+      </div>
+      <div className="[Jakarta Sans'] flex-shrink-0 w-[1012px] text-[#5c5c5c] text-justify font-['Plus text-lg leading-[150%] mt-10 font-thin">
+        <p>
+          Mari kita lanjutkan untuk mentonton penjelasan dari video berikut :
+        </p>
+      </div>
+
+      <div className="bg-black rounded-xl">
+        <div className="relative w-full rounded-xl">
+          <video ref={videoRef} className="w-full rounded-xl h-96" controls>
+            <source src="/videos/blank.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          {showQuestions && (
+            <div>
+              <div className="absolute inset-0 items-end justify-center">
+                <div className="p-8 rounded-lg">
+                  <div className="mt-4 flex space-x-4">
+                    <button
+                      className="bg-farma-500  text-white font-bold py-4 px-12 rounded"
+                      onClick={() => handleAnswerClick("A")}
+                    >
+                       A
+                    </button>
+                    <button
+                      className="bg-farma-500  text-white font-bold py-4 px-12 rounded"
+                      onClick={() => handleAnswerClick("B")}
+                    >
+                       B
+                    </button>
+                    {/* Add more answer buttons as needed */}
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </>
   );
@@ -72,29 +209,38 @@ const LearingModule = () => {
   const [openMacamDiDosis, setOpenMacamDosis] = useState(false);
   const [openFaktorDosis, setOpenFaktorDosis] = useState(false);
   const [openKuisDosis, setOpenKuisDosis] = useState(false);
+
+  const [iconDefinisiDosis, setIconDefinisiDosis] = useState(true);
+  const [iconMacamDiDosis, setIconMacamDosis] = useState(false);
+  const [iconFaktorDosis, setIconFaktorDosis] = useState(false);
+  const [iconKuisDosis, setIconKuisDosis] = useState(false);
   const handleDefinisiDosis = () => {
     setOpenDefinisiDosis(true);
     setOpenMacamDosis(false);
     setOpenFaktorDosis(false);
     setOpenKuisDosis(false);
+    setIconDefinisiDosis(true);
   };
   const handleClickMacamDosis = () => {
     setOpenMacamDosis(true);
     setOpenDefinisiDosis(false);
     setOpenFaktorDosis(false);
     setOpenKuisDosis(false);
+    setIconMacamDosis(true);
   };
   const handleFaktorDosis = () => {
     setOpenFaktorDosis(true);
     setOpenMacamDosis(false);
     setOpenDefinisiDosis(false);
     setOpenKuisDosis(false);
+    setIconFaktorDosis(true);
   };
   const handleKuisDosis = () => {
     setOpenKuisDosis(true);
     setOpenFaktorDosis(false);
     setOpenMacamDosis(false);
     setOpenDefinisiDosis(false);
+    setIconKuisDosis(true);
   };
   return (
     <div className="flex m-5">
@@ -118,7 +264,7 @@ const LearingModule = () => {
                   >
                     Definisi dosis
                   </button>
-                  <span className="me-4">
+                  <span className={`${!iconDefinisiDosis && "me-4 hidden"}`}>
                     <IconCheckedV2 />
                   </span>
                 </div>
@@ -129,7 +275,7 @@ const LearingModule = () => {
                   >
                     Macam-macam dosis
                   </button>
-                  <span className="me-4">
+                  <span className={`${!iconMacamDiDosis && "me-4 hidden"}`}>
                     <IconCheckedV2 />
                   </span>
                 </div>
@@ -140,7 +286,7 @@ const LearingModule = () => {
                   >
                     Faktor faktor yang mempengaruhi dosis obat
                   </button>
-                  <span className="me-4">
+                  <span className={`${!iconFaktorDosis && "me-4 hidden"}`}>
                     <IconCheckedV2 />
                   </span>
                 </div>
@@ -151,7 +297,7 @@ const LearingModule = () => {
                   >
                     Kuis Dosis
                   </button>
-                  <span className="me-4">
+                  <span className={`${!iconKuisDosis && "me-4 hidden"}`}>
                     <IconCheckedV2 />
                   </span>
                 </div>
@@ -234,7 +380,7 @@ const LearingModule = () => {
         </div>
       </div>
 
-      <div className="w-full border rounded-xl mx-3 overflow-y-scroll p-5">
+      <div className="w-full border rounded-xl mx-3  p-5">
         <div className={`${openDefinisiDosis === false ? "hidden" : ""}`}>
           <DefinisiDosis />
         </div>
