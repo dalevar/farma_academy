@@ -26,6 +26,7 @@ import DashboardPage from "./pages/dashboard/App";
 import LanggananPage from "./pages/langganan/App";
 import { useEffect } from "react";
 import LogoutPage from "./pages/authentication/logout/App";
+import TestPage from "./Test";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -69,6 +70,9 @@ export default function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/logout" element={<LogoutPage />} />
+
+
+        <Route path="/test" element={<TestPage />} />
       </Routes>
 
       <Footer />

@@ -1,6 +1,8 @@
 const DashboardPage = () => {
   return (
-    <div className="">Dashboard</div>
+    <main className="flex-auto">
+
+    </main>
   )
 }
 export default DashboardPage;
