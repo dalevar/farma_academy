@@ -11,7 +11,7 @@ import MentorJob from "./MentorJob";
 import ConsultantSection from "./ConsultantSection";
 const LandingPage = () => {
   return (
-    <div>
+    <main className="flex-auto overflow-x-hidden">
       {/* banner */}
       <BannerSection />
 
@@ -44,7 +44,7 @@ const LandingPage = () => {
 
       {/* CTA before Footer */}
       <CTASection />
-    </div>
+    </main>
   );
 };
 export default LandingPage;

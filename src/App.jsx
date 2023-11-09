@@ -8,7 +8,7 @@ import Footer from "./components/layouts/Footer";
 import LandingPage from "./pages/landing_page/App";
 // auth page
 import LoginPage from "./pages/authentication/login/App";
-import RegisterPage from "./pages/authentication/register/app";
+import RegisterPage from "./pages/authentication/register/App";
 // module page
 import ModulePage from "./pages/module_page/App";
 import DetailModule from "./pages/module_page/detail_module/App";
