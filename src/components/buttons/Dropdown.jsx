@@ -48,7 +48,7 @@ Dropdown.propTypes = {
     listItems: PropTypes.arrayOf(
         PropTypes.shape({
             icon: PropTypes.node.isRequired,
-            title: PropTypes.string.isRequired,
+            title: PropTypes.any.isRequired,
             to: PropTypes.string.isRequired,
         })
     ).isRequired,

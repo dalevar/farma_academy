@@ -1,4 +1,4 @@
-import { Route, Routes, ScrollRestoration } from "react-router-dom";
+import { Route, Routes, ScrollRestoration, useLocation } from "react-router-dom";
 
 // component
 import Header from "./components/layouts/Header";
@@ -19,14 +19,28 @@ import DetailForum from "./pages/forum/DetailForum";
 
 import DashboardPage from "./pages/dashboard/App";
 import LanggananPage from "./pages/langganan/App";
+import { useEffect } from "react";
 
 
 export default function App() {
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    // "document.documentElement.scrollTo" is the magic for React Router Dom v6
+    document.documentElement.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant", // Optional if you want to skip the scrolling animation
+    });
+  }, [pathname]);
+
+
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
       
-      <ScrollRestoration  >
+      
       <Routes >
         <Route path="/" element={<LandingPage />} />
         <Route path="/dashboard" element={<DashboardPage />} />
@@ -46,7 +60,7 @@ export default function App() {
         <Route path="/login" element={<LoginPage />} />
       </Routes>
 
-      </ScrollRestoration>
+      
       
 
       <Footer />

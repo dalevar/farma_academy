@@ -15,6 +15,18 @@ export default function Header() {
     const pathName = location.pathname
 
     const dropdownListItems = {
+        profilePicture : [
+            {
+                icon : <IconForum/>,
+                title: 'Dashboard',
+                to:'/dashboard'
+            },
+            {
+                icon : <IconForum/>,
+                title: 'Forum diskusi',
+                to:'/forum'
+            },
+        ],
         materiBelajar: [
             {
                 icon: <IconSubwayBook />,
@@ -71,9 +83,9 @@ export default function Header() {
                     {/* Nav */}
                     <div className="flex gap-3 whitespace-nowrap mr-4 text-sm">
                         <div className="relative">
-                            <Link to={'/'} preventScrollReset>Home</Link>
+                            <Link to={'/'}>Home</Link>
                             {pathName == '/' &&
-                                <motion.span initial={false} layout="size" layoutId="nav-active" className="inline-block w-full border-b-2 border-pale-grey absolute bottom-0 left-0"></motion.span>
+                                <motion.span initial={{ width:0 }} animate={{ width:'100%' }} layout='size' layoutId="nav-active" className="inline-block w-full border-b-2 border-pale-grey absolute bottom-0 left-0"></motion.span>
                             }
                         </div>
 
@@ -93,7 +105,7 @@ export default function Header() {
                         <div className="relative">
                             <Link preventScrollReset to="/langganan">Langganan</Link>
                             {pathName == '/langganan' &&
-                                <motion.span initial="false" layout="size" layoutId="nav-active" className="inline-block w-full border-b-2 border-pale-grey absolute bottom-0 left-0 rounded-xl"></motion.span>
+                                <motion.span initial={{ width:0 }} animate={{ width:'100%' }} layout='size' layoutId="nav-active" className="inline-block w-full border-b-2 border-pale-grey absolute bottom-0 left-0"></motion.span>
                             }
                         </div>
                     </div>
@@ -104,7 +116,7 @@ export default function Header() {
 
                         {user ?
                             <>
-                                <Dropdown />
+                                <Dropdown tittleDropdown={<img src="/images/landingPages/landingPage3.png" alt="" className="w-10 h-10 object-cover rounded-full"/>} listItems={dropdownListItems.profilePicture} />
                             </>
                             :
                             <>
