@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { IconCheckedV2 } from "../../../components/Icons";
+import Draggable from "react-draggable";
 const QuizInteraktif = () => {
   return (
     <div className="flex m-5">
@@ -11,6 +12,9 @@ const QuizInteraktif = () => {
             <div className="font-bold">
                 Hitunglah Paracetamol untuk anak berusia 18 tahun
             </div>
+          <Draggable 
+            axis="both"
+          ></Draggable>
         </div>
       </div>
     </div>
