@@ -4,47 +4,13 @@ import katex from "katex";
 import { IconDropdown } from "../../components/Icons";
 import { useState } from "react";
 import CardYoung from "../../components/card_kalkulator/CardYoung";
+import CardDilling from "../../components/card_kalkulator/CardDilling";
+import CardFried from "../../components/card_kalkulator/CardFried";
+import CardThermich from "../../components/card_kalkulator/CardThermich";
 const HitungDetail = () => {
-  const [young, setYoung] = useState(true);
-  const [dilling, setDilling] = useState(false);
-  const [fried, setFried] = useState(false);
-  const [thermich, setThermich] = useState(false);
   const [showButton, setShowButton] = useState(false);
   const [rumusDipakai, setRumusDipakai] = useState("young");
-  let html;
-  let catatan;
-  function rumusDilling(n, dm) {
-    const mathExpression = `\\frac{${n}}{{20}} \\times ${dm}g`;
-    html = katex.renderToString(mathExpression);
-    catatan = {
-      umur: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
-      tipe: "Tahun",
-      n: "umur anak 8 - 20 tahun",
-      dm: "dosis maksimal",
-    };
-  }
-  function rumusFried(n, dm) {
-    const mathExpression = `\\frac{${n}}{{150}} \\times ${dm}g`;
-    html = katex.renderToString(mathExpression);
-    catatan = {
-      umur: [12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
-      tipe: "Bulan",
-      n: "umur bayi < 1 tahun (dalam bulan)",
-      dm: "dosis maksimal",
-    };
-  }
-  function rumusThermich(n, dm) {
-    const mathExpression = `\\frac{${n}}{{70}} \\times ${dm}g`;
-    html = katex.renderToString(mathExpression);
-    catatan = {
-      n: "berat badan dalam satuan kilo (KG)",
-      dm: "dosis maksimal",
-    };
-  }
-
-  const submitForm = (e) => {
-    e.preventDefault();
-  };
+  
   return (
     <section className="w-full">
       <div className="w-full">
@@ -66,7 +32,9 @@ const HitungDetail = () => {
               className="bg-violet-50 flex w-auto justify-between gap-4 px-10 py-3 rounded-[50px]"
               onClick={() => setShowButton(~showButton)}
             >
-              <p className="mx-auto">{!rumusDipakai ? "Pilih Rumus" : rumusDipakai}</p>
+              <p className="mx-auto">
+                {!rumusDipakai ? "Pilih Rumus" : rumusDipakai}
+              </p>
               <div className="w-5 my-auto">
                 <IconDropdown />
               </div>
@@ -105,11 +73,10 @@ const HitungDetail = () => {
             </div>
           </div>
         </div>
-        {
-          rumusDipakai === "young" && (
-            <CardYoung  />
-          )
-        }
+        {rumusDipakai === "young" && <CardYoung />}
+        {rumusDipakai === "dilling" && <CardDilling />}
+        {rumusDipakai === "fried" && <CardFried />}
+        {rumusDipakai === "thermich" && <CardThermich />}
       </div>
     </section>
     // <div dangerouslySetInnerHTML={{ __html: html }} />
