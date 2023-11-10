@@ -97,7 +97,7 @@ const CardYoung = () => {
                 Hitung
               </button>
               {result && (
-                <span className="text-2xl font-bold">Hasil : {result}g</span>
+                <span className="text-2xl font-bold">Hasil : {result}mg</span>
               )}
             </div>
           </form>
@@ -114,7 +114,7 @@ const CardYoung = () => {
         </div>
         {result && (
           <div className="p-7">
-            <span className="font-bold text-lg">Hasil : {result}g</span>
+            <span className="font-bold text-lg">Hasil : {result} mg</span>
             <p className="text-lg mt-5">Penyelesaian : </p>
             <div className="flex items-center gap-5 mt-5">
               <span className="text-lg font-semibold">Rumus</span>
