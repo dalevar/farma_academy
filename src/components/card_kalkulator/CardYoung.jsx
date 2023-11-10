@@ -3,24 +3,24 @@
 import katex from "katex";
 import { useState } from "react";
 const CardYoung = () => {
-  const [result, setResult] = useState(0);
-  let html;
+  const [result, setResult] = useState();
+  const [rumus, setRumus] = useState();
+  const [mathExpression, setMathExpression] = useState();
   const catatan = {
     umurTahun: [1, 2, 3, 4, 5, 6, 7, 8],
     umurBulan: [12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
     n: "umur anak <= 8 tahun",
     dm: "dosis maksimal",
   };
-  let mathExpression;
-  let rumus;
+  const html = rumus && katex.renderToString(rumus);
   function rumusYoung(e) {
+    e.preventDefault();
     const n = Number(e.target[0].value);
     const dm = Number(e.target[1].value);
-    e.preventDefault();
-    rumus = `\\frac{n}{{n+12}} \\times dm`;
-    mathExpression = `\\frac{${n}}{{${n}+12}} \\times ${dm}g`;
-    html = katex.renderToString(mathExpression);
-    const results = ((n / (n + 12)) * dm).toFixed(3);  
+    setRumus(`\\frac{n}{{n+12}} \\times dm`);
+    setMathExpression(`\\frac{${n}}{{${n}+12}} \\times ${dm}g`)
+
+    const results = ((n / (n + 12)) * dm).toFixed(3);
     setResult(results);
   }
   return (
@@ -37,7 +37,6 @@ const CardYoung = () => {
                     "peer border-2 border-gray-400 rounded-lg  w-full py-4  px-2 outline-none"
                   }
                 />
-
               </div>
 
               <div className="relative flex items-center select-none w-7/12">
@@ -46,7 +45,7 @@ const CardYoung = () => {
                   className="peer border-2 border-gray-400 rounded-lg w-full py-4 px-2
                     outline-none"
                 >
-                  <option selected >Umur anak</option>
+                  <option selected>Umur anak</option>
                   {catatan.umurTahun.map((v, i) => {
                     return (
                       <option value={v} key={i}>
@@ -55,7 +54,11 @@ const CardYoung = () => {
                     );
                   })}
                   {catatan.umurBulan.map((v, i) => {
-                    return <option value={v} key={i}>{v} bulan</option>;
+                    return (
+                      <option value={v} key={i}>
+                        {v} bulan
+                      </option>
+                    );
                   })}
                 </select>
               </div>
@@ -73,17 +76,25 @@ const CardYoung = () => {
               </a>
             </div>
             <div className="flex justify-between mt-5 items-center">
-              <button type="submit" className="font-['Jakarta-sans'] py-2 px-4 text-lg bg-farma-600 text-white rounded-xl">
+              <button
+                type="submit"
+                className="font-['Jakarta-sans'] py-2 px-4 text-lg bg-farma-600 text-white rounded-xl"
+              >
                 Hitung
               </button>
               <span className="text-2xl font-bold">Hasil {result}g</span>
-              {console.log(result)}
             </div>
           </form>
         </div>
       </div>
       <div className="w-5/12 bg-white rounded-2xl p-5 shadow-xl border-2 border-black">
-        {}
+        {result && (
+          <div>
+            <span className="font-bold text-lg">Hasil : {result}</span>
+            <div dangerouslySetInnerHTML={{ __html: html }} />
+            <div dangerouslySetInnerHTML={{ __html: mathExpression }} />
+          </div>
+        )}
       </div>
     </div>
   );
