@@ -14,6 +14,7 @@ import ModulePage from "./pages/module_page/App";
 import DetailModule from "./pages/module_page/detail_module/App";
 import AccessMateriPage from "./pages/module_page/detail_module/detail_materi/App";
 import LearingModule from "./pages/module_page/learning_module/App";
+import QuizInteraktif from "./pages/module_page/quiz_interaktif_module/App";
 
 // Hitung Cepat Page
 import HitungPage from "./pages/hitung_page/App";
@@ -63,6 +64,10 @@ export default function App() {
         <Route
           path="/module/materi/access/learning"
           element={<LearingModule />}
+        />
+        <Route
+          path="/module/materi/access/learning/interaktif"
+          element={<QuizInteraktif />}
         />
 
         {/* auth page */}
