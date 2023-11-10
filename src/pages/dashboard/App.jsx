@@ -1,4 +1,3 @@
-import CardProccessLesson from "../../components/cards/CardProccessLesson";
 import {
   IconMedic,
   IconBook,
@@ -90,7 +89,7 @@ const DashboardPage = () => {
             </div>
           </div>
           <p className="text-end">
-            <a href="#" className="text-farma-500 underline text-xl me-5">
+            <a href="/module" className="text-farma-500 underline text-xl me-5">
               Selengkapnya
             </a>
           </p>
@@ -99,19 +98,19 @@ const DashboardPage = () => {
           <div className="w-8/12 shadow-md border rounded-2xl px-5 py-10 ">
             <span className="font-thin text-xl ml-9">Aktivitas lain</span>
             <div className="flex mt-14 gap-5 justify-center">
-              <div className="border shadow-lg p-5 rounded-xl">
+              <div className="border shadow-lg p-5 rounded-xl hover:scale-110 transition-transform">
                 <div className="w-8">
                   <IconCalendar />
                 </div>
                 <div className="w-8/12 mt-5">Telusuri event terbaru</div>
               </div>
-              <div className="border shadow-lg p-5 rounded-xl">
+              <div className="border shadow-lg p-5 rounded-xl hover:scale-110 transition-transform">
                 <div className="w-8">
                   <IconBag />
                 </div>
                 <div className="w-8/12 mt-5">Telusuri daftar pekerjaan</div>
               </div>
-              <div className="border shadow-lg p-5 rounded-xl">
+              <div className="border shadow-lg p-5 rounded-xl hover:scale-110 transition-transform">
                 <div className="w-8">
                   <IconSMS />
                 </div>
@@ -119,10 +118,91 @@ const DashboardPage = () => {
               </div>
             </div>
           </div>
-          <div className="w-4/12 shadow-md border rounded-2xl p-9 px-8 [Jakarta Sans']">
-            <div className="flex justify-between items-center">
-              <span className="text-xl">Riwayat terkini</span>
-              <span className="text-md text-gray-500">November</span>
+          <div className="w-4/12 shadow-md border rounded-2xl py-3 px-8 [Jakarta Sans']">
+            <div className="self-stretch flex justify-between mx-auto gap-5 mt-8">
+              <div className="flex grow basis-[0%] flex-col items-stretch">
+                <div className="text-sky-950 text-lg leading-7 whitespace-nowrap">
+                  Riwayat Terkini{" "}
+                </div>
+                <div className="flex items-stretch justify-between gap-5 mt-2 max-md:justify-center">
+                  <div className="text-gray-300 text-sm leading-5">Sn</div>
+                  <div className="text-gray-300 text-sm leading-5">Sl</div>
+                  <div className="text-gray-300 text-sm leading-5">Rb</div>
+                  <div className="text-gray-300 text-sm leading-5 whitespace-nowrap">
+                    Km
+                  </div>
+                </div>
+              </div>
+              <div className="flex grow basis-[0%] flex-col">
+                <div className="text-gray-300 text-sm text-end leading-5 my-auto whitespace-nowrap">
+                  November
+                </div>
+                <div className="self-stretch flex items-stretch justify-between gap-5 mt-3 pr-3 max-md:justify-center">
+                  <div className="text-gray-300 text-sm leading-5 self-start">
+                    Jm
+                  </div>
+                  <div className="text-gray-300 text-sm leading-5 self-start">
+                    Sb
+                  </div>
+                  <div className="text-gray-300 text-sm leading-5 whitespace-nowrap">
+                    Mg
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="self-stretch flex items-stretch justify-center gap-3 mt-2.5 max-md:justify-center">
+              <div className="bg-sky-100 flex w-[37px] shrink-0 h-[37px] flex-col rounded-md" />
+              <div className="bg-sky-100 flex w-[37px] shrink-0 h-[37px] flex-col rounded-md" />
+              <div className="bg-sky-100 flex w-[37px] shrink-0 h-[37px] flex-col rounded-md" />
+              <div className="bg-sky-100 flex w-[37px] shrink-0 h-[37px] flex-col rounded-md" />
+              <div className="bg-gray-200 flex w-[37px] shrink-0 h-[37px] flex-col rounded-md" />
+              <div className="bg-sky-600 flex w-[37px] shrink-0 h-[37px] flex-col rounded-md" />
+              <div className="bg-sky-600 flex w-[37px] shrink-0 h-[37px] flex-col rounded-md" />
+            </div>
+            <div className="self-stretch flex items-stretch justify-center gap-3 mt-2.5 max-md:justify-center">
+              <div className="bg-gray-200 flex w-[37px] shrink-0 h-[37px] flex-col rounded-md" />
+              <div className="bg-gray-200 flex w-[37px] shrink-0 h-[37px] flex-col rounded-md" />
+              <div className="bg-gray-200 flex w-[37px] shrink-0 h-[37px] flex-col rounded-md" />
+              <div className="bg-sky-300 flex w-[37px] shrink-0 h-[37px] flex-col rounded-md" />
+              <div className="bg-sky-300 flex w-[37px] shrink-0 h-[37px] flex-col rounded-md" />
+              <div className="bg-gray-200 flex w-[37px] shrink-0 h-[37px] flex-col rounded-md" />
+              <div className="bg-gray-200 flex w-[37px] shrink-0 h-[37px] flex-col rounded-md" />
+            </div>
+            <div className="self-stretch flex items-stretch justify-center gap-3 mt-2.5 max-md:justify-center">
+              <div className="bg-gray-200 flex w-[37px] shrink-0 h-[37px] flex-col rounded-md" />
+              <div className="bg-gray-200 flex w-[37px] shrink-0 h-[37px] flex-col rounded-md" />
+              <div className="bg-gray-200 flex w-[37px] shrink-0 h-[37px] flex-col rounded-md" />
+              <div className="bg-sky-300 flex w-[37px] shrink-0 h-[37px] flex-col rounded-md" />
+              <div className="bg-sky-300 flex w-[37px] shrink-0 h-[37px] flex-col rounded-md" />
+              <div className="bg-gray-200 flex w-[37px] shrink-0 h-[37px] flex-col rounded-md" />
+              <div className="bg-gray-200 flex w-[37px] shrink-0 h-[37px] flex-col rounded-md" />
+            </div>
+            <div className="self-stretch flex items-stretch justify-center gap-3 mt-3 max-md:justify-center">
+              <div className="bg-gray-200 flex w-[37px] shrink-0 h-[37px] flex-col rounded-md" />
+              <div className="bg-gray-200 flex w-[37px] shrink-0 h-[37px] flex-col rounded-md" />
+              <div className="bg-gray-200 flex w-[37px] shrink-0 h-[37px] flex-col rounded-md" />
+              <div className="bg-sky-300 flex w-[37px] shrink-0 h-[37px] flex-col rounded-md" />
+              <div className="bg-sky-300 flex w-[37px] shrink-0 h-[37px] flex-col rounded-md" />
+              <div className="bg-gray-200 flex w-[37px] shrink-0 h-[37px] flex-col rounded-md" />
+              <div className="bg-gray-200 flex w-[37px] shrink-0 h-[37px] flex-col rounded-md" />
+            </div>
+            <div className="self-stretch flex items-stretch justify-start -ml-3 gap-3 mt-3 max-md:justify-center">
+              <div className="bg-gray-200 flex w-[37px] shrink-0 h-[37px] flex-col rounded-md" />
+              <div className="bg-gray-200 flex w-[37px] shrink-0 h-[37px] flex-col rounded-md" />
+            </div>
+
+            <div className="self-center justify-center mx-auto flex w-[173px] max-w-full items-end mt-4 gap-2.5">
+              <div className="text-black text-xs leading-5 my-auto">
+                Sedikit
+              </div>
+              <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/bb658aab-59fd-4940-812b-f6733c86a731?apiKey=6f0257302a85476b9d26590be3d78938&"
+                className="aspect-[6.33] object-contain object-center w-[76px] overflow-hidden shrink-0 max-w-full self-start my-auto"
+              />
+              <div className="text-black text-xs leading-5 whitespace-nowrap self-start">
+                Banyak
+              </div>
             </div>
           </div>
         </div>
