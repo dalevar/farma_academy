@@ -53,8 +53,8 @@ export default function Navbar() {
                         />
                     </div>
                     <div className="relative">
-                        <Link to={'/calculator'}>Kalkulator Rumus</Link>
-                        <NavActiveAnimation to="/calculator" />
+                        <Link to={'/hitung-cepat'}>Kalkulator Rumus</Link>
+                        <NavActiveAnimation to="/hitung-cepat" />
                     </div>
                     <div className="relative">
                         <Link to={'/forum'}>Komunitas</Link>
@@ -82,8 +82,8 @@ export default function Navbar() {
                     </div>
 
                     <div className="relative">
-                        <Link to={"/calculator"}>Kalkulator Rumus</Link>
-                        <NavActiveAnimation to="/calculator" />
+                        <Link to={"/hitung-cepat"}>Kalkulator Rumus</Link>
+                        <NavActiveAnimation to="/hitung-cepat" />
                     </div>
 
                     <div>

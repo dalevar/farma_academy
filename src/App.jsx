@@ -14,6 +14,7 @@ import ModulePage from "./pages/module_page/App";
 import DetailModule from "./pages/module_page/detail_module/App";
 import AccessMateriPage from "./pages/module_page/detail_module/detail_materi/App";
 import LearingModule from "./pages/module_page/learning_module/App";
+import QuizInteraktif from "./pages/module_page/quiz_interaktif_module/App";
 
 // Hitung Cepat Page
 import HitungPage from "./pages/hitung_page/App";
@@ -21,6 +22,9 @@ import HitungDetail from "./pages/hitung_page/HitungDetail";
 // forum
 import ForumPage from "./pages/forum/App";
 import DetailForum from "./pages/forum/DetailForum";
+
+// Consultant
+import ConsultantPage from "./pages/consultant/App";
 
 import DashboardPage from "./pages/dashboard/App";
 import LanggananPage from "./pages/langganan/App";
@@ -66,6 +70,14 @@ export default function App() {
         {/* Hitung Cepat Page */}
         < Route path="/hitung-cepat" element={<HitungPage />} />
         <Route path="/hitung-cepat/hitungId" element={<HitungDetail />} />
+        <Route
+          path="/module/materi/access/learning"
+          element={<LearingModule />}
+        />
+        <Route
+          path="/module/materi/access/learning/interaktif"
+          element={<QuizInteraktif />}
+        />
 
         {/* auth page */}
         <Route path="/register" element={<RegisterPage />} />
@@ -74,6 +86,9 @@ export default function App() {
 
 
         <Route path="/test" element={<TestPage />} />
+
+        {/* Konsultan */}
+        <Route path="/consultant" element={<ConsultantPage />} />
       </Routes>
 
       <Footer />

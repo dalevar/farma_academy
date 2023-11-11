@@ -7,7 +7,10 @@ export default function LanggananPage() {
         <div className="text-center">
           <div className="">
             <p className="font-bold text-2xl">Biaya & Benefit berlangganan</p>
-            <p className="text-center mt-1">Biaya & Benefit Berlangganan</p>
+            <p className="text-center mt-1">
+              Dapatkan akses ke materi pembelajaran yang lengkap dan
+              komprehensif, serta fitur-fitur yang mendukung proses belajar.
+            </p>
           </div>
         </div>
         <div className="flex justify-center mt-6 gap-8 w-auto">
@@ -85,13 +88,13 @@ export default function LanggananPage() {
               Hubungi kami
             </button>
           </div>
-          <div className="w-11/12 bg-gray-200 rounded-xl">
+          <div className="w-11/12  rounded-xl">
             {" "}
-            {/* <img
-              src="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-2-800x800.jpg"
+            <img
+              src="../../public/images/langganan/LanggananImage.png"
               alt="..."
-              className="w-full shadow h-auto align-middle border-none rounded-xl"
-            /> */}
+              className="w-full align-middle border-none rounded-xl"
+            />
           </div>
         </div>
       </div>
