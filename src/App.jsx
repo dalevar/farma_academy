@@ -30,6 +30,9 @@ import DashboardPage from "./pages/dashboard/App";
 import LanggananPage from "./pages/langganan/App";
 import { useEffect } from "react";
 import LogoutPage from "./pages/authentication/logout/App";
+import TestPage from "./Test";
+import QuizPage from "./pages/module_page/quiz/App";
+import ConfirmQuiz from "./pages/module_page/quiz/Confirm";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -60,9 +63,12 @@ export default function App() {
         <Route path="/module" element={<ModulePage />} />
         <Route path="/module/materi" element={<DetailModule />} />
         <Route path="/module/materi/access" element={<AccessMateriPage />} />
+        <Route path="/module/materi/access/learning" element={<LearingModule />} />
+        <Route path="/module/materi/access/learning/quiz" element={<QuizPage />} />
+        <Route path="/module/materi/access/learning/quiz/confirm" element={<ConfirmQuiz />} />
 
         {/* Hitung Cepat Page */}
-        <Route path="/hitung-cepat" element={<HitungPage />} />
+        < Route path="/hitung-cepat" element={<HitungPage />} />
         <Route path="/hitung-cepat/hitungId" element={<HitungDetail />} />
         <Route
           path="/module/materi/access/learning"
@@ -77,6 +83,9 @@ export default function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/logout" element={<LogoutPage />} />
+
+
+        <Route path="/test" element={<TestPage />} />
 
         {/* Konsultan */}
         <Route path="/consultant" element={<ConsultantPage />} />
