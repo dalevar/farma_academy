@@ -28,6 +28,7 @@ import { useEffect } from "react";
 import LogoutPage from "./pages/authentication/logout/App";
 import TestPage from "./Test";
 import QuizPage from "./pages/module_page/quiz/App";
+import ConfirmQuiz from "./pages/module_page/quiz/Confirm";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -60,9 +61,10 @@ export default function App() {
         <Route path="/module/materi/access" element={<AccessMateriPage />} />
         <Route path="/module/materi/access/learning" element={<LearingModule />} />
         <Route path="/module/materi/access/learning/quiz" element={<QuizPage />} />
+        <Route path="/module/materi/access/learning/quiz/confirm" element={<ConfirmQuiz />} />
 
         {/* Hitung Cepat Page */}
-        <Route path="/hitung-cepat" element={<HitungPage />} />
+        < Route path="/hitung-cepat" element={<HitungPage />} />
         <Route path="/hitung-cepat/hitungId" element={<HitungDetail />} />
 
         {/* auth page */}
